@@ -10,15 +10,43 @@ which the brief rules out, every slot is a labelled placeholder at the real dime
 
 ## How to swap them in
 
-Save each photo into `assets/img/` using the placeholder's basename and your own
-extension — `vet-loper.jpg`, `svc-surgery.webp` — then run:
+Save each photo into `incoming/` using the slot's name and your own extension —
+`hero-care.jpg`, `svc-surgery.png`, `why-exam.webp` — then:
 
 ```bash
-./tools/apply-photos.sh
+python3 tools/photos.py list      # what each slot needs, and what is still missing
+python3 tools/photos.py import    # process everything in incoming/
 ```
 
-Every reference is rewritten, the placeholder is deleted and the site rebuilds. Run it as
-often as photos arrive; it only touches slots that now have a real file.
+Each photo is rotated per its EXIF orientation, cropped from the centre to the slot's exact
+aspect ratio, resized to the slot's dimensions, encoded as WebP, and every reference in
+`src/` is rewritten. A 4000×3000 phone photo becomes a correctly-sized 17 kB image rather
+than a six-megabyte one that also shifts the layout, because the markup declares the
+placeholder's width and height and cropping keeps those honest.
+
+To record a credit, put a `.txt` file of the same name beside the photo — `hero-care.txt` —
+containing the photographer, source and licence. It is carried into
+[`PHOTO-CREDITS.md`](PHOTO-CREDITS.md).
+
+## Stock photography
+
+Licensed stock is approved for the general care and service slots. **Unsplash**, **Pexels**
+and **Pixabay** all license for commercial use without requiring attribution.
+
+Two rules:
+
+1. **Never use stock for `about-hospital` or `contact-building`.** Those slots show this
+   practice's own building on Highway 98 East. A photograph of a different clinic presented
+   as theirs misrepresents the business, and a first-time client who cannot recognise the
+   building from the road is worse off than one who saw no photograph at all. A phone
+   snapshot of the real building beats the best stock image in existence here.
+2. **Keep it consistent.** Stock pulled from several photographers at several exposures
+   looks exactly like what it is. Pick images that share a light quality and a colour cast,
+   and prefer warm, unstaged, domestic-feeling frames over glossy studio work — the whole
+   positioning of this practice is *hometown*, not corporate.
+
+Avoid: pets in party hats, veterinarians with folded arms and perfect teeth, aggressively
+blue-filtered clinical interiors, and anything with visible non-US signage or branding.
 
 ## Shooting notes
 

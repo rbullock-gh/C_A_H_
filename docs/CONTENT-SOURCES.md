@@ -144,4 +144,4 @@ What was left out, and why. This is the part that cannot be reconstructed later.
 | **Staff names other than the veterinarians** | No technician, groomer or office-manager name is published. One first name appeared inside a customer review; that is not published staff content. |
 | **"Award-winning", "best in Marion County", "trusted by thousands"** | Unsupportable. |
 | **Emergency-hospital referral partner** | None is named on the existing site. |
-| **Real photographs** | None could be obtained — every image host was blocked. Every image slot is a labelled placeholder, not stock photography. See `PHOTO-CHECKLIST.md`. |
+| **Real photographs** | None could be obtained — every image host was blocked by the network policy. The client has since approved **licensed stock photography** for the general care and service slots, with real staff photographs to follow. Two slots are excluded from that: `about-hospital` and `contact-building` show *this* practice's building, and a stock photograph of some other clinic presented as theirs would be a straightforward misrepresentation. See `PHOTO-CHECKLIST.md`. |

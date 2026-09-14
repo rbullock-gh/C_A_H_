@@ -56,7 +56,7 @@ Two things also ship as placeholders:
 
 | What | Why | Where |
 |---|---|---|
-| **Photography** | Every image host was blocked by the build environment's network policy, so no real photograph could be obtained. Rather than substitute stock, every slot is a labelled placeholder at the real dimensions. | [`docs/PHOTO-CHECKLIST.md`](docs/PHOTO-CHECKLIST.md) |
+| **Photography** | Every image host was blocked by the build environment's network policy, so nothing could be downloaded. Each slot is a labelled placeholder at the real dimensions; `tools/photos.py` crops, resizes and wires in real files in one command. | [`docs/PHOTO-CHECKLIST.md`](docs/PHOTO-CHECKLIST.md) |
 | **The logo** | No logo file could be obtained either. `tools/make-brand.py` draws a paw mark in the brand green and generates the favicons and share card from it. | [`docs/BRAND-AND-ASSETS.md`](docs/BRAND-AND-ASSETS.md) |
 
 Everything factual on the site is sourced and recorded in
@@ -87,7 +87,8 @@ tools/
   build-demo.py         Bundles the whole site into one shareable file
   make-brand.py         Mark, favicons, touch icon, share card
   make-placeholders.py  Photo placeholders at the real dimensions
-  apply-photos.sh       Swaps placeholders for real photos in one command
+  photos.py             Crops, resizes and wires in real photographs
+  apply-photos.sh       Thin wrapper kept for the rename-only case
   set-domain.sh         Points every absolute URL at the live domain
 assets/
   css/styles.css        Design system — brand tokens at the top

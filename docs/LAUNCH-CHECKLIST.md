@@ -63,12 +63,23 @@ cache hard.
 
 ## 5. Replace the placeholder photography
 
-Every image is a labelled placeholder. Real photographs are the largest single upgrade left
-in this project — see [`PHOTO-CHECKLIST.md`](PHOTO-CHECKLIST.md) for the shot list, then:
+Every image is a labelled placeholder. See [`PHOTO-CHECKLIST.md`](PHOTO-CHECKLIST.md) for the
+shot list, then drop files into `incoming/` named after their slot and run:
 
 ```bash
-./tools/apply-photos.sh
+python3 tools/photos.py list      # what each slot needs
+python3 tools/photos.py import    # crop, resize, encode, rewrite references
 ```
+
+Licensed stock is approved for the general care and service slots. It is **not** appropriate
+for `about-hospital` or `contact-building` — those show this practice's own building, and a
+stock photograph of another clinic presented as theirs misrepresents the business. Leave
+those two on placeholders until someone photographs the building; a phone will do.
+
+Record where every stock image came from and under what licence. `tools/photos.py` carries a
+`.txt` sidecar into [`PHOTO-CREDITS.md`](PHOTO-CREDITS.md) for you. Unsplash, Pexels and
+Pixabay all permit commercial use without attribution — keep the record regardless, because a
+licence you cannot evidence is a licence you do not have.
 
 ## 6. Supply a real logo, if one exists
 
