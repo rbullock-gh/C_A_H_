@@ -5,6 +5,8 @@
 
   var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  /* Behavior bound to the page shell — attached exactly once. */
+  function bindShell() {
   /* ---- mobile navigation ------------------------------------------------ */
   var toggle = document.querySelector('[data-nav-toggle]');
   var panel = document.querySelector('[data-nav-panel]');
@@ -43,6 +45,11 @@
     window.addEventListener('scroll', onScroll, { passive: true });
   }
 
+  }
+
+  /* Behavior bound to page content. Runs on load, and again whenever the
+     single-file preview swaps one page's <main> for another's. */
+  function bindContent() {
   /* ---- scroll reveal ----------------------------------------------------
      The .reveal class starts at opacity 0. If this observer never runs the
      stylesheet's html:not(.js) rule keeps everything visible, so a failure
@@ -159,4 +166,9 @@
     }, { rootMargin: '400px' });
     mapObserver.observe(map);
   }
+  }
+
+  bindShell();
+  bindContent();
+  window.__cahInit = bindContent;
 })();

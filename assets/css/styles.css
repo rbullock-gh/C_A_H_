@@ -1,11 +1,11 @@
 /* ==========================================================================
    Columbia Animal Hospital — design system
    --------------------------------------------------------------------------
-   Every colour token below was measured for contrast before it was used.
-   Mid-tone colours (sage, tan) carry three tokens each — a fill, a
+   Every color token below was measured for contrast before it was used.
+   Mid-tone colors (sage, tan) carry three tokens each — a fill, a
    large-text-on-light value and a small-text-on-light value — because a single
    mid-tone value cannot serve all three. Ratios are recorded in
-   docs/BRAND-AND-ASSETS.md. Do not introduce a colour without measuring it.
+   docs/BRAND-AND-ASSETS.md. Do not introduce a color without measuring it.
    ========================================================================== */
 
 /* --- fonts --------------------------------------------------------------- */
@@ -46,7 +46,7 @@
   --sage: #7E9C88;           /* FILL ONLY on light (2.8:1) · text on dark */
   --sage-deep: #557463;      /*  4.8:1  large text and icons on light    */
   --sage-text: #456052;      /*  6.4:1  small text on light              */
-  --sage-pale: #DCE6DC;      /* tint surface — never a text colour       */
+  --sage-pale: #DCE6DC;      /* tint surface — never a text color       */
 
   /* Tan — a mid-tone. Fill and dark-surface accent. */
   --tan: #C7A57E;            /* FILL ONLY on light · 6.2:1 on forest-deep */
@@ -105,7 +105,7 @@
   --radius-lg: 20px;
   --radius-xl: 28px;
 
-  /* Elevation — soft, warm-tinted, never a grey drop shadow */
+  /* Elevation — soft, warm-tinted, never a gray drop shadow */
   --shadow-sm: 0 1px 2px rgba(20, 48, 38, 0.06), 0 2px 8px rgba(20, 48, 38, 0.05);
   --shadow: 0 2px 4px rgba(20, 48, 38, 0.05), 0 8px 24px rgba(20, 48, 38, 0.08);
   --shadow-lg: 0 4px 10px rgba(20, 48, 38, 0.06), 0 22px 56px rgba(20, 48, 38, 0.13);
@@ -695,10 +695,13 @@ a.card:hover h3 { color: var(--forest); }
 }
 .frame--sage::before { background: var(--sage-pale); }
 
+/* Overlaps the photograph downward rather than sideways. A negative left offset
+   put it within 8px of the viewport edge whenever the frame sat in the first
+   grid column. */
 .frame__badge {
   position: absolute;
-  left: -0.5rem;
-  bottom: -1.25rem;
+  left: 1rem;
+  bottom: -1.5rem;
   display: flex;
   align-items: center;
   gap: var(--sp-4);
@@ -718,7 +721,7 @@ a.card:hover h3 { color: var(--forest); }
   letter-spacing: -0.02em;
 }
 .frame__badge span { display: block; font-size: var(--step--1); line-height: 1.35; color: rgba(250, 247, 241, 0.85); margin-top: 0.25rem; }
-@media (min-width: 58rem) { .frame__badge { left: -2rem; } }
+@media (min-width: 58rem) { .frame__badge { left: 1.5rem; bottom: -1.75rem; } }
 
 /* --------------------------------------------------------------------------
    MARKED LIST — the numbered / ticked list used inside split sections

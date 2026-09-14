@@ -49,13 +49,13 @@ Bio pages confirmed at `/AboutUs/Dr<First><Last>.aspx`.
 |---|---|---|
 | Dr. Pat Sanford — 1985 graduate, Mississippi State University College of Veterinary Medicine; with the practice since 1985; married to Wanda; children Elizabeth, William and Jonathan | `/AboutUs/DrPatSanford.aspx` | MEDIUM-HIGH |
 | Dr. Janelle Loper — DVM, Mississippi State University College of Veterinary Medicine, 2002; treating clients of Columbia Animal Hospital since 2008; married to Patrick; one son, Josh | `/AboutUs/DrJanelleLoper.aspx` | MEDIUM-HIGH |
-| Dr. Bridgett Williams — 2010 graduate, Mississippi State University College of Veterinary Medicine; joined in 2013 after practising in Bay Springs; married to Dale; children Joeli and Ryder | `/AboutUs/DrBridgettWilliams.aspx` | MEDIUM-HIGH |
+| Dr. Bridgett Williams — 2010 graduate, Mississippi State University College of Veterinary Medicine; joined in 2013 after practicing in Bay Springs; married to Dale; children Joeli and Ryder | `/AboutUs/DrBridgettWilliams.aspx` | MEDIUM-HIGH |
 
 ### Services
 
 | Service | Sourced detail used on this site | Source | Confidence |
 |---|---|---|---|
-| Surgery | "state-of-the-art surgical suite equipped with innovative tools"; pre-surgical blood work recommended; vitals monitored before, during and after; pet kept warm while recovering from anaesthesia | `/OurServices/Surgery.aspx` | HIGH (last clause MEDIUM) |
+| Surgery | "state-of-the-art surgical suite equipped with innovative tools"; pre-surgical blood work recommended; vitals monitored before, during and after; pet kept warm while recovering from anesthesia | `/OurServices/Surgery.aspx` | HIGH (last clause MEDIUM) |
 | Dental Care | cleanings recommended from as young as one year of age; plaque and tartar form without regular cleaning; oral bacteria can enter the bloodstream and affect heart, liver and kidneys; prevention is more effective and less costly than treatment | `/OurServices/DentalCare.aspx` | HIGH |
 | Digital Radiography | digital system produces images in seconds so treatment can begin immediately; sharper than film; images can be emailed to veterinary radiologists for a rapid second opinion | `/OurServices/DigitalRadiography.aspx` | HIGH |
 | Heartworm Testing | special emphasis on prevention, testing and treatment; mosquitoes transmit it; especially prevalent in south Mississippi; in-house blood test, often results while you wait; preventatives for dogs and cats stocked at the clinic; prevention cheaper and more effective than treatment | `/OurServices/HeartwormTesting.aspx` | HIGH |
@@ -73,7 +73,7 @@ same topics, and the schema questions are kept identical to the visible ones.
 
 | Topic | Sourced answer content | Confidence |
 |---|---|---|
-| Annual visits | at least one visit a year to boost vaccinations, identify problems showing no obvious signs, and monitor ageing | MEDIUM-HIGH |
+| Annual visits | at least one visit a year to boost vaccinations, identify problems showing no obvious signs, and monitor aging | MEDIUM-HIGH |
 | Senior pets | may require blood work to screen for weight-related problems or certain cancers | MEDIUM |
 | Puppy/kitten vaccines | vaccinated at six, nine, twelve and fifteen weeks; annual vaccines a year after the final booster; maternal immunity is short-lived | MEDIUM-HIGH |
 | Dental cleanings | needed with heavy tartar, loose or decaying teeth, or retained baby teeth; tartar bacteria cause dental infection, heart-valve infection and kidney disease | MEDIUM-HIGH |
@@ -90,7 +90,7 @@ Ordered by how much damage getting it wrong would do. The first is a launch bloc
    `/AboutUs/DrWallaceCarson.aspx` — MSU undergraduate, DVM from Auburn University College
    of Veterinary Medicine in 1974, with the practice since 1975. The client brief lists only
    Loper, Sanford and Williams. No obituary and no retirement announcement could be found;
-   neither could any positive evidence that he is currently practising beyond the live page
+   neither could any positive evidence that he is currently practicing beyond the live page
    and stale directory entries. **He is not published on this site.** Confirm his status
    before adding him — and if he has retired, he may still deserve a line in the history.
 2. **How a client actually reaches the on-call vet after hours.** The practice publishes
@@ -138,7 +138,7 @@ What was left out, and why. This is the part that cannot be reconstructed later.
 | **"Fear Free" certification, Dr. Flaum, (877) 570-6272** | Belongs to `columbiaanimalhospital.com`, a different practice in another state. |
 | **Ultrasound, in-house laboratory, wellness-exam page, senior care, nutrition counselling, end-of-life care, pain management, flea/tick page, named surgical procedures** | Not found on the existing site. Most veterinary practices offer several of these, which is exactly why they are not assumed. |
 | **Any pricing** | The practice publishes no prices anywhere. |
-| **Online booking / appointment request form** | None exists. The site offers a contact form that sends nothing until the client wires it up, clearly labelled as such, plus the phone number as the real route. |
+| **Online booking, and a contact form of any kind** | No booking system exists, and no email address is published anywhere, so a form would have nowhere to send. A form that silently goes nowhere is worse than no form: the contact page leads with the phone number, which is how this practice actually takes appointments. |
 | **Follower counts, review counts, star ratings, "X happy pets" statistics** | Invented or borrowed social proof. None used. |
 | **Vet credentials beyond school and year** | No board certifications, special interests, hometowns or personal pets could be sourced for any of the doctors. |
 | **Staff names other than the veterinarians** | No technician, groomer or office-manager name is published. One first name appeared inside a customer review; that is not published staff content. |
