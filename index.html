@@ -155,13 +155,14 @@
     </div>
   </div>
   <div class="hero__photo">
-    <!-- Desktop only. Hiding it with display:none was not enough — measured at
-         390px the browser still fetched all 208 kB, at high priority, competing
-         with the fonts on exactly the connection that can least afford it. A
-         <source media> that does not match is never fetched, so the phone gets
-         the 1x1 fallback and nothing else. -->
+    <!-- Tablet and up (768px). Hiding it with display:none was not enough —
+         measured at 390px the browser still fetched all 208 kB, at high
+         priority, competing with the fonts on exactly the connection that can
+         least afford it. A <source media> that does not match is never fetched,
+         so phones get the 1x1 fallback and nothing else. Keep this breakpoint
+         and the one in the stylesheet in step. -->
     <picture>
-      <source media="(min-width: 62rem)" srcset="assets/img/hero-care.webp">
+      <source media="(min-width: 48rem)" srcset="assets/img/hero-care.webp">
       <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
            width="1536" height="1016" fetchpriority="high"
            alt="Three happy dogs sitting side by side — a brindle mixed breed, a black and white collie mix, and a brown and white terrier mix">

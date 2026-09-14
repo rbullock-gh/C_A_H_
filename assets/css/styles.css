@@ -525,6 +525,7 @@ strong { font-weight: 600; color: var(--ink); }
 }
 .hero__content { max-width: 34rem; }
 
+
 .hero__photo {
   display: flex;
   align-items: flex-end;
@@ -532,10 +533,23 @@ strong { font-weight: 600; color: var(--ink); }
 }
 .hero__photo img { width: 100%; height: auto; display: block; }
 
-/* The hero photograph is desktop-only for now — see the note in the markup about
-   why it is not merely display:none. On a phone the hero is type on the forest
-   field, which is the arrangement the rest of the site's page heads already use. */
+/* Phones get type on the forest field — the arrangement the rest of the site's
+   page heads already use — and never download the photograph at all. See the
+   note in the markup about why that is a <source media> and not display:none. */
 .hero__photo { display: none; }
+/* Tablets from 768px get the dogs back, stacked under the copy rather than
+   beside it. Side by side at this width leaves the headline about 350px to work
+   in, and "Compassionate" alone is wider than that at the size the fluid scale
+   gives it here. Stacked, the headline keeps the full width, the calls to action
+   stay near the top, and the photograph's flat lower edge is covered by the
+   quick-facts strip exactly as it is on desktop. */
+@media (min-width: 48rem) {
+  .hero__photo { display: flex; padding-bottom: var(--sp-6); }
+  .hero__photo img { max-width: 32rem; margin-inline: auto; }
+  /* Stacked, the copy and the photograph share one screen, so the panel gives
+     up the generous vertical padding it can afford when it stands alone. */
+  .hero__panel { padding-block: var(--sp-7); padding-bottom: var(--sp-5); }
+}
 
 @media (min-width: 62rem) {
   .hero { grid-template-columns: minmax(0, 1fr) minmax(0, 1.18fr); align-items: stretch; }
@@ -548,6 +562,7 @@ strong { font-weight: 600; color: var(--ink); }
     padding-bottom: calc(var(--sp-9) + var(--sp-8));
   }
   .hero__photo { display: flex; padding-top: var(--sp-8); padding-bottom: var(--sp-8); }
+  .hero__photo img { max-width: none; }
   .hero__content { max-width: 32rem; }
 }
 
