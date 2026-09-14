@@ -117,6 +117,12 @@ def check_page(page: str) -> None:
         r for r in re.findall(r'(?:src|href)="((?!https?:|tel:|mailto:|#|data:)[^"]+)"', html)
         if r and not r.startswith("#")
     }
+    # srcset carries real paths too, and nothing else here would catch a typo
+    for value in re.findall(r'srcset="([^"]+)"', html):
+        for candidate in value.split(","):
+            path = candidate.strip().split(" ")[0]
+            if path and not path.startswith(("http", "data:")):
+                refs.add(path)
     missing = []
     for r in refs:
         bare = r.split("#", 1)[0]

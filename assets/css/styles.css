@@ -520,8 +520,8 @@ strong { font-weight: 600; color: var(--ink); }
   color: var(--cream);
   display: flex;
   align-items: center;
-  padding: var(--sp-9) var(--gutter);
-  padding-bottom: calc(var(--sp-9) + var(--sp-7));
+  padding: var(--sp-10) var(--gutter);
+  padding-bottom: calc(var(--sp-10) + var(--sp-7));
 }
 .hero__content { max-width: 34rem; }
 
@@ -532,10 +532,10 @@ strong { font-weight: 600; color: var(--ink); }
 }
 .hero__photo img { width: 100%; height: auto; display: block; }
 
-/* On a phone the photograph leads. Stacked under the copy it sat entirely below
-   the fold, so the first screen carried no dog at all — the one thing this image
-   is here to do. The copy panel below it carries the strip overlap. */
-.hero__photo { order: -1; padding-top: var(--sp-5); }
+/* The hero photograph is desktop-only for now — see the note in the markup about
+   why it is not merely display:none. On a phone the hero is type on the forest
+   field, which is the arrangement the rest of the site's page heads already use. */
+.hero__photo { display: none; }
 
 @media (min-width: 62rem) {
   .hero { grid-template-columns: minmax(0, 1fr) minmax(0, 1.18fr); align-items: stretch; }
@@ -547,7 +547,7 @@ strong { font-weight: 600; color: var(--ink); }
     padding-block: var(--sp-9);
     padding-bottom: calc(var(--sp-9) + var(--sp-8));
   }
-  .hero__photo { order: 0; padding-top: var(--sp-8); padding-bottom: var(--sp-8); }
+  .hero__photo { display: flex; padding-top: var(--sp-8); padding-bottom: var(--sp-8); }
   .hero__content { max-width: 32rem; }
 }
 
@@ -1396,13 +1396,3 @@ a.card:hover h3 { color: var(--forest); }
   .services-grid .service-card--feature .link-arrow { margin-top: auto; }
 }
 
-/* The source photograph crops the dogs at chest level, so the cut-out has a flat
-   bottom edge. On desktop the quick-facts strip covers it. On mobile it lands
-   mid-hero and reads as a crop line, so the last few percent dissolve into the
-   forest behind — the ground is flat colour there, so the blend is invisible. */
-@media (max-width: 61.99rem) {
-  .hero__photo img {
-    -webkit-mask-image: linear-gradient(to bottom, #000 86%, transparent 100%);
-    mask-image: linear-gradient(to bottom, #000 86%, transparent 100%);
-  }
-}
