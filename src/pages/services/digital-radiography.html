@@ -1,0 +1,100 @@
+<!--json
+{
+  "slug": "digital-radiography",
+  "nav": "Services",
+  "service": "Radiography",
+  "out": "services/digital-radiography.html",
+  "priority": "0.7",
+  "title": "Pet Digital X-Ray in Columbia, MS | Columbia Animal Hospital",
+  "description": "In-house digital radiography in Columbia, Mississippi \u2014 clear x-ray images in seconds, and a radiologist second opinion when needed. Call (601) 736-3041."
+}
+-->
+
+<section class="page-head">
+  <div class="shell shell--wide">
+    <ol class="crumbs">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../services.html">Services</a></li>
+      <li><span aria-current="page">Digital radiography</span></li>
+    </ol>
+    <h1>Digital radiography</h1>
+    <p class="page-head__lede">Clear x-ray images in seconds rather than minutes — which means treatment can begin while your pet is still on the table.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="shell shell--wide">
+    <div class="detail">
+      <div>
+        <div class="frame frame--sage" style="margin-bottom:var(--sp-8)">
+          <div class="frame__img">
+            <img src="../assets/img/svc-digital-radiography.svg" width="1200" height="800" alt="A digital x-ray image being reviewed at Columbia Animal Hospital">
+          </div>
+        </div>
+
+        <dl class="quickfacts">
+          <div><dt>Speed</dt><dd>Images in seconds</dd></div>
+          <div><dt>Quality</dt><dd>Sharper than film</dd></div>
+          <div><dt>Second opinion</dt><dd>Emailed to a veterinary radiologist</dd></div>
+        </dl>
+
+        <div class="prose">
+          <p>The digital x-ray system at Columbia Animal Hospital is superior to older film technologies for a number of reasons, and the difference shows up in how quickly your pet gets treated.</p>
+
+          <h2>Results in seconds</h2>
+          <p>The digital system produces clear and concise x-ray images in seconds, which allows our doctors to begin treatment immediately as needed. With film, the same picture meant developing time — and a pet in pain waiting through it.</p>
+
+          <h2>Sharper images, better diagnoses</h2>
+          <p>Digital radiographs are generally sharper and better quality than film. Our digital radiography system allows our veterinarians to diagnose many conditions quicker and more accurately than with older imaging systems.</p>
+
+          <h2>A specialist's eye when it is needed</h2>
+          <p>Digital images can be emailed to veterinary radiologists for a rapid second opinion in those rare cases where a specialist is needed. That saves valuable time for a pet who needs treatment, and it means a difficult case does not require a drive to another city before anyone has looked at the films.</p>
+
+          <h2>Common reasons for an x-ray</h2>
+          <p>Radiographs are part of working out what is wrong when a pet is limping, struggling to breathe, vomiting repeatedly, or has swallowed something they should not have. If your veterinarian recommends imaging, they will explain what they are looking for before anything is done.</p>
+        </div>
+
+        <div class="stack-actions mt-7">
+          <a class="btn" href="{{ contact.phoneLink }}">
+            <svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg>
+            Call {{ contact.phoneDisplay }}
+          </a>
+          <a class="btn btn--ghost" href="../services.html">
+            All services
+            <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+          </a>
+        </div>
+      </div>
+
+      {{> service-aside }}
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Digital radiography",
+  "serviceType": "Digital radiography",
+  "url": "{{ site.url }}/services/digital-radiography.html",
+  "provider": {
+    "@type": "VeterinaryCare",
+    "name": "Columbia Animal Hospital",
+    "@id": "{{ site.url }}/#practice",
+    "telephone": "{{ contact.phoneRaw }}",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "1409 Hwy 98E",
+      "addressLocality": "Columbia",
+      "addressRegion": "MS",
+      "postalCode": "39429",
+      "addressCountry": "US"
+    }
+  },
+  "areaServed": [
+    { "@type": "City", "name": "Columbia", "addressRegion": "MS" },
+    { "@type": "City", "name": "Foxworth", "addressRegion": "MS" }
+  ]
+}
+</script>

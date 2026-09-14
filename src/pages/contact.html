@@ -1,0 +1,183 @@
+<!--json
+{
+  "slug": "contact",
+  "nav": "Contact",
+  "out": "contact.html",
+  "priority": "0.9",
+  "title": "Contact and Directions | Columbia Animal Hospital, MS",
+  "description": "Columbia Animal Hospital, 1409 Hwy 98E, Columbia, MS 39429. Call (601) 736-3041. Open Mon-Fri 7:30 AM-5:30 PM and Saturday mornings, with an on-call vet after hours."
+}
+-->
+
+<section class="page-head">
+  <div class="shell shell--wide">
+    <ol class="crumbs">
+      <li><a href="index.html">Home</a></li>
+      <li><span aria-current="page">Contact &amp; Directions</span></li>
+    </ol>
+    <h1>Come and see us on Highway 98 East</h1>
+    <p class="page-head__lede">
+      Appointments, grooming, boarding and questions are all handled by phone. One number gets
+      you a person who can help.
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="shell shell--wide">
+    <div class="location__grid">
+      <div class="reveal">
+        <ul class="info-list">
+          <li>
+            <span class="icon-tile icon-tile--tan"><svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg></span>
+            <h2>Call the hospital</h2>
+            <div>
+              <a href="{{ contact.phoneLink }}">{{ contact.phoneDisplay }}</a>
+              <p style="font-size:var(--step--1);color:var(--muted);margin-top:0.35rem">
+                The fastest way to reach us, during hours and after them.
+              </p>
+            </div>
+          </li>
+          <li>
+            <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-pin"></use></svg></span>
+            <h2>Address</h2>
+            <div>
+              <address>1409 Hwy 98E<br>Columbia, MS 39429</address>
+              <a class="link-arrow" href="{{ contact.directionsUrl }}" target="_blank" rel="noopener">
+                Get driving directions
+                <svg class="icon" aria-hidden="true"><use href="#i-directions"></use></svg>
+              </a>
+            </div>
+          </li>
+          <li>
+            <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-facebook"></use></svg></span>
+            <h2>Facebook</h2>
+            <div>
+              <a href="{{ contact.facebook }}" target="_blank" rel="noopener">Columbia Animal Hospital</a>
+              <p style="font-size:var(--step--1);color:var(--muted);margin-top:0.35rem">
+                Where we post practice news and closures.
+              </p>
+            </div>
+          </li>
+        </ul>
+
+        <div class="hours-card mt-7" id="hours">
+          <div class="hours-card__head">
+            <h2>Opening hours</h2>
+            <span class="status" data-status data-state="closed">
+              <span class="status__dot"></span>
+              <span data-status-label>Hours</span>
+            </span>
+          </div>
+          <ul class="hours-list">
+            <li data-day="1,2,3,4,5"><span class="day">Monday – Friday</span> <span class="time">{{ hours.weekdays }}</span></li>
+            <li data-day="6"><span class="day">Saturday</span> <span class="time">{{ hours.saturday }}</span></li>
+            <li data-day="0"><span class="day">Sunday</span> <span class="time time--closed">{{ hours.sunday }}</span></li>
+          </ul>
+          <p class="hours-card__note">
+            All times are US Central. An on-call veterinarian is available after hours in the
+            case of an emergency — see below.
+          </p>
+        </div>
+      </div>
+
+      <div class="map reveal" data-delay="1" data-map="{{ contact.mapEmbed }}">
+        <div class="map__placeholder">
+          <div>
+            <p><strong>1409 Hwy 98E, Columbia, MS 39429</strong></p>
+            <p class="mt-6"><a class="btn btn--ghost" href="{{ contact.directionsUrl }}" target="_blank" rel="noopener">Open in Google Maps</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--lg emergency" id="emergency">
+  <div class="shell shell--wide">
+    <div class="emergency__grid">
+      <div class="reveal">
+        <p class="eyebrow eyebrow--light">After-hours care</p>
+        <h2>If something happens when we are closed</h2>
+        <p class="lede mt-6" style="color:rgba(250,247,241,0.85)">
+          Columbia Animal Hospital has an on-call veterinarian available after hours in the case
+          of an emergency. Call the hospital and follow the instructions you are given.
+        </p>
+        <div class="notice">
+          <svg class="icon" aria-hidden="true"><use href="#i-alert"></use></svg>
+          <p>
+            <strong>We are not a 24-hour emergency hospital.</strong>
+            The building is staffed during the hours posted above. Please call first rather
+            than driving over — nobody may be at the hospital to meet you.
+          </p>
+        </div>
+      </div>
+      <div class="call-panel reveal" data-delay="1">
+        <p class="eyebrow eyebrow--light">One number, any hour</p>
+        <a class="call-panel__number" href="{{ contact.phoneLink }}">{{ contact.phoneDisplay }}</a>
+        <p>1409 Hwy 98E, Columbia, MS 39429</p>
+        <a class="btn btn--onDark" href="{{ contact.phoneLink }}">
+          <svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg>
+          Call the hospital
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--lg section--cream">
+  <div class="shell shell--wide">
+    <div class="split split--wide-text">
+      <div class="split__media reveal">
+        <div class="frame">
+          <div class="frame__img">
+            <img src="assets/img/contact-building.svg" width="1400" height="900" alt="Columbia Animal Hospital seen from Highway 98 East in Columbia, Mississippi">
+          </div>
+        </div>
+      </div>
+      <div class="reveal" data-delay="1">
+        <p class="eyebrow">Before you call</p>
+        <h2>What helps us help you faster</h2>
+        <ul class="marklist">
+          <li>
+            <span class="marklist__num">1</span>
+            <strong>Your pet's name and rough age</strong>
+            <span>If you have been here before, that is usually enough for us to find their record.</span>
+          </li>
+          <li>
+            <span class="marklist__num">2</span>
+            <strong>What you are seeing, and since when</strong>
+            <span>Limping since Tuesday, off their food for two days, scratching an ear raw — specifics help us judge urgency.</span>
+          </li>
+          <li>
+            <span class="marklist__num">3</span>
+            <strong>Anything they may have eaten or got into</strong>
+            <span>Medications, plants, antifreeze, a bone, a toy. Bring packaging if you have it.</span>
+          </li>
+          <li>
+            <span class="marklist__num">4</span>
+            <strong>For boarding, your dates and vaccination status</strong>
+            <span>If a booster is due, call four weeks before the stay so there is time to sort it.</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "name": "Contact Columbia Animal Hospital",
+  "url": "{{ site.url }}/contact.html",
+  "mainEntity": { "@id": "{{ site.url }}/#practice" },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "{{ site.url }}/" },
+      { "@type": "ListItem", "position": 2, "name": "Contact & Directions", "item": "{{ site.url }}/contact.html" }
+    ]
+  }
+}
+</script>

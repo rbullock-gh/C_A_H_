@@ -1,0 +1,101 @@
+<!--json
+{
+  "slug": "surgery",
+  "nav": "Services",
+  "service": "Surgery",
+  "out": "services/surgery.html",
+  "priority": "0.7",
+  "title": "Pet Surgery in Columbia, MS | Columbia Animal Hospital",
+  "description": "A state-of-the-art surgical suite in Columbia, Mississippi, with pre-surgical blood work and monitored recovery. Call (601) 736-3041 to arrange a procedure."
+}
+-->
+
+<section class="page-head">
+  <div class="shell shell--wide">
+    <ol class="crumbs">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../services.html">Services</a></li>
+      <li><span aria-current="page">Surgery</span></li>
+    </ol>
+    <h1>Surgery</h1>
+    <p class="page-head__lede">A state-of-the-art surgical suite, pre-surgical blood work, and a pet who is monitored from the moment they go under until they are awake and warm again.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="shell shell--wide">
+    <div class="detail">
+      <div>
+        <div class="frame frame--sage" style="margin-bottom:var(--sp-8)">
+          <div class="frame__img">
+            <img src="../assets/img/svc-surgery.svg" width="1200" height="800" alt="The surgical suite at Columbia Animal Hospital in Columbia, Mississippi">
+          </div>
+        </div>
+
+        <dl class="quickfacts">
+          <div><dt>Before surgery</dt><dd>Blood work recommended</dd></div>
+          <div><dt>During</dt><dd>Vital signs monitored continuously</dd></div>
+          <div><dt>After</dt><dd>Kept warm and watched while recovering</dd></div>
+        </dl>
+
+        <div class="prose">
+          <p>Columbia Animal Hospital offers a state-of-the-art surgical suite equipped with innovative tools to care for your pet. Surgery is the part of veterinary medicine owners worry about most, so it is worth explaining exactly how we approach it.</p>
+
+          <h2>Blood work before anaesthesia</h2>
+          <p>Prior to surgery, our veterinarians recommend running blood work on your pet. Blood work can indicate issues that would not be found by a physical examination alone — and knowing about them beforehand is what allows anaesthesia to be administered as safely as possible.</p>
+          <p>This is not an upsell. It is the difference between giving a drug to a patient whose liver and kidney function you know, and giving it to one whose you do not.</p>
+
+          <h2>Monitoring, before and after</h2>
+          <p>Before and after the procedure, the veterinarian constantly monitors your pet's vital signs. After treatment, your pet is kept warm while they continue to be monitored, recovering from anaesthesia somewhere quiet rather than being sent home half-asleep.</p>
+
+          <h2>When to have your pet spayed or neutered</h2>
+          <p>Columbia Animal Hospital recommends not having your pet sterilised any earlier than six months of age. This allows your pet to mature with their reproductive organs and the corresponding hormones, which supports a normal ageing process.</p>
+
+          <h2>Arranging a procedure</h2>
+          <p>Surgery is scheduled by phone. Call the hospital, tell us what your pet needs, and we will talk you through what happens on the day, what to bring, and when you can collect them.</p>
+        </div>
+
+        <div class="stack-actions mt-7">
+          <a class="btn" href="{{ contact.phoneLink }}">
+            <svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg>
+            Call {{ contact.phoneDisplay }}
+          </a>
+          <a class="btn btn--ghost" href="../services.html">
+            All services
+            <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+          </a>
+        </div>
+      </div>
+
+      {{> service-aside }}
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Surgery",
+  "serviceType": "Surgery",
+  "url": "{{ site.url }}/services/surgery.html",
+  "provider": {
+    "@type": "VeterinaryCare",
+    "name": "Columbia Animal Hospital",
+    "@id": "{{ site.url }}/#practice",
+    "telephone": "{{ contact.phoneRaw }}",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "1409 Hwy 98E",
+      "addressLocality": "Columbia",
+      "addressRegion": "MS",
+      "postalCode": "39429",
+      "addressCountry": "US"
+    }
+  },
+  "areaServed": [
+    { "@type": "City", "name": "Columbia", "addressRegion": "MS" },
+    { "@type": "City", "name": "Foxworth", "addressRegion": "MS" }
+  ]
+}
+</script>

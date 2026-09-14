@@ -1,0 +1,249 @@
+<!--json
+{
+  "slug": "faq",
+  "nav": "Faq",
+  "out": "faq.html",
+  "priority": "0.7",
+  "title": "Pet Care Questions | Columbia Animal Hospital, Columbia MS",
+  "description": "Answers on yearly visits, puppy and kitten vaccines, dental cleanings, spay and neuter timing and heartworms, from our Columbia, MS veterinarians."
+}
+-->
+
+<section class="page-head">
+  <div class="shell shell--wide">
+    <ol class="crumbs">
+      <li><a href="index.html">Home</a></li>
+      <li><span aria-current="page">FAQ</span></li>
+    </ol>
+    <h1>Questions we hear often</h1>
+    <p class="page-head__lede">
+      The things owners ask at the front desk, answered here so you can read them before you
+      call. If your question is not below, phone the hospital and ask.
+    </p>
+  </div>
+</section>
+
+<section class="section section--lg">
+  <div class="shell shell--narrow">
+    <div class="faq-list">
+      <details class="faq reveal">
+        <summary>How often should my pet see a veterinarian?</summary>
+        <div class="faq__body">
+          <p>
+            We recommend that a healthy pet visit the clinic at least once each year. A yearly
+            visit lets us properly boost vaccinations, identify any health issues your pet may
+            be experiencing without obvious signs, and monitor their ageing process.
+          </p>
+          <p>
+            Pets are good at hiding illness. A great deal of what we find at an annual exam is
+            something the owner had no way of noticing.
+          </p>
+        </div>
+      </details>
+
+      <details class="faq reveal">
+        <summary>When should puppies and kittens be vaccinated?</summary>
+        <div class="faq__body">
+          <p>
+            Puppies and kittens require several booster vaccinations, given three weeks apart,
+            to protect them from viruses common to this area. They are vaccinated at six, nine,
+            twelve and fifteen weeks of age.
+          </p>
+          <p>
+            They do receive some immunity from their mother's milk, but that immunity only
+            protects them for a short period of time. Missing a vaccination can lead to severe
+            illness, which can lead to death — so the schedule matters. Annual vaccines are
+            recommended one year after the final puppy or kitten booster.
+          </p>
+        </div>
+      </details>
+
+      <details class="faq reveal">
+        <summary>Does my pet need a dental cleaning?</summary>
+        <div class="faq__body">
+          <p>
+            Dental cleanings are important if your pet has a large amount of tartar, has loose
+            or decaying teeth, or did not lose all of their baby teeth. Tartar has bacteria
+            associated with it that can cause dental infection, infection on the heart valves,
+            and kidney disease.
+          </p>
+          <p>
+            Studies show that both dogs and cats need to begin regular cleanings as young as
+            one year of age.
+          </p>
+        </div>
+      </details>
+
+      <details class="faq reveal">
+        <summary>At what age should my pet be spayed or neutered?</summary>
+        <div class="faq__body">
+          <p>
+            Columbia Animal Hospital recommends not having your pet sterilised any earlier than
+            six months of age. This allows your pet to mature with their reproductive organs and
+            the corresponding hormones, which allows for a normal ageing process.
+          </p>
+        </div>
+      </details>
+
+      <details class="faq reveal">
+        <summary>What are heartworms, and can cats get them too?</summary>
+        <div class="faq__body">
+          <p>
+            Heartworms are parasites passed from one infected animal to another by a mosquito.
+            Both dogs and cats can contract them, and they are especially prevalent in south
+            Mississippi because of the high number of mosquitoes that carry them.
+          </p>
+          <p>
+            Medications are available to prevent both dogs and cats from becoming infected, and
+            we keep these products at the clinic. If your pet is not currently on heartworm
+            prevention, our doctors recommend bringing them in for an evaluation.
+          </p>
+        </div>
+      </details>
+
+      <details class="faq reveal">
+        <summary>My pet is getting older. Does anything change?</summary>
+        <div class="faq__body">
+          <p>
+            Senior animals may require blood work to screen for weight-related health problems
+            or the presence of certain cancers. Finding these things early gives you more
+            options than finding them late.
+          </p>
+        </div>
+      </details>
+
+      <details class="faq reveal">
+        <summary>What happens if my pet needs help after hours?</summary>
+        <div class="faq__body">
+          <p>
+            Columbia Animal Hospital has an on-call veterinarian available after hours in the
+            case of an emergency. Call the hospital on
+            <a href="{{ contact.phoneLink }}">{{ contact.phoneDisplay }}</a> and follow the
+            instructions you are given.
+          </p>
+          <p>
+            Please note that we are not a 24-hour emergency hospital. The building is staffed
+            during our posted hours, so call before driving over rather than assuming someone
+            is here.
+          </p>
+        </div>
+      </details>
+
+      <details class="faq reveal">
+        <summary>Do I need to book grooming and boarding in advance?</summary>
+        <div class="faq__body">
+          <p>
+            Yes, and the earlier the better. Our groomers are very popular and can often book
+            up quickly.
+          </p>
+          <p>
+            For boarding, we recommend that all animals be current on their vaccinations before
+            their stay. If your pet is due for a booster, or you are not certain of their
+            vaccination status, contact us four weeks in advance of their stay so there is time
+            to get them properly vaccinated.
+          </p>
+        </div>
+      </details>
+
+      <details class="faq reveal">
+        <summary>What animals do you treat?</summary>
+        <div class="faq__body">
+          <p>
+            Dogs and cats. Columbia Animal Hospital began in 1975 as a mixed animal practice and
+            became a small animal clinic exclusively in 2005, so our doctors, our equipment and
+            our attention go entirely to companion animals.
+          </p>
+        </div>
+      </details>
+
+      <details class="faq reveal">
+        <summary>How do I make an appointment?</summary>
+        <div class="faq__body">
+          <p>
+            By phone. Call <a href="{{ contact.phoneLink }}">{{ contact.phoneDisplay }}</a>
+            during our opening hours — Monday to Friday, {{ hours.weekdays }}, and Saturday,
+            {{ hours.saturday }}. Tell us what is going on and we will find you a time.
+          </p>
+        </div>
+      </details>
+    </div>
+
+    <div class="stack-actions stack-actions--center mt-7">
+      <a class="btn btn--lg" href="{{ contact.phoneLink }}">
+        <svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg>
+        Call {{ contact.phoneDisplay }}
+      </a>
+      <a class="btn btn--lg btn--ghost" href="contact.html">
+        Contact &amp; directions
+        <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "url": "{{ site.url }}/faq.html",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How often should my pet see a veterinarian?",
+      "acceptedAnswer": { "@type": "Answer", "text": "We recommend that a healthy pet visit the clinic at least once each year. A yearly visit lets us properly boost vaccinations, identify any health issues your pet may be experiencing without obvious signs, and monitor their ageing process. Pets are good at hiding illness, and a great deal of what we find at an annual exam is something the owner had no way of noticing." }
+    },
+    {
+      "@type": "Question",
+      "name": "When should puppies and kittens be vaccinated?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Puppies and kittens require several booster vaccinations, given three weeks apart, to protect them from viruses common to this area. They are vaccinated at six, nine, twelve and fifteen weeks of age. They receive some immunity from their mother's milk, but that immunity only protects them for a short period of time. Annual vaccines are recommended one year after the final puppy or kitten booster." }
+    },
+    {
+      "@type": "Question",
+      "name": "Does my pet need a dental cleaning?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Dental cleanings are important if your pet has a large amount of tartar, has loose or decaying teeth, or did not lose all of their baby teeth. Tartar has bacteria associated with it that can cause dental infection, infection on the heart valves, and kidney disease. Studies show that both dogs and cats need to begin regular cleanings as young as one year of age." }
+    },
+    {
+      "@type": "Question",
+      "name": "At what age should my pet be spayed or neutered?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Columbia Animal Hospital recommends not having your pet sterilised any earlier than six months of age. This allows your pet to mature with their reproductive organs and the corresponding hormones, which allows for a normal ageing process." }
+    },
+    {
+      "@type": "Question",
+      "name": "What are heartworms, and can cats get them too?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Heartworms are parasites passed from one infected animal to another by a mosquito. Both dogs and cats can contract them, and they are especially prevalent in south Mississippi because of the high number of mosquitoes that carry them. Medications are available to prevent both dogs and cats from becoming infected, and we keep these products at the clinic. If your pet is not currently on heartworm prevention, our doctors recommend bringing them in for an evaluation." }
+    },
+    {
+      "@type": "Question",
+      "name": "My pet is getting older. Does anything change?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Senior animals may require blood work to screen for weight-related health problems or the presence of certain cancers. Finding these things early gives you more options than finding them late." }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens if my pet needs help after hours?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Columbia Animal Hospital has an on-call veterinarian available after hours in the case of an emergency. Call the hospital on (601) 736-3041 and follow the instructions you are given. Please note that we are not a 24-hour emergency hospital. The building is staffed during our posted hours, so call before driving over rather than assuming someone is here." }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need to book grooming and boarding in advance?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes, and the earlier the better. Our groomers are very popular and can often book up quickly. For boarding, we recommend that all animals be current on their vaccinations before their stay. If your pet is due for a booster, or you are not certain of their vaccination status, contact us four weeks in advance of their stay so there is time to get them properly vaccinated." }
+    },
+    {
+      "@type": "Question",
+      "name": "What animals do you treat?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Dogs and cats. Columbia Animal Hospital began in 1975 as a mixed animal practice and became a small animal clinic exclusively in 2005, so our doctors, our equipment and our attention go entirely to companion animals." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I make an appointment?",
+      "acceptedAnswer": { "@type": "Answer", "text": "By phone. Call (601) 736-3041 during our opening hours — Monday to Friday, 7:30 AM to 5:30 PM, and Saturday, 8:00 AM to 12:00 PM. Tell us what is going on and we will find you a time." }
+    }
+  ],
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "{{ site.url }}/" },
+      { "@type": "ListItem", "position": 2, "name": "FAQ", "item": "{{ site.url }}/faq.html" }
+    ]
+  }
+}
+</script>

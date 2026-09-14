@@ -1,0 +1,94 @@
+<!--json
+{
+  "slug": "reproductive-services",
+  "nav": "Services",
+  "service": "Reproductive",
+  "out": "services/reproductive-services.html",
+  "priority": "0.7",
+  "title": "Pet Reproductive Services | Columbia Animal Hospital, MS",
+  "description": "Reproductive services at Columbia Animal Hospital in Columbia, Mississippi \u2014 support from artificial insemination through the birthing process. Call (601) 736-3041."
+}
+-->
+
+<section class="page-head">
+  <div class="shell shell--wide">
+    <ol class="crumbs">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../services.html">Services</a></li>
+      <li><span aria-current="page">Reproductive services</span></li>
+    </ol>
+    <h1>Reproductive services</h1>
+    <p class="page-head__lede">Support through every phase, from artificial insemination through to the birthing process.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="shell shell--wide">
+    <div class="detail">
+      <div>
+        <div class="frame frame--sage" style="margin-bottom:var(--sp-8)">
+          <div class="frame__img">
+            <img src="../assets/img/svc-reproductive-services.svg" width="1200" height="800" alt="Newborn puppies resting, cared for at Columbia Animal Hospital">
+          </div>
+        </div>
+
+        <dl class="quickfacts">
+          <div><dt>Covers</dt><dd>Insemination through birth</dd></div>
+          <div><dt>Species</dt><dd>Companion animals</dd></div>
+          <div><dt>Arranged by</dt><dd>Phone, with timing in mind</dd></div>
+        </dl>
+
+        <div class="prose">
+          <p>The doctors at Columbia Animal Hospital can assist you and your pet through all phases of artificial insemination, right through to the birthing process.</p>
+
+          <h2>Working to a timetable</h2>
+          <p>Breeding is one of the few areas of veterinary medicine that runs on a calendar rather than on symptoms. Getting the timing right requires planning ahead, so call early rather than when something is already under way.</p>
+
+          <h2>Talk to us first</h2>
+          <p>Every case is different, and what is appropriate depends on the animal, the breed and where you are in the cycle. Call the hospital and ask for a conversation with one of the doctors before you make arrangements — it is the quickest way to find out what is and is not possible here.</p>
+        </div>
+
+        <div class="stack-actions mt-7">
+          <a class="btn" href="{{ contact.phoneLink }}">
+            <svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg>
+            Call {{ contact.phoneDisplay }}
+          </a>
+          <a class="btn btn--ghost" href="../services.html">
+            All services
+            <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+          </a>
+        </div>
+      </div>
+
+      {{> service-aside }}
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Reproductive services",
+  "serviceType": "Reproductive services",
+  "url": "{{ site.url }}/services/reproductive-services.html",
+  "provider": {
+    "@type": "VeterinaryCare",
+    "name": "Columbia Animal Hospital",
+    "@id": "{{ site.url }}/#practice",
+    "telephone": "{{ contact.phoneRaw }}",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "1409 Hwy 98E",
+      "addressLocality": "Columbia",
+      "addressRegion": "MS",
+      "postalCode": "39429",
+      "addressCountry": "US"
+    }
+  },
+  "areaServed": [
+    { "@type": "City", "name": "Columbia", "addressRegion": "MS" },
+    { "@type": "City", "name": "Foxworth", "addressRegion": "MS" }
+  ]
+}
+</script>

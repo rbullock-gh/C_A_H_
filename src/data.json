@@ -1,0 +1,45 @@
+{
+  "site": {
+    "url": "https://www.columbiaanimalhospital.net",
+    "name": "Columbia Animal Hospital",
+    "shortName": "Columbia Animal Hospital",
+    "place": "Columbia, Mississippi",
+    "tagline": "A full-service companion animal hospital in Columbia, Mississippi.",
+    "founded": "1975",
+    "yearsServing": "50",
+    "smallAnimalSince": "2005",
+    "ogImage": "https://www.columbiaanimalhospital.net/assets/img/og-image.png"
+  },
+  "contact": {
+    "phoneDisplay": "(601) 736-3041",
+    "phoneLink": "tel:+16017363041",
+    "phoneRaw": "+1-601-736-3041",
+    "street": "1409 Hwy 98E",
+    "city": "Columbia",
+    "region": "MS",
+    "regionName": "Mississippi",
+    "postal": "39429",
+    "country": "US",
+    "addressOneLine": "1409 Hwy 98E, Columbia, MS 39429",
+    "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=1409+Hwy+98E%2C+Columbia%2C+MS+39429",
+    "mapEmbed": "https://www.google.com/maps?q=1409+Hwy+98E,+Columbia,+MS+39429&output=embed",
+    "facebook": "https://www.facebook.com/ColumbiaAnimalHospitalMS/"
+  },
+  "hours": {
+    "weekdays": "7:30 AM – 5:30 PM",
+    "saturday": "8:00 AM – 12:00 PM",
+    "sunday": "Closed",
+    "summary": "Mon–Fri 7:30 AM – 5:30 PM · Sat 8:00 AM – 12:00 PM · Sun closed"
+  },
+  "emergency": {
+    "headline": "After-hours emergencies",
+    "policy": "An on-call veterinarian is available after hours in the case of an emergency.",
+    "notice": "Columbia Animal Hospital is not a 24-hour emergency hospital. Outside our posted hours, an on-call veterinarian is available for emergencies — call the hospital and follow the instructions you are given."
+  },
+  "areaServed": ["Columbia", "Foxworth"],
+  "copy": {
+    "heroHeadline": "Compassionate care for every stage of their life",
+    "closerHeadline": "Your pet deserves compassionate, experienced care.",
+    "mission": "To provide professional, compassionate veterinary care to clients and their furry family members."
+  }
+}

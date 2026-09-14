@@ -1,0 +1,104 @@
+<!--json
+{
+  "slug": "boarding",
+  "nav": "Services",
+  "service": "Boarding",
+  "out": "services/boarding.html",
+  "priority": "0.7",
+  "title": "Pet Boarding in Columbia, MS | Columbia Animal Hospital",
+  "description": "Veterinarian-supervised pet boarding in Columbia, Mississippi. Climate-controlled, daily walks for dogs, and a separate quiet area for cats. Call (601) 736-3041."
+}
+-->
+
+<section class="page-head">
+  <div class="shell shell--wide">
+    <ol class="crumbs">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../services.html">Services</a></li>
+      <li><span aria-current="page">Boarding</span></li>
+    </ol>
+    <h1>Boarding</h1>
+    <p class="page-head__lede">Boarding supervised by our veterinarians, in a climate-controlled building — with cats kept well away from the barking.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="shell shell--wide">
+    <div class="detail">
+      <div>
+        <div class="frame frame--sage" style="margin-bottom:var(--sp-8)">
+          <div class="frame__img">
+            <img src="../assets/img/svc-boarding.svg" width="1200" height="800" alt="A clean, climate-controlled boarding area at Columbia Animal Hospital">
+          </div>
+        </div>
+
+        <dl class="quickfacts">
+          <div><dt>Supervision</dt><dd>By our veterinarians</dd></div>
+          <div><dt>Dogs</dt><dd>Walked daily</dd></div>
+          <div><dt>Vaccinations</dt><dd>Call four weeks ahead if boosters are due</dd></div>
+        </dl>
+
+        <div class="prose">
+          <p>Leaving a pet behind is the part of a trip nobody looks forward to. Our boarding facility is supervised by our veterinarians and kept clean and comfortable, which means that if something does come up while you are away, a doctor is already in the building.</p>
+
+          <h2>Comfortable in any season</h2>
+          <p>The facility is climate-controlled to keep boarders cosy during winter and cool during summer.</p>
+
+          <h2>Dogs and cats, kept apart</h2>
+          <p>We walk each canine boarder daily. Feline friends are kept in a separate area, away from barking dogs, to reduce the stress that noise causes cats.</p>
+
+          <h2>Before your pet's stay</h2>
+          <p>For the safety of your pet and of the others in our care, we recommend that all animals be current on their vaccinations prior to boarding at Columbia Animal Hospital.</p>
+          <p>If your pet is due for a vaccination booster, or if you are uncertain of their vaccination status, please contact us <strong>four weeks in advance</strong> of their stay so we can make sure they are properly vaccinated in time.</p>
+
+          <h2>What to bring</h2>
+          <p>If your pet requires medication or a special dietary food during boarding, please bring it with you. Familiar food is one less change for them to absorb while you are away.</p>
+
+          <h2>Reserving a place</h2>
+          <p>Boarding is arranged by phone. Holiday periods fill up, so call as early as you can.</p>
+        </div>
+
+        <div class="stack-actions mt-7">
+          <a class="btn" href="{{ contact.phoneLink }}">
+            <svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg>
+            Call {{ contact.phoneDisplay }}
+          </a>
+          <a class="btn btn--ghost" href="../services.html">
+            All services
+            <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+          </a>
+        </div>
+      </div>
+
+      {{> service-aside }}
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Boarding",
+  "serviceType": "Boarding",
+  "url": "{{ site.url }}/services/boarding.html",
+  "provider": {
+    "@type": "VeterinaryCare",
+    "name": "Columbia Animal Hospital",
+    "@id": "{{ site.url }}/#practice",
+    "telephone": "{{ contact.phoneRaw }}",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "1409 Hwy 98E",
+      "addressLocality": "Columbia",
+      "addressRegion": "MS",
+      "postalCode": "39429",
+      "addressCountry": "US"
+    }
+  },
+  "areaServed": [
+    { "@type": "City", "name": "Columbia", "addressRegion": "MS" },
+    { "@type": "City", "name": "Foxworth", "addressRegion": "MS" }
+  ]
+}
+</script>

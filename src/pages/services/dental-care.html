@@ -1,0 +1,101 @@
+<!--json
+{
+  "slug": "dental-care",
+  "nav": "Services",
+  "service": "Dental",
+  "out": "services/dental-care.html",
+  "priority": "0.7",
+  "title": "Pet Dental Care in Columbia, MS | Columbia Animal Hospital",
+  "description": "Dog and cat dental cleanings in Columbia, Mississippi. Why tartar matters for the heart, liver and kidneys, and when to start. Call (601) 736-3041."
+}
+-->
+
+<section class="page-head">
+  <div class="shell shell--wide">
+    <ol class="crumbs">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../services.html">Services</a></li>
+      <li><span aria-current="page">Dental care</span></li>
+    </ol>
+    <h1>Dental care</h1>
+    <p class="page-head__lede">Dental disease is the problem owners notice last and pets suffer from longest. Cleanings can start as early as one year of age.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="shell shell--wide">
+    <div class="detail">
+      <div>
+        <div class="frame frame--sage" style="margin-bottom:var(--sp-8)">
+          <div class="frame__img">
+            <img src="../assets/img/svc-dental-care.svg" width="1200" height="800" alt="A dog having its teeth examined at Columbia Animal Hospital">
+          </div>
+        </div>
+
+        <dl class="quickfacts">
+          <div><dt>Start from</dt><dd>One year of age</dd></div>
+          <div><dt>Applies to</dt><dd>Dogs and cats</dd></div>
+          <div><dt>Why it matters</dt><dd>Oral bacteria reach the bloodstream</dd></div>
+        </dl>
+
+        <div class="prose">
+          <p>Studies show that both dogs and cats need to begin regular cleanings as young as one year of age. It sounds early. The reason is that the damage begins long before anything is visible to an owner.</p>
+
+          <h2>What happens without regular cleaning</h2>
+          <p>Without regular cleaning and brushing, pets develop a thin layer of bacteria on their teeth and gum line. That layer hardens into tartar and plaque. Left unchecked, the bacteria cause tooth decay and gum disease, which makes it difficult for a dog or cat to eat most foods.</p>
+
+          <h2>Why it is not only about teeth</h2>
+          <p>Bacteria in the mouth can enter the bloodstream and cause damage to the heart, liver and kidneys, shortening the life expectancy of the pet. A mouth problem becomes an organ problem, quietly, over years.</p>
+
+          <h2>Prevention costs less than treatment</h2>
+          <p>Preventative care is always more effective and less costly than treatment of disease, and this is as true of your pet's dental health as of anything else we do here.</p>
+
+          <h2>When a cleaning is needed</h2>
+          <p>A dental cleaning is important if your pet has a large amount of tartar, has loose or decaying teeth, or did not lose all of their baby teeth. Tartar carries bacteria that can cause dental infection, infection on the heart valves, and kidney disease.</p>
+          <p>If you are not sure where your pet stands, mention it at their next visit and we will look.</p>
+        </div>
+
+        <div class="stack-actions mt-7">
+          <a class="btn" href="{{ contact.phoneLink }}">
+            <svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg>
+            Call {{ contact.phoneDisplay }}
+          </a>
+          <a class="btn btn--ghost" href="../services.html">
+            All services
+            <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+          </a>
+        </div>
+      </div>
+
+      {{> service-aside }}
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Dental care",
+  "serviceType": "Dental care",
+  "url": "{{ site.url }}/services/dental-care.html",
+  "provider": {
+    "@type": "VeterinaryCare",
+    "name": "Columbia Animal Hospital",
+    "@id": "{{ site.url }}/#practice",
+    "telephone": "{{ contact.phoneRaw }}",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "1409 Hwy 98E",
+      "addressLocality": "Columbia",
+      "addressRegion": "MS",
+      "postalCode": "39429",
+      "addressCountry": "US"
+    }
+  },
+  "areaServed": [
+    { "@type": "City", "name": "Columbia", "addressRegion": "MS" },
+    { "@type": "City", "name": "Foxworth", "addressRegion": "MS" }
+  ]
+}
+</script>

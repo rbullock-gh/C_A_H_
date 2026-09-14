@@ -1,0 +1,101 @@
+<!--json
+{
+  "slug": "heartworm-testing",
+  "nav": "Services",
+  "service": "Heartworm",
+  "out": "services/heartworm-testing.html",
+  "priority": "0.7",
+  "title": "Heartworm Testing in Columbia, MS | Columbia Animal Hospital",
+  "description": "Heartworm testing, prevention and treatment in Columbia, Mississippi. Heartworms are especially prevalent in south Mississippi. Call (601) 736-3041."
+}
+-->
+
+<section class="page-head">
+  <div class="shell shell--wide">
+    <ol class="crumbs">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../services.html">Services</a></li>
+      <li><span aria-current="page">Heartworm testing</span></li>
+    </ol>
+    <h1>Heartworm testing</h1>
+    <p class="page-head__lede">Heartworms are especially prevalent in south Mississippi. We test in-house, and results are often ready while you wait.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="shell shell--wide">
+    <div class="detail">
+      <div>
+        <div class="frame frame--sage" style="margin-bottom:var(--sp-8)">
+          <div class="frame__img">
+            <img src="../assets/img/svc-heartworm-testing.svg" width="1200" height="800" alt="A heartworm blood test being run in-house at Columbia Animal Hospital">
+          </div>
+        </div>
+
+        <dl class="quickfacts">
+          <div><dt>Results</dt><dd>Often while you wait</dd></div>
+          <div><dt>Affects</dt><dd>Dogs and cats</dd></div>
+          <div><dt>Prevention</dt><dd>Stocked at the clinic</dd></div>
+        </dl>
+
+        <div class="prose">
+          <p>Columbia Animal Hospital places special emphasis on the prevention, testing and treatment of heartworm disease. If you live in or around Columbia, this is not a theoretical risk.</p>
+
+          <h2>Why south Mississippi is different</h2>
+          <p>Mosquitoes that have previously taken a blood meal from a heartworm-positive animal can pass immature heartworms to dogs and cats by biting them. Heartworms are especially prevalent in south Mississippi because of the high number of mosquitoes that carry them. The same warm, wet climate that makes the summers what they are makes heartworm a year-round conversation.</p>
+
+          <h2>Testing</h2>
+          <p>Accurate blood tests are available to determine whether a pet has heartworm disease, and the veterinarians at Columbia Animal Hospital can perform these tests — often having results while you wait. There is no sending a sample away and waiting days to hear.</p>
+
+          <h2>Prevention</h2>
+          <p>Medications are available to prevent both dogs and cats from becoming infected with heartworms, and Columbia Animal Hospital stocks these products at the clinic with a veterinarian's recommendation behind them.</p>
+          <p>If your pet is not currently on heartworm prevention, our doctors recommend bringing them in for an evaluation rather than simply starting a product.</p>
+
+          <h2>Prevention is cheaper than treatment</h2>
+          <p>Preventing heartworm disease is always less expensive and more effective than treating it once a pet has contracted these dangerous parasites. Treatment is hard on an animal in a way that a monthly preventative is not.</p>
+        </div>
+
+        <div class="stack-actions mt-7">
+          <a class="btn" href="{{ contact.phoneLink }}">
+            <svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg>
+            Call {{ contact.phoneDisplay }}
+          </a>
+          <a class="btn btn--ghost" href="../services.html">
+            All services
+            <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+          </a>
+        </div>
+      </div>
+
+      {{> service-aside }}
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Heartworm testing",
+  "serviceType": "Heartworm testing",
+  "url": "{{ site.url }}/services/heartworm-testing.html",
+  "provider": {
+    "@type": "VeterinaryCare",
+    "name": "Columbia Animal Hospital",
+    "@id": "{{ site.url }}/#practice",
+    "telephone": "{{ contact.phoneRaw }}",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "1409 Hwy 98E",
+      "addressLocality": "Columbia",
+      "addressRegion": "MS",
+      "postalCode": "39429",
+      "addressCountry": "US"
+    }
+  },
+  "areaServed": [
+    { "@type": "City", "name": "Columbia", "addressRegion": "MS" },
+    { "@type": "City", "name": "Foxworth", "addressRegion": "MS" }
+  ]
+}
+</script>

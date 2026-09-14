@@ -1,0 +1,97 @@
+<!--json
+{
+  "slug": "dermatology",
+  "nav": "Services",
+  "service": "Dermatology",
+  "out": "services/dermatology.html",
+  "priority": "0.7",
+  "title": "Pet Dermatology in Columbia, MS | Columbia Animal Hospital",
+  "description": "Skin scrapings, ear and skin cytologies, and medicated baths for itching and infection, at our Columbia, Mississippi hospital. Call (601) 736-3041."
+}
+-->
+
+<section class="page-head">
+  <div class="shell shell--wide">
+    <ol class="crumbs">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../services.html">Services</a></li>
+      <li><span aria-current="page">Dermatology</span></li>
+    </ol>
+    <h1>Dermatology</h1>
+    <p class="page-head__lede">Constant scratching, a smell from the ears, hair coming out in patches — skin problems are miserable for a pet and rarely resolve on their own.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="shell shell--wide">
+    <div class="detail">
+      <div>
+        <div class="frame frame--sage" style="margin-bottom:var(--sp-8)">
+          <div class="frame__img">
+            <img src="../assets/img/svc-dermatology.svg" width="1200" height="800" alt="A veterinarian examining a dog for a skin condition at Columbia Animal Hospital">
+          </div>
+        </div>
+
+        <dl class="quickfacts">
+          <div><dt>Diagnostics</dt><dd>Skin scrapings and cytologies</dd></div>
+          <div><dt>Ears</dt><dd>Ear cytologies</dd></div>
+          <div><dt>Treatment</dt><dd>Medicated baths</dd></div>
+        </dl>
+
+        <div class="prose">
+          <p>Skin and ear complaints are among the most common reasons pets are brought to us, and among the most frustrating for owners — because the itching is visible long before the cause is.</p>
+
+          <h2>Finding out what is actually going on</h2>
+          <p>Our dermatology services include skin scrapings, ear cytologies and skin cytologies. These are quick, in-house tests that tell us whether we are dealing with parasites, a bacterial infection, a yeast overgrowth, or something else — which matters, because the treatments are not interchangeable.</p>
+
+          <h2>Medicated baths</h2>
+          <p>We also offer medicated baths to help manage skin infections and dermatitis. Our grooming team can carry these out, which means a pet with an ongoing skin condition can be bathed by people who already know their history.</p>
+
+          <h2>When to bring your pet in</h2>
+          <p>Scratching that does not settle, head-shaking, a smell from the ears, redness between the toes, or bald patches are all worth a look. Skin conditions tend to get more entrenched — and more expensive — the longer they run.</p>
+        </div>
+
+        <div class="stack-actions mt-7">
+          <a class="btn" href="{{ contact.phoneLink }}">
+            <svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg>
+            Call {{ contact.phoneDisplay }}
+          </a>
+          <a class="btn btn--ghost" href="../services.html">
+            All services
+            <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+          </a>
+        </div>
+      </div>
+
+      {{> service-aside }}
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Dermatology",
+  "serviceType": "Dermatology",
+  "url": "{{ site.url }}/services/dermatology.html",
+  "provider": {
+    "@type": "VeterinaryCare",
+    "name": "Columbia Animal Hospital",
+    "@id": "{{ site.url }}/#practice",
+    "telephone": "{{ contact.phoneRaw }}",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "1409 Hwy 98E",
+      "addressLocality": "Columbia",
+      "addressRegion": "MS",
+      "postalCode": "39429",
+      "addressCountry": "US"
+    }
+  },
+  "areaServed": [
+    { "@type": "City", "name": "Columbia", "addressRegion": "MS" },
+    { "@type": "City", "name": "Foxworth", "addressRegion": "MS" }
+  ]
+}
+</script>

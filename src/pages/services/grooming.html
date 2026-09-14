@@ -1,0 +1,97 @@
+<!--json
+{
+  "slug": "grooming",
+  "nav": "Services",
+  "service": "Grooming",
+  "out": "services/grooming.html",
+  "priority": "0.7",
+  "title": "Pet Grooming in Columbia, MS | Columbia Animal Hospital",
+  "description": "Pet grooming in Columbia, Mississippi \u2014 trimming, cleaning and medicated bathing by experienced groomers. Book ahead: call (601) 736-3041."
+}
+-->
+
+<section class="page-head">
+  <div class="shell shell--wide">
+    <ol class="crumbs">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../services.html">Services</a></li>
+      <li><span aria-current="page">Grooming</span></li>
+    </ol>
+    <h1>Grooming</h1>
+    <p class="page-head__lede">Experienced groomers who have been keeping pets in the Columbia area looking and feeling their best for many years.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="shell shell--wide">
+    <div class="detail">
+      <div>
+        <div class="frame frame--sage" style="margin-bottom:var(--sp-8)">
+          <div class="frame__img">
+            <img src="../assets/img/svc-grooming.svg" width="1200" height="800" alt="A groomer working with a dog at Columbia Animal Hospital in Columbia, Mississippi">
+          </div>
+        </div>
+
+        <dl class="quickfacts">
+          <div><dt>Includes</dt><dd>Trimming, cleaning, brushing</dd></div>
+          <div><dt>Also offered</dt><dd>Medicated bathing</dd></div>
+          <div><dt>Booking</dt><dd>Groomers book up quickly</dd></div>
+        </dl>
+
+        <div class="prose">
+          <p>Keeping your pet's hair cut, cleaned and brushed is important — it prevents matting and helps keep them cool and clean, which in a Mississippi summer is not a small thing.</p>
+
+          <h2>What our groomers do</h2>
+          <p>Our services run from trimming and cleaning through to medicated bathing for pets with skin conditions. Because the grooming room is inside a veterinary hospital, a pet whose skin is being treated can be bathed by people who already have their notes.</p>
+
+          <h2>Experienced hands</h2>
+          <p>Our experienced groomers have been keeping pets in the Columbia area looking and feeling their best for many years. Nervous dogs, matted coats and cats who have opinions about water are all familiar territory.</p>
+
+          <h2>Book ahead</h2>
+          <p>The groomers at Columbia Animal Hospital are very popular and can often book up quickly. If you have a date in mind — before a holiday, or before the weather turns warm — it is worth calling well in advance.</p>
+        </div>
+
+        <div class="stack-actions mt-7">
+          <a class="btn" href="{{ contact.phoneLink }}">
+            <svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg>
+            Call {{ contact.phoneDisplay }}
+          </a>
+          <a class="btn btn--ghost" href="../services.html">
+            All services
+            <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+          </a>
+        </div>
+      </div>
+
+      {{> service-aside }}
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Grooming",
+  "serviceType": "Grooming",
+  "url": "{{ site.url }}/services/grooming.html",
+  "provider": {
+    "@type": "VeterinaryCare",
+    "name": "Columbia Animal Hospital",
+    "@id": "{{ site.url }}/#practice",
+    "telephone": "{{ contact.phoneRaw }}",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "1409 Hwy 98E",
+      "addressLocality": "Columbia",
+      "addressRegion": "MS",
+      "postalCode": "39429",
+      "addressCountry": "US"
+    }
+  },
+  "areaServed": [
+    { "@type": "City", "name": "Columbia", "addressRegion": "MS" },
+    { "@type": "City", "name": "Foxworth", "addressRegion": "MS" }
+  ]
+}
+</script>

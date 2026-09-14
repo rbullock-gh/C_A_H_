@@ -1,0 +1,97 @@
+<!--json
+{
+  "slug": "microchipping",
+  "nav": "Services",
+  "service": "Microchipping",
+  "out": "services/microchipping.html",
+  "priority": "0.7",
+  "title": "Pet Microchipping in Columbia, MS | Columbia Animal Hospital",
+  "description": "Pet microchipping at Columbia Animal Hospital in Columbia, Mississippi. Permanent identification with a code unique to your pet. Call (601) 736-3041."
+}
+-->
+
+<section class="page-head">
+  <div class="shell shell--wide">
+    <ol class="crumbs">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../services.html">Services</a></li>
+      <li><span aria-current="page">Microchipping</span></li>
+    </ol>
+    <h1>Microchipping</h1>
+    <p class="page-head__lede">A collar can come off. A microchip is permanent identification that stays with your pet for life.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="shell shell--wide">
+    <div class="detail">
+      <div>
+        <div class="frame frame--sage" style="margin-bottom:var(--sp-8)">
+          <div class="frame__img">
+            <img src="../assets/img/svc-microchipping.svg" width="1200" height="800" alt="A microchip scanner being passed over a pet at Columbia Animal Hospital">
+          </div>
+        </div>
+
+        <dl class="quickfacts">
+          <div><dt>Type</dt><dd>Permanent identification</dd></div>
+          <div><dt>Code</dt><dd>Unique to your pet</dd></div>
+          <div><dt>Read by</dt><dd>Most clinics and shelters</dd></div>
+        </dl>
+
+        <div class="prose">
+          <p>Microchips are a permanent form of identification. Each microchip contains a code which is unique to your pet.</p>
+
+          <h2>How it helps when a pet goes missing</h2>
+          <p>In the event your furry friend is lost, they can be taken to most veterinary clinics and animal shelters, where they can be scanned and identified as your pet. A collar and tag can be lost, removed or worn illegible; a chip cannot.</p>
+
+          <h2>Having it done</h2>
+          <p>Microchipping is quick and is often done during a routine visit — many owners have it done at the same time as a spay or neuter, while the pet is already here. Call the hospital and we will fit it into your next appointment.</p>
+
+          <h2>Keep your details current</h2>
+          <p>A microchip only works if the contact details attached to it are up to date. If you move house or change your phone number, update the registration.</p>
+        </div>
+
+        <div class="stack-actions mt-7">
+          <a class="btn" href="{{ contact.phoneLink }}">
+            <svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg>
+            Call {{ contact.phoneDisplay }}
+          </a>
+          <a class="btn btn--ghost" href="../services.html">
+            All services
+            <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+          </a>
+        </div>
+      </div>
+
+      {{> service-aside }}
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Microchipping",
+  "serviceType": "Microchipping",
+  "url": "{{ site.url }}/services/microchipping.html",
+  "provider": {
+    "@type": "VeterinaryCare",
+    "name": "Columbia Animal Hospital",
+    "@id": "{{ site.url }}/#practice",
+    "telephone": "{{ contact.phoneRaw }}",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "1409 Hwy 98E",
+      "addressLocality": "Columbia",
+      "addressRegion": "MS",
+      "postalCode": "39429",
+      "addressCountry": "US"
+    }
+  },
+  "areaServed": [
+    { "@type": "City", "name": "Columbia", "addressRegion": "MS" },
+    { "@type": "City", "name": "Foxworth", "addressRegion": "MS" }
+  ]
+}
+</script>

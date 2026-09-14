@@ -1,0 +1,65 @@
+<header class="header" data-header>
+  <div class="shell shell--wide header__bar">
+    <a class="brand" href="{{# base | raw }}index.html">
+      <img class="brand__mark" src="{{# base | raw }}assets/img/logo-mark.svg" width="46" height="46" alt="" aria-hidden="true">
+      <span class="brand__text">
+        <span class="brand__name">Columbia Animal Hospital</span>
+        <span class="brand__place">Columbia, Mississippi</span>
+      </span>
+    </a>
+
+    <nav class="nav" aria-label="Main">
+      <ul class="nav__list">
+        <li><a class="nav__link" href="{{# base | raw }}index.html"{{# navHome | raw }}>Home</a></li>
+        <li><a class="nav__link" href="{{# base | raw }}about.html"{{# navAbout | raw }}>About</a></li>
+        <li><a class="nav__link" href="{{# base | raw }}veterinarians.html"{{# navVets | raw }}>Our Veterinarians</a></li>
+        <li><a class="nav__link" href="{{# base | raw }}services.html"{{# navServices | raw }}>Services</a></li>
+        <li><a class="nav__link" href="{{# base | raw }}faq.html"{{# navFaq | raw }}>FAQ</a></li>
+        <li><a class="nav__link" href="{{# base | raw }}contact.html"{{# navContact | raw }}>Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="header__actions">
+      <a class="header__phone" href="{{ contact.phoneLink }}">
+        <svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg>
+        <span class="header__phone-text">
+          <strong>{{ contact.phoneDisplay }}</strong>
+          <span>Call the hospital</span>
+        </span>
+      </a>
+      <a class="btn" href="{{ contact.phoneLink }}">
+        <svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg>
+        <span class="btn__label">Call to schedule</span>
+      </a>
+      <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="nav-panel">
+        <svg class="icon nav-toggle__open" aria-hidden="true"><use href="#i-menu"></use></svg>
+        <svg class="icon nav-toggle__close" aria-hidden="true"><use href="#i-close"></use></svg>
+        <span class="visually-hidden">Menu</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="nav-panel" id="nav-panel" data-nav-panel>
+    <nav aria-label="Mobile">
+      <ul class="nav-panel__list">
+        <li><a class="nav-panel__link" href="{{# base | raw }}index.html">Home <svg class="icon" aria-hidden="true"><use href="#i-chevron-right"></use></svg></a></li>
+        <li><a class="nav-panel__link" href="{{# base | raw }}about.html">About <svg class="icon" aria-hidden="true"><use href="#i-chevron-right"></use></svg></a></li>
+        <li><a class="nav-panel__link" href="{{# base | raw }}veterinarians.html">Our Veterinarians <svg class="icon" aria-hidden="true"><use href="#i-chevron-right"></use></svg></a></li>
+        <li><a class="nav-panel__link" href="{{# base | raw }}services.html">Services <svg class="icon" aria-hidden="true"><use href="#i-chevron-right"></use></svg></a></li>
+        <li><a class="nav-panel__link" href="{{# base | raw }}faq.html">FAQ <svg class="icon" aria-hidden="true"><use href="#i-chevron-right"></use></svg></a></li>
+        <li><a class="nav-panel__link" href="{{# base | raw }}contact.html">Contact &amp; Directions <svg class="icon" aria-hidden="true"><use href="#i-chevron-right"></use></svg></a></li>
+      </ul>
+    </nav>
+    <div class="nav-panel__cta">
+      <a class="btn btn--lg" href="{{ contact.phoneLink }}">
+        <svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg>
+        {{ contact.phoneDisplay }}
+      </a>
+      <a class="btn btn--ghost" href="{{ contact.directionsUrl }}" target="_blank" rel="noopener">
+        <svg class="icon" aria-hidden="true"><use href="#i-directions"></use></svg>
+        Get directions
+      </a>
+    </div>
+    <p class="nav-panel__hours">{{ contact.addressOneLine }}<br>{{ hours.summary }}</p>
+  </div>
+</header>

@@ -1,0 +1,74 @@
+<footer class="footer">
+  <div class="shell shell--wide">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <a class="brand" href="{{# base | raw }}index.html">
+          <img class="brand__mark" src="{{# base | raw }}assets/img/logo-mark.svg" width="46" height="46" alt="" aria-hidden="true">
+          <span class="brand__text">
+            <span class="brand__name">Columbia Animal Hospital</span>
+            <span class="brand__place">Columbia, Mississippi</span>
+          </span>
+        </a>
+        <p>Caring for the dogs and cats of Columbia and Foxworth since 1975.</p>
+        <div class="social">
+          <a href="{{ contact.facebook }}" target="_blank" rel="noopener">
+            <svg class="icon" aria-hidden="true"><use href="#i-facebook"></use></svg>
+            <span class="visually-hidden">Columbia Animal Hospital on Facebook</span>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <h2>Pages</h2>
+        <ul class="footer__list">
+          <li><a href="{{# base | raw }}index.html">Home</a></li>
+          <li><a href="{{# base | raw }}about.html">About the hospital</a></li>
+          <li><a href="{{# base | raw }}veterinarians.html">Our veterinarians</a></li>
+          <li><a href="{{# base | raw }}services.html">Services</a></li>
+          <li><a href="{{# base | raw }}faq.html">Questions we hear often</a></li>
+          <li><a href="{{# base | raw }}contact.html">Contact &amp; directions</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h2>Services</h2>
+        <ul class="footer__list">
+          <li><a href="{{# base | raw }}services/surgery.html">Surgery</a></li>
+          <li><a href="{{# base | raw }}services/dental-care.html">Dental care</a></li>
+          <li><a href="{{# base | raw }}services/digital-radiography.html">Digital radiography</a></li>
+          <li><a href="{{# base | raw }}services/heartworm-testing.html">Heartworm testing</a></li>
+          <li><a href="{{# base | raw }}services/dermatology.html">Dermatology</a></li>
+          <li><a href="{{# base | raw }}services/grooming.html">Grooming</a></li>
+          <li><a href="{{# base | raw }}services/boarding.html">Boarding</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h2>Visit us</h2>
+        <address>
+          1409 Hwy 98E<br>
+          Columbia, MS 39429
+        </address>
+        <a class="footer__phone" href="{{ contact.phoneLink }}">{{ contact.phoneDisplay }}</a>
+        <ul class="footer__hours">
+          <li><span>Mon – Fri</span> <span class="time">{{ hours.weekdays }}</span></li>
+          <li><span>Saturday</span> <span class="time">{{ hours.saturday }}</span></li>
+          <li><span>Sunday</span> <span class="time">{{ hours.sunday }}</span></li>
+        </ul>
+        <p style="margin-top:var(--sp-4);font-size:var(--step--1);line-height:1.6">
+          An on-call veterinarian is available after hours for emergencies. We are not a
+          24-hour emergency hospital.
+        </p>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <p>&copy; 2026 Columbia Animal Hospital. All rights reserved.</p>
+      <nav aria-label="Footer">
+        <a href="{{# base | raw }}contact.html">Contact</a>
+        <a href="{{ contact.directionsUrl }}" target="_blank" rel="noopener">Directions</a>
+        <a href="{{ contact.phoneLink }}">{{ contact.phoneDisplay }}</a>
+      </nav>
+    </div>
+  </div>
+</footer>
