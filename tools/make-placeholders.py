@@ -23,7 +23,7 @@ OUT = ROOT / "assets" / "img"
 
 # slot: (width, height, variant, description shown on the placeholder)
 SLOTS = {
-    "hero-care": (1800, 1100, "plain", "Veterinarian examining a dog, warm natural light"),
+    "hero-care": (1536, 1024, "plain", "Three dogs on a white studio background (client supplied)"),
     "closer-community": (1800, 900, "plain", "Owner with their dog outside the hospital"),
     "why-exam": (1200, 900, "labelled", "Technician holding a cat during an exam"),
     "about-hospital": (1200, 900, "labelled", "Exterior of the hospital on Hwy 98E, signage visible"),
@@ -114,6 +114,12 @@ def main() -> int:
     OUT.mkdir(parents=True, exist_ok=True)
     total = 0
     for name, (w, h, variant, desc) in SLOTS.items():
+        # A slot that already holds a real photograph is left alone — regenerating
+        # a placeholder beside it would leave an orphan file and invite confusion.
+        real = next((f for f in OUT.glob(f"{name}.*") if f.suffix != ".svg"), None)
+        if real:
+            print(f"    {name + '.svg':<36} skipped — {real.name} is in place")
+            continue
         path = OUT / f"{name}.svg"
         path.write_text(build(name, w, h, variant, desc), encoding="utf-8")
         total += path.stat().st_size
@@ -123,4 +129,7 @@ def main() -> int:
 
 
 if __name__ == "__main__":
-    raise SystemExit(main())
+    try:
+        raise SystemExit(main())
+    except BrokenPipeError:      # output piped into head/less
+        raise SystemExit(0)

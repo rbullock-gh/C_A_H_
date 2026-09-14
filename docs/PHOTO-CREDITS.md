@@ -12,12 +12,12 @@ each photo in `incoming/` before importing it.
 
 | Slot | File | Shows | Credit / licence |
 |---|---|---|---|
+| `hero-care` | `hero-care.webp` | Three dogs on a white studio background (client supplied) | Supplied by the client. Source and licence not recorded — confirm commercial usage rights before launch. |
 
 ## Still on placeholders
 
 These slots have no real photograph yet:
 
-- `hero-care` — Veterinarian examining a dog, warm natural light
 - `closer-community` — Owner with their dog outside the hospital
 - `why-exam` — Technician holding a cat during an exam
 - `about-hospital` — Exterior of the hospital on Hwy 98E, signage visible

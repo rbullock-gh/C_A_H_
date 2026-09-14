@@ -65,7 +65,7 @@ blue-filtered clinical interiors, and anything with visible non-US signage or br
 
 | Slot | Size | Type | The shot | Used on |
 |---|---|---|---|---|
-| `hero-care.svg` | 1800×1100 | plain | Veterinarian examining a dog, warm natural light | `index.html` |
+| ~~`hero-care`~~ | 1536×1024 | **filled** | Three dogs on a white studio background — supplied by the client, in place as `hero-care.webp` | `index.html` |
 | `closer-community.svg` | 1800×900 | plain | Owner with their dog outside the hospital | `about.html`, `index.html` |
 | `why-exam.svg` | 1200×900 | labelled | Technician holding a cat during an exam | `index.html`, `services.html` |
 | `about-hospital.svg` | 1200×900 | labelled | Exterior of the hospital on Hwy 98E, signage visible | `about.html` |
@@ -88,7 +88,7 @@ blue-filtered clinical interiors, and anything with visible non-US signage or br
 
 If only a few photographs can be taken, take these five:
 
-1. **`hero-care`** — the first thing every visitor sees.
+1. ~~**`hero-care`**~~ — done. The client supplied the three-dog studio photograph.
 2. **`vet-loper`, `vet-sanford`, `vet-williams`** — faces build more trust than any
    amount of copy, and they are the reason someone chooses one practice over another.
 3. **`contact-building`** — so a first-time client recognizes the building from the road.

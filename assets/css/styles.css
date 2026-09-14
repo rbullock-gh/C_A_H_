@@ -492,31 +492,61 @@ strong { font-weight: 600; color: var(--ink); }
 
 /* --------------------------------------------------------------------------
    HERO
-   Full-bleed photograph, forest scrim, and a content card that overlaps the
-   image's lower edge so the hero does not read as a flat banner.
+   A split, not an overlay. The supplied photograph is studio work on a white
+   ground; a scrim dark enough to carry white headline type over it would turn
+   that white to mud and crush the dogs. So the type gets its own forest panel
+   and the photograph keeps its own light ground, bottom-aligned so the dogs sit
+   on the baseline. Nothing is cropped — the image runs at its natural ratio.
    -------------------------------------------------------------------------- */
-/* The image and the content are stacked in one grid cell, so the hero grows to
-   fit whichever is taller. Absolutely positioning the content instead meant the
-   second call-to-action fell behind the overlapping strip at 1440px. */
-.hero { position: relative; display: grid; background: var(--forest-deep); }
-.hero__media { position: relative; grid-area: 1 / 1; min-height: clamp(24rem, 18rem + 24vw, 38rem); }
-.hero__media img { width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0; }
-.hero__media::after {
+.hero { display: grid; background: var(--forest-deep); }
+
+.hero__panel {
+  background: var(--forest-deep);
+  color: var(--cream);
+  display: flex;
+  align-items: center;
+  padding: var(--sp-9) var(--gutter);
+  position: relative;
+  overflow: hidden;
+}
+.hero__panel::before {
   content: '';
   position: absolute;
   inset: 0;
-  background:
-    linear-gradient(to right, rgba(20, 48, 38, 0.92) 0%, rgba(20, 48, 38, 0.72) 45%, rgba(20, 48, 38, 0.35) 100%),
-    linear-gradient(to bottom, rgba(20, 48, 38, 0.45) 0%, rgba(20, 48, 38, 0.1) 40%, rgba(20, 48, 38, 0.6) 100%);
+  background: radial-gradient(44rem 30rem at 8% 6%, rgba(44, 83, 68, 0.85), transparent 68%);
+  pointer-events: none;
 }
-.hero__inner {
-  position: relative;
-  grid-area: 1 / 1;
+.hero__content { position: relative; max-width: 34rem; }
+
+.hero__photo {
+  background: #FDFDFD;   /* the photograph's own ground — sampled from it, not guessed */
   display: flex;
-  align-items: center;
-  padding-block: var(--sp-8) calc(var(--sp-9) + 3.5rem);
+  align-items: flex-end;
+  justify-content: center;
 }
-.hero__content { max-width: 40rem; color: var(--cream); }
+
+/* On a phone the photograph leads. Stacked under the copy it sat entirely below
+   the fold, so the first screen carried no dog at all — the one thing this image
+   is here to do. At 390px it runs about 260px tall at its natural ratio, so it
+   costs little of the message. The copy panel then carries the strip overlap. */
+.hero__photo { order: -1; }
+.hero__panel { padding-bottom: calc(var(--sp-9) + var(--sp-7)); }
+.hero__photo img { width: 100%; height: auto; display: block; }
+
+@media (min-width: 62rem) {
+  .hero { grid-template-columns: minmax(0, 1fr) minmax(0, 1.18fr); align-items: stretch; }
+  /* Line the headline up with the header logo rather than centring it in the
+     panel. Padding only, on a track that can shrink, so it cannot overflow. */
+  .hero__panel {
+    padding-left: max(var(--gutter), calc((100vw - var(--shell-wide)) / 2));
+    padding-right: clamp(2rem, 0.5rem + 3vw, 4.5rem);
+    padding-block: var(--sp-9);
+    padding-bottom: calc(var(--sp-9) + var(--sp-8));
+  }
+  .hero__photo { order: 0; padding-bottom: var(--sp-8); }
+  .hero__content { max-width: 32rem; }
+}
+
 .hero h1 { color: var(--cream); }
 .hero h1 em {
   font-style: normal;
@@ -548,7 +578,6 @@ strong { font-weight: 600; color: var(--ink); }
 }
 .hero__since .icon { width: 1.1rem; height: 1.1rem; }
 
-/* The strip that overlaps the hero image */
 .hero__strip { position: relative; background: var(--cream); }
 .hero__strip .shell { position: relative; }
 .hero__strip-inner {
@@ -559,7 +588,7 @@ strong { font-weight: 600; color: var(--ink); }
   border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: var(--shadow-lg);
-  margin-top: -3.5rem;
+  margin-top: calc(var(--sp-7) * -1);
 }
 .hero__strip-item {
   display: flex;
@@ -597,7 +626,7 @@ a.hero__strip-item:hover { background: var(--cream-deep); }
 
 @media (min-width: 40rem) { .hero__strip-inner { grid-template-columns: repeat(2, 1fr); } }
 @media (min-width: 62rem) {
-  .hero__strip-inner { grid-template-columns: repeat(4, 1fr); margin-top: -4.5rem; }
+  .hero__strip-inner { grid-template-columns: repeat(4, 1fr); margin-top: calc(var(--sp-8) * -1); }
   .hero__strip-item { padding: var(--sp-6) var(--sp-5); }
 }
 

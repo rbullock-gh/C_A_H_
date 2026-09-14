@@ -119,4 +119,7 @@ def main() -> int:
 
 
 if __name__ == "__main__":
-    raise SystemExit(main())
+    try:
+        raise SystemExit(main())
+    except BrokenPipeError:      # output piped into head/less
+        raise SystemExit(0)
