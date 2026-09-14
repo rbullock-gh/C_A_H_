@@ -28,6 +28,30 @@ To record a credit, put a `.txt` file of the same name beside the photo — `her
 containing the photographer, source and licence. It is carried into
 [`PHOTO-CREDITS.md`](PHOTO-CREDITS.md).
 
+## Studio photographs on a white background
+
+A photograph shot on a white sweep looks like a box pasted onto the page when it sits
+against a coloured ground. Cut the background away instead, so the subject stands on the
+design's own colour:
+
+```bash
+pip install "rembg[cpu]"
+python3 tools/cutout.py incoming/hero-care.png
+python3 tools/photos.py import
+```
+
+`cutout.py` uses the isnet-general-use model with alpha matting — settings that held up on
+the three-dog hero, where a plain threshold key leaves a white fringe on the black dog's
+ear. It trims to the subject's bounding box so no empty margin is carried around.
+
+**Always check a cut-out against a dark ground before trusting it.** A white fringe is
+invisible on white and obvious on forest green.
+
+Two things to expect. A subject cropped by the original frame — the hero dogs are cut at
+chest level — keeps that flat edge, so anchor it to the bottom of a section where the edge
+reads as a baseline rather than a crop, or dissolve the last few percent into the ground
+behind. And transparency costs bytes: the hero is 208 kB with alpha against 161 kB flattened.
+
 ## Stock photography
 
 Licensed stock is approved for the general care and service slots. **Unsplash**, **Pexels**

@@ -12,7 +12,7 @@ each photo in `incoming/` before importing it.
 
 | Slot | File | Shows | Credit / licence |
 |---|---|---|---|
-| `hero-care` | `hero-care.webp` | Three dogs on a white studio background (client supplied) | Supplied by the client. Source and licence not recorded — confirm commercial usage rights before launch. |
+| `hero-care` | `hero-care.webp` | Three dogs, cut out on transparency (client supplied) | Supplied by the client. Background removed in-house (rembg, isnet-general-use, alpha matting). Source and licence of the original not recorded — confirm commercial usage rights before launch. |
 
 ## Still on placeholders
 

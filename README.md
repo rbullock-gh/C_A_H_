@@ -88,6 +88,7 @@ tools/
   make-brand.py         Mark, favicons, touch icon, share card
   make-placeholders.py  Photo placeholders at the real dimensions
   photos.py             Crops, resizes and wires in real photographs
+  cutout.py             Removes a photo's background, leaving transparency
   apply-photos.sh       Thin wrapper kept for the rename-only case
   set-domain.sh         Points every absolute URL at the live domain
 assets/

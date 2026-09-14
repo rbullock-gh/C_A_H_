@@ -90,7 +90,11 @@ def cmd_import(directory: pathlib.Path) -> int:
 
         with Image.open(src) as im:
             im = ImageOps.exif_transpose(im)          # honour the camera's rotation
-            im = im.convert("RGB")
+            # Cut-outs arrive with an alpha channel. Flattening them to RGB would
+            # silently paint the transparency black, so keep it when it is there.
+            transparent = im.mode in ("RGBA", "LA") or (
+                im.mode == "P" and "transparency" in im.info)
+            im = im.convert("RGBA" if transparent else "RGB")
             before = im.size
             # crop to the slot's ratio from the centre, then resize to exactly it
             im = ImageOps.fit(im, (w, h), method=Image.LANCZOS, centering=(0.5, 0.42))
@@ -112,7 +116,8 @@ def cmd_import(directory: pathlib.Path) -> int:
             "credit": credit.read_text(encoding="utf-8").strip() if credit.exists() else "",
         }
         kb = out.stat().st_size / 1024
-        print(f"  {slot:<30} {before[0]}x{before[1]} -> {w}x{h}  {kb:6.1f} kB"
+        alpha = " alpha" if transparent else ""
+        print(f"  {slot:<30} {before[0]}x{before[1]} -> {w}x{h}{alpha}  {kb:6.1f} kB"
               + ("" if ledger[slot]["credit"] else "   (no credit recorded)"))
         done += 1
 

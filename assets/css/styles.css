@@ -492,46 +492,50 @@ strong { font-weight: 600; color: var(--ink); }
 
 /* --------------------------------------------------------------------------
    HERO
-   A split, not an overlay. The supplied photograph is studio work on a white
-   ground; a scrim dark enough to carry white headline type over it would turn
-   that white to mud and crush the dogs. So the type gets its own forest panel
-   and the photograph keeps its own light ground, bottom-aligned so the dogs sit
-   on the baseline. Nothing is cropped — the image runs at its natural ratio.
+   The supplied photograph was studio work on a white ground. Rather than sit it
+   in a white panel — which read as a box pasted onto the page — the background
+   is cut away and the dogs sit directly on the forest field, bottom-anchored so
+   they stand on the hero's baseline. Two soft radials light the band: one
+   behind the headline, one under the dogs so they are not floating on flat
+   colour.
    -------------------------------------------------------------------------- */
-.hero { display: grid; background: var(--forest-deep); }
+.hero {
+  position: relative;
+  display: grid;
+  background: var(--forest-deep);
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(44rem 32rem at 4% 0%, rgba(44, 83, 68, 0.9), transparent 66%),
+    radial-gradient(34rem 22rem at 76% 100%, rgba(126, 156, 136, 0.26), transparent 72%);
+}
+.hero > * { position: relative; }
 
 .hero__panel {
-  background: var(--forest-deep);
   color: var(--cream);
   display: flex;
   align-items: center;
   padding: var(--sp-9) var(--gutter);
-  position: relative;
-  overflow: hidden;
+  padding-bottom: calc(var(--sp-9) + var(--sp-7));
 }
-.hero__panel::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(44rem 30rem at 8% 6%, rgba(44, 83, 68, 0.85), transparent 68%);
-  pointer-events: none;
-}
-.hero__content { position: relative; max-width: 34rem; }
+.hero__content { max-width: 34rem; }
 
 .hero__photo {
-  background: #FDFDFD;   /* the photograph's own ground — sampled from it, not guessed */
   display: flex;
   align-items: flex-end;
   justify-content: center;
 }
+.hero__photo img { width: 100%; height: auto; display: block; }
 
 /* On a phone the photograph leads. Stacked under the copy it sat entirely below
    the fold, so the first screen carried no dog at all — the one thing this image
-   is here to do. At 390px it runs about 260px tall at its natural ratio, so it
-   costs little of the message. The copy panel then carries the strip overlap. */
-.hero__photo { order: -1; }
-.hero__panel { padding-bottom: calc(var(--sp-9) + var(--sp-7)); }
-.hero__photo img { width: 100%; height: auto; display: block; }
+   is here to do. The copy panel below it carries the strip overlap. */
+.hero__photo { order: -1; padding-top: var(--sp-5); }
 
 @media (min-width: 62rem) {
   .hero { grid-template-columns: minmax(0, 1fr) minmax(0, 1.18fr); align-items: stretch; }
@@ -543,7 +547,7 @@ strong { font-weight: 600; color: var(--ink); }
     padding-block: var(--sp-9);
     padding-bottom: calc(var(--sp-9) + var(--sp-8));
   }
-  .hero__photo { order: 0; padding-bottom: var(--sp-8); }
+  .hero__photo { order: 0; padding-top: var(--sp-8); padding-bottom: var(--sp-8); }
   .hero__content { max-width: 32rem; }
 }
 
@@ -1390,4 +1394,15 @@ a.card:hover h3 { color: var(--forest); }
     height: 100%;
   }
   .services-grid .service-card--feature .link-arrow { margin-top: auto; }
+}
+
+/* The source photograph crops the dogs at chest level, so the cut-out has a flat
+   bottom edge. On desktop the quick-facts strip covers it. On mobile it lands
+   mid-hero and reads as a crop line, so the last few percent dissolve into the
+   forest behind — the ground is flat colour there, so the blend is invisible. */
+@media (max-width: 61.99rem) {
+  .hero__photo img {
+    -webkit-mask-image: linear-gradient(to bottom, #000 86%, transparent 100%);
+    mask-image: linear-gradient(to bottom, #000 86%, transparent 100%);
+  }
 }

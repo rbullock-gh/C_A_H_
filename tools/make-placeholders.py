@@ -23,7 +23,7 @@ OUT = ROOT / "assets" / "img"
 
 # slot: (width, height, variant, description shown on the placeholder)
 SLOTS = {
-    "hero-care": (1536, 1024, "plain", "Three dogs on a white studio background (client supplied)"),
+    "hero-care": (1536, 1016, "plain", "Three dogs, cut out on transparency (client supplied)"),
     "closer-community": (1800, 900, "plain", "Owner with their dog outside the hospital"),
     "why-exam": (1200, 900, "labelled", "Technician holding a cat during an exam"),
     "about-hospital": (1200, 900, "labelled", "Exterior of the hospital on Hwy 98E, signage visible"),
