@@ -75,7 +75,22 @@ def main() -> int:
             attr, path = m.group(1), m.group(2)
             name = path.rsplit("/", 1)[-1]
             return f'{attr}="{images[name]}"' if name in images else m.group(0)
-        return re.sub(r'(src|href)="((?:\.\./)*assets/img/[^"]+)"', repl, html)
+        html = re.sub(r'(src|href)="((?:\.\./)*assets/img/[^"]+)"', repl, html)
+
+        # srcset too. The photographs are served through <picture><source srcset>
+        # so a phone never downloads them; inlining only src left every one of
+        # them pointing at a path that does not exist inside a single file.
+        def repl_set(m):
+            out = []
+            for candidate in m.group(1).split(","):
+                parts = candidate.strip().split()
+                if not parts:
+                    continue
+                name = parts[0].rsplit("/", 1)[-1]
+                parts[0] = images.get(name, parts[0])
+                out.append(" ".join(parts))
+            return 'srcset="' + ", ".join(out) + '"'
+        return re.sub(r'srcset="([^"]+)"', repl_set, html)
 
     # ---- collect each page's <main> ---------------------------------------
     mains, titles = {}, {}
@@ -160,6 +175,14 @@ Preview build &middot; not the live site &middot; photography is placeholder
     # main.js exposes window.__cahInit for exactly this: the router calls it
     # after swapping <main>, so no surgery on the script is needed here.
     doc = doc.replace("</body>", f"{store}\n<script>\n{js}\n</script>\n{router}\n</body>")
+
+    # Nothing may still point at a file on disk: this is meant to open from a
+    # USB stick with no assets folder beside it. Fail loudly rather than ship a
+    # preview whose photographs silently resolve to nothing.
+    leftovers = sorted(set(re.findall(r'["\'(]((?:\.\./)*assets/[^"\')]+)', doc)))
+    if leftovers:
+        sys.exit("build-demo: these assets were not inlined, so the preview would "
+                 "render without them:\n  " + "\n  ".join(leftovers))
 
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(doc, encoding="utf-8")
