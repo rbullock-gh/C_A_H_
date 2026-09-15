@@ -78,12 +78,12 @@ locked door does not come back.
 
 ---
 
-## 3a. The proposal is priced
+## 3a. The proposal is ready to send
 
-`docs/proposal/columbia-animal-hospital-proposal.html` now carries a price: **$2,500 to launch
-and $150 a month**, or **$5,500 once** to own it outright. Three markers are left —
-`[[ YOUR NAME ]]`, `[[ YOUR PHONE ]]`, `[[ YOUR EMAIL ]]` — and the document must not go out
-until they are replaced and the dashed notice at the top is deleted.
+`docs/proposal/columbia-animal-hospital-proposal.html` is complete: **$2,500 to launch and
+$150 a month**, or **$5,500 once** to own it outright, prepared by Ryan Bullock,
+(769) 313-6636, ryanbullock09@gmail.com. Nothing is left blank and the draft notice is gone.
+Open it in a browser and print to PDF if a paper copy is wanted — it has a print stylesheet.
 
 ## 3b. Decide what "Request an Appointment" should do
 
