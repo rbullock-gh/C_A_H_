@@ -114,6 +114,52 @@ reviews section using this shape, which is what the styles already expect:
 Use real names with permission. An invented quote is the fastest way to lose a client's trust,
 and people local enough to be reading this will notice a name that does not exist.
 
+### What a search for existing reviews turned up
+
+Every review host is blocked from this environment, so this is what search results carried,
+not what the pages say. **Nothing found here is publishable.**
+
+- **No Google rating or review count could be verified at all.** Two scraper sites gave
+  contradictory figures — 4.7 and 5.0 — and the one with the higher figure never showed the
+  address or phone, so it may not even be this practice.
+- **Not one review anywhere carried both a reviewer's name and a date.** Several fragments
+  surfaced, one of them naming Dr. Sanford and Dr. Loper and so almost certainly genuine, but
+  anonymous, undated and second-hand is not a testimonial.
+- The Facebook figure this project recorded earlier — **94% recommend across 37 reviews** —
+  came back identically across several differently-worded searches, each time attached to the
+  right address and phone. It is still unconfirmed by us, and Facebook Recommendations is
+  yes/no, so there is no star rating to show.
+- The name collision is vicious here. The first search of the session returned praise for a
+  "Dr. Bartlett", who belongs to Columbia Animal Hospital in **Pennsylvania**. That practice
+  also owns the generic `demandforce.com/b/columbiaanimalhospital` slug. **Check the phone
+  number on anything before believing it.**
+
+**Two questions to the client settle this in a minute**, and either answer beats any amount of
+searching: *do you manage a Google Business Profile, and what does it say today?* and *what
+does Facebook show for recommendations?*
+
+### If the client wants Google reviews on the page
+
+The only legitimate route is the Google Places API, and its constraints shape the design:
+
+- **Five reviews, maximum**, and Google picks which five. More needs the Business Profile
+  APIs, which only the profile's owner can authorize.
+- **The review text may not be stored.** Google's Maps Platform terms permit caching the Place
+  ID indefinitely and coordinates for 30 days, and nothing else — so review text and author
+  names cannot go into a JSON file, a CMS, or the page's structured data. They have to be
+  fetched live on each view.
+- **Attribution is mandatory**: author name, avatar, and a link to their Google Maps profile,
+  plus the "Powered by Google" mark on any page showing Places data without a map.
+- **It will not put stars in search results.** Google treats a business's own reviews of
+  itself as self-serving and does not show review rich results for them. That is the same
+  reason there is no `aggregateRating` in this site's structured data, and
+  `tools/check.py` fails the build if one appears.
+- It needs a Google Cloud project with billing enabled. One clinic's traffic sits inside the
+  free monthly allowance, but the key cannot be issued without a card on file.
+
+Given all of that, **first-party collection is the better trade**: real names, real dates, no
+terms exposure, no bill, and the practice owns the words.
+
 ## 4. Point the site at its domain
 
 Everything absolute — canonical tags, Open Graph, Twitter cards, JSON-LD, sitemap, robots —
@@ -190,6 +236,7 @@ These directly affect map rankings and are quick wins:
 | Two Yelp pages for one business | Yelp | Merge |
 | A Yelp listing under **CARSON WALLACE DR** at the same address | Yelp | Merge or remove |
 | An unclaimed Facebook place page | Facebook | Merge into the real page |
+| Searches surface the **Pennsylvania** practice's review pages | Demandforce, GeniusVets | Nothing to fix directly — one more reason to build up the Google profile, which does carry the right address |
 | Site indexed at both `columbiaanimalhospital.net` and `columbiaanimalhospital.vetsourcecms.com` | Old host | Redirect the CMS subdomain, or have it de-indexed |
 | `Boarding.aspx` and `DrBridgettWilliams.aspx` indexed over **http** | Old host | Force HTTPS sitewide |
 
