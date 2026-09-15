@@ -73,5 +73,10 @@
     "file": "vet-williams.webp",
     "describes": "Dr. Bridgett Williams holding a kitten (client supplied)",
     "credit": "Supplied by the client. The practice's own veterinarian at work in the hospital. The person is identifiable \u2014 confirm consent before publishing."
+  },
+  "why-exam": {
+    "file": "why-exam.webp",
+    "describes": "Technician holding a cat during an exam",
+    "credit": "Supplied by the client. Generic clinical photograph, not this practice's own exam room \u2014 the alt text and caption say so. Source and licence of the original not recorded; confirm commercial usage rights before launch. No identifiable person is shown."
   }
 }

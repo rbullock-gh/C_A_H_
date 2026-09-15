@@ -13,6 +13,7 @@ each photo in `incoming/` before importing it.
 | Slot | File | Shows | Credit / licence |
 |---|---|---|---|
 | `hero-care` | `hero-care.webp` | Three dogs, cut out on transparency (client supplied) | Supplied by the client. Background removed in-house (rembg, isnet-general-use, alpha matting). Source and licence of the original not recorded — confirm commercial usage rights before launch. |
+| `why-exam` | `why-exam.webp` | Technician holding a cat during an exam | Supplied by the client. Generic clinical photograph, not this practice's own exam room — the alt text and caption say so. Source and licence of the original not recorded; confirm commercial usage rights before launch. No identifiable person is shown. |
 | `about-hospital` | `about-hospital.webp` | Exterior of the hospital on Hwy 98E, signage visible | Supplied by the client and placed at their explicit direction. NOT VERIFIED AS THIS PRACTICE: the sign in the photograph reads 903-234-0869 with a single-dog logo on green, where Columbia Animal Hospital of Columbia MS is 601-736-3041 with a dog-and-cat logo on black. 903 is an East Texas area code. Confirm or replace before launch. |
 | `vet-loper` | `vet-loper.webp` | Dr. Janelle Loper examining a corgi (client supplied) | Supplied by the client. The practice's own veterinarian at work in the hospital. The person is identifiable — confirm consent before publishing. |
 | `vet-sanford` | `vet-sanford.webp` | Dr. Pat Sanford examining a puppy (client supplied) | Supplied by the client. The practice's own veterinarian at work in the hospital. The person is identifiable — confirm consent before publishing. |
@@ -33,7 +34,6 @@ each photo in `incoming/` before importing it.
 These slots have no real photograph yet:
 
 - `closer-community` — Owner with their dog outside the hospital
-- `why-exam` — Technician holding a cat during an exam
 - `about-history` — Older photograph of the practice, or the building today
 - `svc-surgery` — Surgical suite, prepped and clean
 - `svc-dental-care` — Dental cleaning in progress, or a dog's teeth
