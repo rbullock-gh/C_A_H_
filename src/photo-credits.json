@@ -3,5 +3,20 @@
     "file": "hero-care.webp",
     "describes": "Three dogs, cut out on transparency (client supplied)",
     "credit": "Supplied by the client. Background removed in-house (rembg, isnet-general-use, alpha matting). Source and licence of the original not recorded \u2014 confirm commercial usage rights before launch."
+  },
+  "cta-dog": {
+    "file": "cta-dog.webp",
+    "describes": "Cut-out dog for the closing call to action (client supplied)",
+    "credit": "Supplied by the client. Background removed in-house (rembg, isnet-general-use, alpha matting). Source and licence of the original not recorded \u2014 confirm commercial usage rights before launch."
+  },
+  "reviews-dog": {
+    "file": "reviews-dog.webp",
+    "describes": "Cut-out dog for the reviews panel (client supplied)",
+    "credit": "Supplied by the client. Background removed in-house (rembg, isnet-general-use, alpha matting). Source and licence of the original not recorded \u2014 confirm commercial usage rights before launch."
+  },
+  "welcome-dog": {
+    "file": "welcome-dog.webp",
+    "describes": "Cut-out dog with paws over an edge (client supplied)",
+    "credit": "Supplied by the client. Background removed in-house (rembg, isnet-general-use, alpha matting). Source and licence of the original not recorded \u2014 confirm commercial usage rights before launch."
   }
 }

@@ -46,6 +46,9 @@ SLOTS = {
     "gallery-exam": (1000, 1000, "labelled", "An exam room, clean and well lit"),
     "gallery-treatment": (1000, 1000, "labelled", "Treatment area or laboratory bench"),
     "gallery-boarding": (1000, 1000, "labelled", "A boarding run, or a dog on its daily walk"),
+    "reviews-dog": (804, 1112, "plain", "Cut-out dog for the reviews panel (client supplied)"),
+    "cta-dog": (717, 1197, "plain", "Cut-out dog for the closing call to action (client supplied)"),
+    "welcome-dog": (977, 855, "plain", "Cut-out dog with paws over an edge (client supplied)"),
 }
 
 CREAM = "#F0E9DC"

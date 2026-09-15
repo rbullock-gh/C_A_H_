@@ -13,6 +13,9 @@ each photo in `incoming/` before importing it.
 | Slot | File | Shows | Credit / licence |
 |---|---|---|---|
 | `hero-care` | `hero-care.webp` | Three dogs, cut out on transparency (client supplied) | Supplied by the client. Background removed in-house (rembg, isnet-general-use, alpha matting). Source and licence of the original not recorded — confirm commercial usage rights before launch. |
+| `reviews-dog` | `reviews-dog.webp` | Cut-out dog for the reviews panel (client supplied) | Supplied by the client. Background removed in-house (rembg, isnet-general-use, alpha matting). Source and licence of the original not recorded — confirm commercial usage rights before launch. |
+| `cta-dog` | `cta-dog.webp` | Cut-out dog for the closing call to action (client supplied) | Supplied by the client. Background removed in-house (rembg, isnet-general-use, alpha matting). Source and licence of the original not recorded — confirm commercial usage rights before launch. |
+| `welcome-dog` | `welcome-dog.webp` | Cut-out dog with paws over an edge (client supplied) | Supplied by the client. Background removed in-house (rembg, isnet-general-use, alpha matting). Source and licence of the original not recorded — confirm commercial usage rights before launch. |
 
 ## Still on placeholders
 
@@ -35,3 +38,8 @@ These slots have no real photograph yet:
 - `svc-microchipping` — Scanner being passed over a pet's shoulders
 - `svc-reproductive-services` — Puppies or a nursing mother, calm setting
 - `contact-building` — The building and car park from the road
+- `gallery-welcome` — A dog greeted at the front desk
+- `gallery-reception` — Reception and waiting area
+- `gallery-exam` — An exam room, clean and well lit
+- `gallery-treatment` — Treatment area or laboratory bench
+- `gallery-boarding` — A boarding run, or a dog on its daily walk

@@ -1079,6 +1079,69 @@ a.card:hover .icon-tile { background: var(--amber); color: var(--ink); transform
   .header__bar { gap: var(--sp-3); }
 }
 
+/* --------------------------------------------------------------------------
+   CUT-OUT DOGS
+   Studio portraits with their backgrounds removed, so they stand on the page's
+   own colour instead of arriving in a white box. Each is placed where its own
+   composition points: the two that look back across the page sit on the right
+   of a split, and the one photographed with its paws over an edge is anchored
+   to a section's lower border so the paws rest on it.
+
+   All three are desktop-and-tablet only. They are decorative, they are the
+   heaviest thing in their sections, and a phone should not pay for them — so
+   each is served through a <source media> rather than merely hidden, which
+   measurement showed still downloads the file.
+   -------------------------------------------------------------------------- */
+.review-panel__photo { display: none; }
+.review-panel__photo img { width: 100%; height: auto; display: block; }
+
+@media (min-width: 58rem) {
+  /* The panel clips, because the source frame cut this dog off at its right
+     edge. Bleeding the photograph into the panel's own border makes that flat
+     edge the panel boundary rather than a rectangle floating inside it. */
+  .review-panel { grid-template-columns: 1.15fr 0.85fr; align-items: end; overflow: hidden; }
+  .review-panel__photo {
+    display: block;
+    align-self: end;
+    margin-bottom: calc(var(--sp-9) * -1);
+    margin-right: calc(var(--sp-9) * -1);
+  }
+  .review-panel__photo img { max-width: 19rem; margin-left: auto; }
+}
+
+/* Closing call to action, split variant — used where a photograph is present */
+.closer__grid { display: grid; gap: var(--sp-7); align-items: end; }
+.closer--split .closer__inner { text-align: center; max-width: 48rem; }
+.closer__photo { display: none; }
+.closer__photo img { width: 100%; height: auto; display: block; }
+
+@media (min-width: 64rem) {
+  .closer--split .closer__grid { grid-template-columns: 1.12fr 0.88fr; }
+  .closer--split .closer__inner {
+    text-align: left; margin-inline: 0; align-self: center;
+    padding-bottom: var(--sp-6);
+  }
+  .closer--split .closer__actions { justify-content: flex-start; }
+  .closer--split { padding-bottom: 0; }
+  .closer__photo { display: block; margin-right: calc(var(--gutter) * -1); }
+  .closer__photo img { max-width: 21rem; margin-left: auto; }
+}
+
+/* A dog with its paws over an edge, resting on a page head's lower border */
+.page-head__dog { display: none; }
+@media (min-width: 64rem) {
+  .page-head { padding-bottom: var(--sp-10); }
+  .page-head__dog {
+    display: block;
+    position: absolute;
+    right: clamp(1rem, -2rem + 6vw, 5rem);
+    bottom: 0;
+    width: clamp(15rem, 6rem + 16vw, 21rem);
+    height: auto;
+    pointer-events: none;
+  }
+}
+
 </style>
 
 
@@ -1496,9 +1559,7 @@ Preview build &middot; not the live site &middot; photography is placeholder
           family members.
         </blockquote>
         <cite>Our mission, and the standard we ask to be judged against</cite>
-      </div>
-      <div>
-        <p style="font-size:var(--step-0);line-height:1.72;color:var(--muted)">
+        <p style="margin-top:var(--sp-7);font-size:var(--step-0);line-height:1.72;color:var(--muted)">
           Our clients leave reviews on our Facebook page, where you can read them in full and
           in their own words rather than as selected quotes.
         </p>
@@ -1508,10 +1569,14 @@ Preview build &middot; not the live site &middot; photography is placeholder
             Read reviews on Facebook
           </a>
         </div>
-        <p style="margin-top:var(--sp-5);font-size:var(--step--1);color:var(--muted)">
-          Been in to see us? A few words about your visit helps other pet owners in Columbia
-          find their way to us.
-        </p>
+      </div>
+      <div class="review-panel__photo">
+        <picture>
+          <source media="(min-width: 58rem)" srcset="assets/img/reviews-dog.webp">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+               width="804" height="1112" loading="lazy"
+               alt="A cocker spaniel with a tilted head, looking across the page">
+        </picture>
       </div>
     </div>
   </div>
@@ -1712,8 +1777,9 @@ Preview build &middot; not the live site &middot; photography is placeholder
   </div>
 </section>
 
-<section class="section section--lg closer">
-  <div class="shell">
+<section class="section section--lg closer closer--split">
+  <div class="shell shell--wide">
+   <div class="closer__grid">
     <div class="closer__inner reveal">
       <h2>Your pet deserves compassionate, experienced care.</h2>
       <p>
@@ -1732,6 +1798,15 @@ Preview build &middot; not the live site &middot; photography is placeholder
       </div>
       <p class="closer__meta">1409 Hwy 98E, Columbia, MS 39429 &middot; Mon–Fri 7:30 AM – 5:30 PM · Sat 8:00 AM – 12:00 PM · Sun closed</p>
     </div>
+    <div class="closer__photo reveal" data-delay="1">
+      <picture>
+        <source media="(min-width: 64rem)" srcset="assets/img/cta-dog.webp">
+        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+             width="717" height="1197" loading="lazy"
+             alt="A shiba inu smiling, looking across the page">
+      </picture>
+    </div>
+   </div>
   </div>
 </section>
 
@@ -2553,6 +2628,12 @@ Preview build &middot; not the live site &middot; photography is placeholder
       </a>
     </div>
   </div>
+    <picture>
+      <source media="(min-width: 64rem)" srcset="assets/img/welcome-dog.webp">
+      <img class="page-head__dog" width="977" height="855" loading="lazy"
+           src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+           alt="A tricolour collie resting its paws over an edge, looking at the camera">
+    </picture>
 </section>
 
 <section class="section section--lg">
