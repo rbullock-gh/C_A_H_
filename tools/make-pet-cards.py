@@ -22,14 +22,19 @@ W, H = 640, 480
 
 # source stem, name, centre x, centre y, half crop width
 CARDS = [
-    # the trio sit shoulder to shoulder, so these three are kept narrow enough
-    # not to catch a slice of the neighbouring dog
-    ("hero-care",   "brindle",  330,  470, 235),
-    ("hero-care",   "collie",   800,  400, 225),
-    ("hero-care",   "terrier", 1250,  470, 230),
-    ("reviews-dog", "cocker",   400,  380, 340),
-    ("cta-dog",     "shiba",    350,  380, 330),
-    ("welcome-dog", "aussie",   490,  340, 330),
+    # the trio sit shoulder to shoulder in the group photograph, so these three
+    # are kept narrow enough not to catch a slice of the neighbouring dog
+    ("hero-care",          "brindle",       330,  395, 250),
+    ("hero-care",          "collie",        800,  330, 240),
+    ("hero-care",          "terrier",      1250,  405, 245),
+    ("reviews-dog",        "cocker",        400,  380, 340),
+    # single-subject studio portraits: centred, so the crop just frames the head
+    # and upper chest
+    ("pet-shepherd",       "shepherd",      627,  520, 470),
+    ("pet-kitten-ginger",  "kitten-ginger", 627,  560, 440),
+    ("pet-kitten-tabby",   "kitten-tabby",  627,  560, 440),
+    ("pet-cat-tuxedo",     "cat-tuxedo",    627,  540, 450),
+    ("pet-cat-siamese",    "cat-siamese",   627,  520, 460),
 ]
 
 
