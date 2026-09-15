@@ -2,27 +2,27 @@
   "hero-care": {
     "file": "hero-care.webp",
     "describes": "Three dogs, cut out on transparency (client supplied)",
-    "credit": "Supplied by the client. Background removed in-house (rembg, isnet-general-use, alpha matting). Source and licence of the original not recorded — confirm commercial usage rights before launch."
+    "credit": "Supplied by the client. Background removed in-house (rembg, isnet-general-use, alpha matting). Source and licence of the original not recorded \u2014 confirm commercial usage rights before launch."
   },
   "cta-dog": {
     "file": "cta-dog.webp",
     "describes": "Cut-out dog for the closing call to action (client supplied)",
-    "credit": "Supplied by the client. Background removed in-house (rembg, isnet-general-use, alpha matting). Source and licence of the original not recorded — confirm commercial usage rights before launch."
+    "credit": "Supplied by the client. Background removed in-house (rembg, isnet-general-use, alpha matting). Source and licence of the original not recorded \u2014 confirm commercial usage rights before launch."
   },
   "reviews-dog": {
     "file": "reviews-dog.webp",
     "describes": "Cut-out dog for the reviews panel (client supplied)",
-    "credit": "Supplied by the client. Background removed in-house (rembg, isnet-general-use, alpha matting). Source and licence of the original not recorded — confirm commercial usage rights before launch."
+    "credit": "Supplied by the client. Background removed in-house (rembg, isnet-general-use, alpha matting). Source and licence of the original not recorded \u2014 confirm commercial usage rights before launch."
   },
   "welcome-dog": {
     "file": "welcome-dog.webp",
     "describes": "Cut-out dog with paws over an edge (client supplied)",
-    "credit": "Supplied by the client. Background removed in-house (rembg, isnet-general-use, alpha matting). Source and licence of the original not recorded — confirm commercial usage rights before launch."
+    "credit": "Supplied by the client. Background removed in-house (rembg, isnet-general-use, alpha matting). Source and licence of the original not recorded \u2014 confirm commercial usage rights before launch."
   },
   "team-photo": {
     "file": "team-photo.webp",
     "describes": "The team at the Highway 98 East sign (client supplied)",
-    "credit": "Supplied by the client. The practice's own team at their Highway 98 East sign; identity confirmed from the sign, which reads 601-736-3041. People are identifiable — confirm staff consent before publishing."
+    "credit": "Supplied by the client. The practice's own team at their Highway 98 East sign; identity confirmed from the sign, which reads 601-736-3041. People are identifiable \u2014 confirm staff consent before publishing."
   },
   "about-hospital": {
     "file": "about-hospital.webp",
@@ -32,26 +32,46 @@
   "pet-shepherd": {
     "file": "pet-shepherd.webp",
     "describes": "Australian shepherd on a pale sweep (client supplied)",
-    "credit": "Supplied by the client. Source and licence of the original not recorded — confirm commercial usage rights before launch."
+    "credit": "Supplied by the client. Source and licence of the original not recorded \u2014 confirm commercial usage rights before launch."
   },
   "pet-kitten-ginger": {
     "file": "pet-kitten-ginger.webp",
     "describes": "Ginger kitten on a pale sweep (client supplied)",
-    "credit": "Supplied by the client. Source and licence of the original not recorded — confirm commercial usage rights before launch."
+    "credit": "Supplied by the client. Source and licence of the original not recorded \u2014 confirm commercial usage rights before launch."
   },
   "pet-kitten-tabby": {
     "file": "pet-kitten-tabby.webp",
     "describes": "Grey tabby kitten on a pale sweep (client supplied)",
-    "credit": "Supplied by the client. Source and licence of the original not recorded — confirm commercial usage rights before launch."
+    "credit": "Supplied by the client. Source and licence of the original not recorded \u2014 confirm commercial usage rights before launch."
   },
   "pet-cat-tuxedo": {
     "file": "pet-cat-tuxedo.webp",
     "describes": "Tuxedo cat on a pale sweep (client supplied)",
-    "credit": "Supplied by the client. Source and licence of the original not recorded — confirm commercial usage rights before launch."
+    "credit": "Supplied by the client. Source and licence of the original not recorded \u2014 confirm commercial usage rights before launch."
   },
   "pet-cat-siamese": {
     "file": "pet-cat-siamese.webp",
     "describes": "Siamese cat on a pale sweep (client supplied)",
-    "credit": "Supplied by the client. Source and licence of the original not recorded — confirm commercial usage rights before launch."
+    "credit": "Supplied by the client. Source and licence of the original not recorded \u2014 confirm commercial usage rights before launch."
+  },
+  "pet-frenchie": {
+    "file": "pet-frenchie.webp",
+    "describes": "French bulldog on a pale sweep (client supplied)",
+    "credit": "Supplied by the client. Source and licence of the original not recorded \u2014 confirm commercial usage rights before launch."
+  },
+  "vet-loper": {
+    "file": "vet-loper.webp",
+    "describes": "Dr. Janelle Loper examining a corgi (client supplied)",
+    "credit": "Supplied by the client. The practice's own veterinarian at work in the hospital. The person is identifiable \u2014 confirm consent before publishing."
+  },
+  "vet-sanford": {
+    "file": "vet-sanford.webp",
+    "describes": "Dr. Pat Sanford examining a puppy (client supplied)",
+    "credit": "Supplied by the client. The practice's own veterinarian at work in the hospital. The person is identifiable \u2014 confirm consent before publishing."
+  },
+  "vet-williams": {
+    "file": "vet-williams.webp",
+    "describes": "Dr. Bridgett Williams holding a kitten (client supplied)",
+    "credit": "Supplied by the client. The practice's own veterinarian at work in the hospital. The person is identifiable \u2014 confirm consent before publishing."
   }
 }

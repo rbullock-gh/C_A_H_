@@ -56,7 +56,7 @@ Bio pages confirmed at `/AboutUs/Dr<First><Last>.aspx`.
 |---|---|---|
 | Dr. Pat Sanford — 1985 graduate, Mississippi State University College of Veterinary Medicine; with the practice since 1985; married to Wanda; children Elizabeth, William and Jonathan | `/AboutUs/DrPatSanford.aspx` | MEDIUM-HIGH |
 | Dr. Janelle Loper — DVM, Mississippi State University College of Veterinary Medicine, 2002; treating clients of Columbia Animal Hospital since 2008; married to Patrick; one son, Josh | `/AboutUs/DrJanelleLoper.aspx` | MEDIUM-HIGH |
-| Dr. Bridgett Williams — 2010 graduate, Mississippi State University College of Veterinary Medicine; joined in 2013 after practicing in Bay Springs; married to Dale; children Joeli and Ryder | `/AboutUs/DrBridgettWilliams.aspx` | MEDIUM-HIGH |
+| Dr. Bridgett Williams — 2010 graduate, Mississippi State University College of Veterinary Medicine; joined in 2013 after practicing in Bay Springs; married to Dale; children Joeli and Ryder | `/AboutUs/DrBridgettWilliams.aspx`; spelling confirmed against the embroidery on her scrubs in the photograph the client supplied | HIGH |
 
 ### Services
 

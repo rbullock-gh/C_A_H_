@@ -14,6 +14,9 @@ each photo in `incoming/` before importing it.
 |---|---|---|---|
 | `hero-care` | `hero-care.webp` | Three dogs, cut out on transparency (client supplied) | Supplied by the client. Background removed in-house (rembg, isnet-general-use, alpha matting). Source and licence of the original not recorded — confirm commercial usage rights before launch. |
 | `about-hospital` | `about-hospital.webp` | Exterior of the hospital on Hwy 98E, signage visible | Supplied by the client and placed at their explicit direction. NOT VERIFIED AS THIS PRACTICE: the sign in the photograph reads 903-234-0869 with a single-dog logo on green, where Columbia Animal Hospital of Columbia MS is 601-736-3041 with a dog-and-cat logo on black. 903 is an East Texas area code. Confirm or replace before launch. |
+| `vet-loper` | `vet-loper.webp` | Dr. Janelle Loper examining a corgi (client supplied) | Supplied by the client. The practice's own veterinarian at work in the hospital. The person is identifiable — confirm consent before publishing. |
+| `vet-sanford` | `vet-sanford.webp` | Dr. Pat Sanford examining a puppy (client supplied) | Supplied by the client. The practice's own veterinarian at work in the hospital. The person is identifiable — confirm consent before publishing. |
+| `vet-williams` | `vet-williams.webp` | Dr. Bridgett Williams holding a kitten (client supplied) | Supplied by the client. The practice's own veterinarian at work in the hospital. The person is identifiable — confirm consent before publishing. |
 | `reviews-dog` | `reviews-dog.webp` | Cut-out dog for the reviews panel (client supplied) | Supplied by the client. Background removed in-house (rembg, isnet-general-use, alpha matting). Source and licence of the original not recorded — confirm commercial usage rights before launch. |
 | `cta-dog` | `cta-dog.webp` | Cut-out dog for the closing call to action (client supplied) | Supplied by the client. Background removed in-house (rembg, isnet-general-use, alpha matting). Source and licence of the original not recorded — confirm commercial usage rights before launch. |
 | `welcome-dog` | `welcome-dog.webp` | Cut-out dog with paws over an edge (client supplied) | Supplied by the client. Background removed in-house (rembg, isnet-general-use, alpha matting). Source and licence of the original not recorded — confirm commercial usage rights before launch. |
@@ -23,6 +26,7 @@ each photo in `incoming/` before importing it.
 | `pet-kitten-tabby` | `pet-kitten-tabby.webp` | Grey tabby kitten on a pale sweep (client supplied) | Supplied by the client. Source and licence of the original not recorded — confirm commercial usage rights before launch. |
 | `pet-cat-tuxedo` | `pet-cat-tuxedo.webp` | Tuxedo cat on a pale sweep (client supplied) | Supplied by the client. Source and licence of the original not recorded — confirm commercial usage rights before launch. |
 | `pet-cat-siamese` | `pet-cat-siamese.webp` | Siamese cat on a pale sweep (client supplied) | Supplied by the client. Source and licence of the original not recorded — confirm commercial usage rights before launch. |
+| `pet-frenchie` | `pet-frenchie.webp` | French bulldog on a pale sweep (client supplied) | Supplied by the client. Source and licence of the original not recorded — confirm commercial usage rights before launch. |
 
 ## Still on placeholders
 
@@ -31,9 +35,6 @@ These slots have no real photograph yet:
 - `closer-community` — Owner with their dog outside the hospital
 - `why-exam` — Technician holding a cat during an exam
 - `about-history` — Older photograph of the practice, or the building today
-- `vet-loper` — Dr. Janelle Loper — portrait, chest up
-- `vet-sanford` — Dr. Pat Sanford — portrait, chest up
-- `vet-williams` — Dr. Bridgett Williams — portrait, chest up
 - `svc-surgery` — Surgical suite, prepped and clean
 - `svc-dental-care` — Dental cleaning in progress, or a dog's teeth
 - `svc-digital-radiography` — Digital x-ray image on a monitor

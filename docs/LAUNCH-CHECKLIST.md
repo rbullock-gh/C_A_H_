@@ -128,8 +128,11 @@ cache hard.
 
 ## 5. Replace the placeholder photography
 
-Every image is a labelled placeholder. See [`PHOTO-CHECKLIST.md`](PHOTO-CHECKLIST.md) for the
-shot list, then drop files into `incoming/` named after their slot and run:
+Fourteen slots hold real photographs now — the three doctors at work, the animals on the
+service cards, the team at the sign. Seventeen are still labelled placeholders, and
+`python3 tools/photos.py list` prints which is which at any moment. See
+[`PHOTO-CHECKLIST.md`](PHOTO-CHECKLIST.md) for the shot list, then drop files into
+`incoming/` named after their slot and run:
 
 ```bash
 python3 tools/photos.py list      # what each slot needs
@@ -146,11 +149,17 @@ Record where every stock image came from and under what licence. `tools/photos.p
 Pixabay all permit commercial use without attribution — keep the record regardless, because a
 licence you cannot evidence is a licence you do not have.
 
-## 5b. Get consent for the team photograph, and a photograph of the building
+## 5b. Get consent for the staff photographs, and a photograph of the building
 
 The team photograph on the home page and the Our Team page shows around a dozen identifiable
-people. **Confirm every one of them is happy to appear on the website** before it goes live.
-People leave jobs, and a website is more public than a noticeboard.
+people, and each doctor now appears in a working photograph of their own — Dr. Sanford with a
+puppy, Dr. Loper with a corgi, Dr. Williams with a kitten. **Confirm every one of them is
+happy to appear on the website** before it goes live. People leave jobs, and a website is more
+public than a noticeboard.
+
+The client photographs also carry pets that belong to somebody. Where an animal is
+recognisable to its owner — the corgi and the puppy on the exam tables, rather than the studio
+portraits on the service cards — confirm the owner is happy too.
 
 There is still **no photograph of the building**. The exterior shot supplied during the build
 was a different Columbia Animal Hospital — its sign reads 903-234-0869, an East Texas number,

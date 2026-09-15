@@ -28,9 +28,9 @@ SLOTS = {
     "why-exam": (1200, 900, "labelled", "Technician holding a cat during an exam"),
     "about-hospital": (1536, 1024, "labelled", "Exterior of the hospital on Hwy 98E, signage visible"),
     "about-history": (1000, 1200, "labelled", "Older photograph of the practice, or the building today"),
-    "vet-loper": (800, 1000, "labelled", "Dr. Janelle Loper — portrait, chest up"),
-    "vet-sanford": (800, 1000, "labelled", "Dr. Pat Sanford — portrait, chest up"),
-    "vet-williams": (800, 1000, "labelled", "Dr. Bridgett Williams — portrait, chest up"),
+    "vet-loper": (560, 700, "labelled", "Dr. Janelle Loper examining a corgi (client supplied)"),
+    "vet-sanford": (560, 700, "labelled", "Dr. Pat Sanford examining a puppy (client supplied)"),
+    "vet-williams": (560, 700, "labelled", "Dr. Bridgett Williams holding a kitten (client supplied)"),
     "svc-surgery": (1200, 800, "labelled", "Surgical suite, prepped and clean"),
     "svc-dental-care": (1200, 800, "labelled", "Dental cleaning in progress, or a dog's teeth"),
     "svc-digital-radiography": (1200, 800, "labelled", "Digital x-ray image on a monitor"),
@@ -56,6 +56,7 @@ SLOTS = {
     "pet-kitten-tabby": (1254, 1254, "plain", "Grey tabby kitten on a pale sweep (client supplied)"),
     "pet-cat-tuxedo": (1254, 1254, "plain", "Tuxedo cat on a pale sweep (client supplied)"),
     "pet-cat-siamese": (1254, 1254, "plain", "Siamese cat on a pale sweep (client supplied)"),
+    "pet-frenchie": (1254, 1254, "plain", "French bulldog on a pale sweep (client supplied)"),
 }
 
 CREAM = "#F0E9DC"

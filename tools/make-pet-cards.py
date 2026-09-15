@@ -55,13 +55,24 @@ EDGE_SHARE = 0.004              # of a row's pixels, before the row counts
 # where one dog's fur gives way to the next. Traced off the photograph itself.
 BRINDLE_COLLIE = [(555, 600), (620, 600), (620, 1016), (528, 1016), (535, 930),
                   (544, 880), (549, 830), (553, 730), (550, 680), (548, 640)]
-# the collie leans its ear over the terrier, so the seam is a diagonal above the
-# shoulders and close to vertical below them; each dog is cut on its own side
-COLLIE_SIDE = [(980, 100), (1068, 100), (1068, 175), (1062, 195), (1032, 245),
-               (1014, 330), (1006, 380), (1000, 600), (992, 750), (986, 1016),
-               (980, 1016)]
-TERRIER_SIDE = [(996, 340), (1030, 340), (1030, 1016), (978, 1016), (984, 750),
-                (990, 600), (999, 380)]
+# The collie's right ear leans out over the terrier and comes to a point in
+# clear air above its head, so the line between the two runs well right of the
+# collie's shoulders before dropping back. Traced down the white left between
+# them, it is the single boundary both dogs are cut along: the collie keeps
+# everything left of it, the terrier everything right, and the collie's ear
+# stays whole instead of ending against the side of its card.
+COLLIE_TERRIER = [
+    (1080, 0), (1080, 140), (1068, 165), (1055, 180), (1046, 200), (1038, 220),
+    (1026, 240), (1020, 262), (1020, 300), (1006, 330), (1000, 380), (1000, 580),
+    (994, 620), (986, 660), (982, 700), (980, 760), (992, 790), (996, 830),
+    (996, 940), (1000, 1000), (1000, 1016),
+]
+# Right of the seam, for the collie's frame; left of it, for the terrier's. Down
+# at the shoulders the two coats interleave, so each side is pushed a few pixels
+# into its own dog: better to shave one fur edge than to leave the neighbour's.
+BITE = 4
+TERRIER_SIDE = [(x - BITE, y) for x, y in COLLIE_TERRIER] + [(1120, 1016), (1120, 0)]
+COLLIE_SIDE = [(x + BITE, y) for x, y in COLLIE_TERRIER] + [(940, 1016), (940, 0)]
 
 Card = collections.namedtuple("Card", "stem name region erase turn")
 Card.__new__.__defaults__ = (None, None, 0)
@@ -69,14 +80,11 @@ Card.__new__.__defaults__ = (None, None, 0)
 CARDS = [
     # the trio stand shoulder to shoulder, so each one has its neighbours cut away
     Card("hero-care", "brindle", (0, 120, 562, 1016), [BRINDLE_COLLIE]),
-    Card("hero-care", "collie", (556, 0, 1016, 1016),
+    Card("hero-care", "collie", (556, 0, 1092, 1016),
          [[(556, 130), (574, 130), (574, 255), (556, 255)], TERRIER_SIDE]),
     Card("hero-care", "terrier", (980, 120, 1536, 1016), [COLLIE_SIDE]),
-    # the cocker was shot leaning in from the top corner, head tilted and chest
-    # running off to the other one. Stood up and cut below the ears it is a
-    # portrait; left alone it is the one card an animal walks into from the side.
-    Card("reviews-dog", "cocker", (0, 0, 1188, 840), turn=-24),
     # single-subject studio portraits, already alone and square in the frame
+    Card("pet-frenchie", "frenchie"),
     Card("pet-shepherd", "shepherd"),
     Card("pet-kitten-ginger", "kitten-ginger"),
     Card("pet-kitten-tabby", "kitten-tabby"),
