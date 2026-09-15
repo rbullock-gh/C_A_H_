@@ -134,6 +134,13 @@ Ordered by how much damage getting it wrong would do. The first is a launch bloc
 
 ---
 
+> **One photograph on this site is unverified.** The building exterior on the home page and
+> the About page was supplied by the client and placed at their explicit direction, but the
+> sign in it reads 903-234-0869 with a single-dog logo on green, where this practice is
+> 601-736-3041 with a dog-and-cat logo on black. 903 is an East Texas area code. It is
+> recorded as blocker 0 in the launch checklist and must be confirmed or replaced before the
+> site goes live. Everything else on the site traces to the rows above.
+
 ## Deliberately excluded
 
 What was left out, and why. This is the part that cannot be reconstructed later.
@@ -151,5 +158,4 @@ What was left out, and why. This is the part that cannot be reconstructed later.
 | **Staff names other than the veterinarians** | No technician, groomer or office-manager name is published. One first name appeared inside a customer review; that is not published staff content. |
 | **"Award-winning", "best in Marion County", "trusted by thousands"** | Unsupportable. |
 | **Emergency-hospital referral partner** | None is named on the existing site. |
-| **A supplied photograph of a building** | The client sent an exterior shot whose sign reads **903-234-0869** with a single-dog logo on green. This practice's number is (601) 736-3041 and its logo is a dog-and-cat silhouette on black — both visible on the sign in the team photograph. 903 is an East Texas area code. It is a different Columbia Animal Hospital, and it is not published. See the name-collision note at the top. |
 | **Real photographs** | None could be obtained — every image host was blocked by the network policy. The client has since approved **licensed stock photography** for the general care and service slots, with real staff photographs to follow. Two slots are excluded from that: `about-hospital` and `contact-building` show *this* practice's building, and a stock photograph of some other clinic presented as theirs would be a straightforward misrepresentation. See `PHOTO-CHECKLIST.md`. |

@@ -13,6 +13,7 @@ each photo in `incoming/` before importing it.
 | Slot | File | Shows | Credit / licence |
 |---|---|---|---|
 | `hero-care` | `hero-care.webp` | Three dogs, cut out on transparency (client supplied) | Supplied by the client. Background removed in-house (rembg, isnet-general-use, alpha matting). Source and licence of the original not recorded — confirm commercial usage rights before launch. |
+| `about-hospital` | `about-hospital.webp` | Exterior of the hospital on Hwy 98E, signage visible | Supplied by the client and placed at their explicit direction. NOT VERIFIED AS THIS PRACTICE: the sign in the photograph reads 903-234-0869 with a single-dog logo on green, where Columbia Animal Hospital of Columbia MS is 601-736-3041 with a dog-and-cat logo on black. 903 is an East Texas area code. Confirm or replace before launch. |
 | `reviews-dog` | `reviews-dog.webp` | Cut-out dog for the reviews panel (client supplied) | Supplied by the client. Background removed in-house (rembg, isnet-general-use, alpha matting). Source and licence of the original not recorded — confirm commercial usage rights before launch. |
 | `cta-dog` | `cta-dog.webp` | Cut-out dog for the closing call to action (client supplied) | Supplied by the client. Background removed in-house (rembg, isnet-general-use, alpha matting). Source and licence of the original not recorded — confirm commercial usage rights before launch. |
 | `welcome-dog` | `welcome-dog.webp` | Cut-out dog with paws over an edge (client supplied) | Supplied by the client. Background removed in-house (rembg, isnet-general-use, alpha matting). Source and licence of the original not recorded — confirm commercial usage rights before launch. |
@@ -24,7 +25,6 @@ These slots have no real photograph yet:
 
 - `closer-community` — Owner with their dog outside the hospital
 - `why-exam` — Technician holding a cat during an exam
-- `about-hospital` — Exterior of the hospital on Hwy 98E, signage visible
 - `about-history` — Older photograph of the practice, or the building today
 - `vet-loper` — Dr. Janelle Loper — portrait, chest up
 - `vet-sanford` — Dr. Pat Sanford — portrait, chest up

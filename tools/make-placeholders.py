@@ -26,7 +26,7 @@ SLOTS = {
     "hero-care": (1536, 1016, "plain", "Three dogs, cut out on transparency (client supplied)"),
     "closer-community": (1800, 900, "plain", "Owner with their dog outside the hospital"),
     "why-exam": (1200, 900, "labelled", "Technician holding a cat during an exam"),
-    "about-hospital": (1200, 900, "labelled", "Exterior of the hospital on Hwy 98E, signage visible"),
+    "about-hospital": (1536, 1024, "labelled", "Exterior of the hospital on Hwy 98E, signage visible"),
     "about-history": (1000, 1200, "labelled", "Older photograph of the practice, or the building today"),
     "vet-loper": (800, 1000, "labelled", "Dr. Janelle Loper — portrait, chest up"),
     "vet-sanford": (800, 1000, "labelled", "Dr. Pat Sanford — portrait, chest up"),

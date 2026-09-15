@@ -568,7 +568,12 @@ a.card:hover .icon-tile { background: var(--amber); color: var(--ink); transform
   letter-spacing: -0.03em; }
 .figure__plate span { display: block; font-size: var(--step--1); line-height: 1.35;
   color: var(--muted); margin-top: 0.35rem; }
-@media (min-width: 60rem) { .figure__plate { left: calc(var(--sp-7) * -1); } }
+/* Overlap the image's left edge, but never further than the page gutter allows —
+   a flat -2.75rem put the plate hard against the viewport edge at 1440px and
+   off it on anything narrower. */
+@media (min-width: 60rem) {
+  .figure__plate { left: calc(max(0px, var(--gutter) - 1.25rem) * -1); }
+}
 
 /* --------------------------------------------------------------------------
    MARKED LIST

@@ -5,6 +5,35 @@ one until they are done.
 
 ---
 
+## 0. Verify the building photograph — BLOCKER
+
+The exterior photograph on the home page and the About page was supplied by the client and
+placed at their explicit direction. **It has not been verified as this practice.**
+
+What the evidence says:
+
+| | In the photograph | Columbia Animal Hospital, Columbia MS |
+|---|---|---|
+| Phone on the sign | **903-234-0869** | **601-736-3041** |
+| Area code | 903 — East Texas | 601 — Mississippi |
+| Logo on the sign | A single dog, white on green | A dog with a cat in negative space, white on black |
+
+Both signs were read at high magnification. The practice's own sign is visible in the team
+photograph and reads 601-736-3041, so the comparison is direct rather than inferred. There are
+at least six unrelated practices called Columbia Animal Hospital, which is exactly how a mix-up
+like this happens.
+
+**Before launch, do one of two things:**
+
+1. Confirm the photograph really is the Highway 98 East building — in which case delete this
+   section and nothing else changes; or
+2. Replace it. Drop a photograph of the real building into `incoming/about-hospital.jpg` and
+   run `python3 tools/photos.py import`. A phone snapshot from the road on a bright day is
+   entirely good enough.
+
+Why it matters more than it looks: this is the image a first-time client matches against when
+they are looking for the turning. If it shows the wrong building, they drive past.
+
 ## 1. Confirm Dr. Wallace Carson's status — BLOCKER
 
 The existing site has a live, indexed bio page for **Dr. Wallace Carson**
