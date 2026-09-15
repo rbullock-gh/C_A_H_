@@ -1133,3 +1133,29 @@ a.card:hover .icon-tile { background: var(--amber); color: var(--ink); transform
 @media (min-width: 48rem) {
   .team-banner figcaption { padding: var(--sp-9) var(--sp-8) var(--sp-6); font-size: var(--step-0); }
 }
+
+
+/* --------------------------------------------------------------------------
+   PET CARDS
+   A real animal across the top of every service card. The crops are framed
+   slightly above centre (tools/make-pet-cards.py) because a face centred in a
+   4:3 box sits too low once the card's rounded corners clip it.
+   -------------------------------------------------------------------------- */
+.service-card--pet { padding: 0; overflow: hidden; }
+.service-card__photo {
+  display: block; aspect-ratio: 4 / 3; overflow: hidden;
+  background: var(--gray-100); border-bottom: 1px solid var(--line);
+}
+.service-card__photo img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+  transition: transform 0.7s var(--ease-out);
+}
+a.card:hover .service-card__photo img { transform: scale(1.045); }
+.service-card__body {
+  display: flex; flex-direction: column; flex: 1;
+  padding: var(--sp-6); gap: 0;
+}
+.service-card--pet h3 { margin-bottom: 0; font-size: var(--step-2); }
+.service-card--pet p { margin-top: var(--sp-3); font-size: var(--step--1);
+  line-height: 1.62; color: var(--muted); }
+.service-card--pet .link-arrow { margin-top: auto; padding-top: var(--sp-5); }

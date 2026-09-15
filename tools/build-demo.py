@@ -65,9 +65,15 @@ def main() -> int:
     css = inline_css((ROOT / "assets/css/styles.css").read_text(encoding="utf-8"))
     js = (ROOT / "assets/js/main.js").read_text(encoding="utf-8")
 
+    # rglob, not glob: the service card photographs live in assets/img/pets/, and
+    # a top-level glob silently left every one of them pointing at a path that
+    # does not exist inside a single file
     images = {}
-    for img in sorted((ROOT / "assets/img").glob("*")):
+    for img in sorted((ROOT / "assets/img").rglob("*")):
         if img.is_file():
+            if img.name in images:
+                sys.exit(f"build-demo: two images share the basename {img.name!r}; "
+                         "inlining is keyed on basename, so rename one")
             images[img.name] = data_uri(img)
 
     def swap_src(html: str) -> str:
