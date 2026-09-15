@@ -133,7 +133,7 @@ What was left out, and why. This is the part that cannot be reconstructed later.
 
 | Left out | Why |
 |---|---|
-| **Testimonials and reviews** | The practice has a 94% Facebook recommendation rate across 37 reviews. That is a third-party rating and is not ours to republish, least of all as first-party review markup. No `aggregateRating` appears in the structured data. |
+| **Testimonials and reviews** | The practice has a 94% Facebook recommendation rate across 37 reviews. That is a third-party rating and is not ours to republish, least of all as first-party review markup. No `aggregateRating` appears in the structured data. The home page has a reviews section, but it carries **the practice's own mission statement** and a link to the Facebook page where real reviews already live — not a quote we wrote. See LAUNCH-CHECKLIST §3c for how to add genuine ones. |
 | **Dr. Wallace Carson** | Status unresolved — see above. Publishing a veterinarian who may have retired is worse than a shorter page. |
 | **"Fear Free" certification, Dr. Flaum, (877) 570-6272** | Belongs to `columbiaanimalhospital.com`, a different practice in another state. |
 | **Ultrasound, in-house laboratory, wellness-exam page, senior care, nutrition counselling, end-of-life care, pain management, flea/tick page, named surgical procedures** | Not found on the existing site. Most veterinary practices offer several of these, which is exactly why they are not assumed. |

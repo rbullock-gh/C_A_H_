@@ -29,7 +29,7 @@
       <div class="reveal">
         <ul class="info-list">
           <li>
-            <span class="icon-tile icon-tile--tan"><svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg></span>
+            <span class="icon-tile icon-tile--green"><svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg></span>
             <h2>Call the hospital</h2>
             <div>
               <a href="{{ contact.phoneLink }}">{{ contact.phoneDisplay }}</a>
@@ -85,7 +85,7 @@
         <div class="map__placeholder">
           <div>
             <p><strong>1409 Hwy 98E, Columbia, MS 39429</strong></p>
-            <p class="mt-6"><a class="btn btn--ghost" href="{{ contact.directionsUrl }}" target="_blank" rel="noopener">Open in Google Maps</a></p>
+            <p class="mt-6"><a class="btn btn--outline" href="{{ contact.directionsUrl }}" target="_blank" rel="noopener">Open in Google Maps</a></p>
           </div>
         </div>
       </div>
@@ -112,9 +112,9 @@
           </p>
         </div>
       </div>
-      <div class="call-panel reveal" data-delay="1">
+      <div class="call-card reveal" data-delay="1">
         <p class="eyebrow eyebrow--light">One number, any hour</p>
-        <a class="call-panel__number" href="{{ contact.phoneLink }}">{{ contact.phoneDisplay }}</a>
+        <a class="call-card__number" href="{{ contact.phoneLink }}">{{ contact.phoneDisplay }}</a>
         <p>1409 Hwy 98E, Columbia, MS 39429</p>
         <a class="btn btn--onDark" href="{{ contact.phoneLink }}">
           <svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg>
@@ -125,15 +125,13 @@
   </div>
 </section>
 
-<section class="section section--lg section--cream">
+<section class="section section--lg section--gray">
   <div class="shell shell--wide">
     <div class="split split--wide-text">
       <div class="split__media reveal">
-        <div class="frame">
-          <div class="frame__img">
-            <img src="assets/img/contact-building.svg" width="1400" height="900" alt="Columbia Animal Hospital seen from Highway 98 East in Columbia, Mississippi">
-          </div>
-        </div>
+        <figure class="figure">
+          <img src="assets/img/contact-building.svg" width="1400" height="900" alt="Columbia Animal Hospital seen from Highway 98 East in Columbia, Mississippi">
+        </figure>
       </div>
       <div class="reveal" data-delay="1">
         <p class="eyebrow">Before you call</p>

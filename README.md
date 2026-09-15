@@ -106,13 +106,24 @@ python3 tools/build.py          # rebuild every page
 
 ## Pages
 
-Home · About · Our Veterinarians · Services · FAQ · Contact & Directions, plus a page for
-each of the nine services: Surgery, Dental Care, Digital Radiography, Heartworm Testing,
-Dermatology, Reproductive Services, Grooming, Boarding and Microchipping. And a 404.
+Home · About · Services · Our Team · New Patients · Resources · Contact · Request an
+Appointment, plus a page for each of the nine services — Surgery, Dental Care, Digital
+Radiography, Heartworm Testing, Dermatology, Reproductive Services, Grooming, Boarding and
+Microchipping — a full FAQ, and a 404. Nineteen pages.
 
-The home page runs land → understand the practice → see the services → see why → meet the
-doctors → know what happens in an emergency → find us → call. Calling is reachable from the
-sticky header on desktop, a fixed bar on mobile, and every major section.
+The home page runs land → understand the practice → browse the services → see why → meet the
+doctors → read what clients say → know what a first visit involves → know what happens in an
+emergency → look inside → find us → call. **Request an Appointment** is reachable from the
+sticky header, a fixed bar on mobile, the hero, the footer and every service page; so is the
+phone number.
+
+## Look and feel
+
+White-led and editorial, with near-black sections for drama and two warm accents — amber and
+eucalyptus — so it reads warm rather than clinical. Newsreader for display, Inter for body.
+Every colour was measured for contrast before it was used; the notes in
+[`docs/BRAND-AND-ASSETS.md`](docs/BRAND-AND-ASSETS.md) explain why the amber accent needs
+three tokens and why amber buttons take dark text.
 
 ## Notes on the implementation
 

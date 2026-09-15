@@ -41,6 +41,11 @@ SLOTS = {
     "svc-microchipping": (1200, 800, "labelled", "Scanner being passed over a pet's shoulders"),
     "svc-reproductive-services": (1200, 800, "labelled", "Puppies or a nursing mother, calm setting"),
     "contact-building": (1400, 900, "labelled", "The building and car park from the road"),
+    "gallery-welcome": (1200, 1200, "labelled", "A dog greeted at the front desk"),
+    "gallery-reception": (1000, 1000, "labelled", "Reception and waiting area"),
+    "gallery-exam": (1000, 1000, "labelled", "An exam room, clean and well lit"),
+    "gallery-treatment": (1000, 1000, "labelled", "Treatment area or laboratory bench"),
+    "gallery-boarding": (1000, 1000, "labelled", "A boarding run, or a dog on its daily walk"),
 }
 
 CREAM = "#F0E9DC"

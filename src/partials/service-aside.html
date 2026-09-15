@@ -3,15 +3,15 @@
     <h2>Book this service</h2>
     <a class="aside-card__phone" href="{{ contact.phoneLink }}">{{ contact.phoneDisplay }}</a>
     <p>Appointments are made by phone. Tell us what is going on and we will find a time.</p>
-    <a class="btn" href="{{ contact.phoneLink }}">
-      <svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg>
-      Call the hospital
+    <a class="btn btn--primary" href="../request-appointment.html">
+      <svg class="icon" aria-hidden="true"><use href="#i-calendar"></use></svg>
+      Request an appointment
     </a>
   </div>
 
   <div class="aside-card">
     <h2>Opening hours</h2>
-    <ul class="footer__hours">
+    <ul class="hours-mini">
       <li><span>Mon – Fri</span> <span class="time">{{ hours.weekdays }}</span></li>
       <li><span>Saturday</span> <span class="time">{{ hours.saturday }}</span></li>
       <li><span>Sunday</span> <span class="time">{{ hours.sunday }}</span></li>

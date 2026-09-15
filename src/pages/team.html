@@ -1,10 +1,10 @@
 <!--json
 {
-  "slug": "veterinarians",
-  "nav": "Vets",
-  "out": "veterinarians.html",
+  "slug": "team",
+  "nav": "Team",
+  "out": "team.html",
   "priority": "0.8",
-  "title": "Our Veterinarians | Columbia Animal Hospital, Columbia MS",
+  "title": "Our Veterinary Team | Columbia Animal Hospital, MS",
   "description": "Meet the veterinarians at Columbia Animal Hospital in Columbia, Mississippi: Dr. Janelle Loper, Dr. Pat Sanford and Dr. Bridgett Williams."
 }
 -->
@@ -13,7 +13,7 @@
   <div class="shell shell--wide">
     <ol class="crumbs">
       <li><a href="index.html">Home</a></li>
-      <li><span aria-current="page">Our Veterinarians</span></li>
+      <li><span aria-current="page">Our Team</span></li>
     </ol>
     <h1>The doctors who will see your pet</h1>
     <p class="page-head__lede">
@@ -28,17 +28,15 @@
 
     <article class="split split--wide-text" id="dr-pat-sanford" style="margin-bottom:var(--section-y-lg)">
       <div class="split__media reveal">
-        <div class="frame">
-          <div class="frame__img">
-            <img src="assets/img/vet-sanford.svg" width="800" height="1000" alt="Dr. Pat Sanford, veterinarian at Columbia Animal Hospital in Columbia, Mississippi">
-          </div>
-          <div class="frame__badge">
+        <figure class="figure">
+          <img src="assets/img/vet-sanford.svg" width="800" height="1000" alt="Dr. Pat Sanford, veterinarian at Columbia Animal Hospital in Columbia, Mississippi">
+          <figcaption class="figure__plate">
             <div>
               <strong>1985</strong>
               <span>The year he joined Columbia Animal Hospital</span>
             </div>
-          </div>
-        </div>
+          </figcaption>
+        </figure>
       </div>
       <div class="reveal" data-delay="1">
         <p class="eyebrow">Doctor of Veterinary Medicine</p>
@@ -64,17 +62,15 @@
 
     <article class="split split--wide-text split--reverse" id="dr-janelle-loper" style="margin-bottom:var(--section-y-lg)">
       <div class="split__media reveal">
-        <div class="frame frame--sage">
-          <div class="frame__img">
-            <img src="assets/img/vet-loper.svg" width="800" height="1000" alt="Dr. Janelle Loper, veterinarian at Columbia Animal Hospital in Columbia, Mississippi">
-          </div>
-          <div class="frame__badge">
+        <figure class="figure figure--tall">
+          <img src="assets/img/vet-loper.svg" width="800" height="1000" alt="Dr. Janelle Loper, veterinarian at Columbia Animal Hospital in Columbia, Mississippi">
+          <figcaption class="figure__plate">
             <div>
               <strong>2008</strong>
               <span>Treating our clients' pets since</span>
             </div>
-          </div>
-        </div>
+          </figcaption>
+        </figure>
       </div>
       <div class="reveal" data-delay="1">
         <p class="eyebrow">Doctor of Veterinary Medicine</p>
@@ -99,17 +95,15 @@
 
     <article class="split split--wide-text" id="dr-bridgett-williams">
       <div class="split__media reveal">
-        <div class="frame">
-          <div class="frame__img">
-            <img src="assets/img/vet-williams.svg" width="800" height="1000" alt="Dr. Bridgett Williams, veterinarian at Columbia Animal Hospital in Columbia, Mississippi">
-          </div>
-          <div class="frame__badge">
+        <figure class="figure">
+          <img src="assets/img/vet-williams.svg" width="800" height="1000" alt="Dr. Bridgett Williams, veterinarian at Columbia Animal Hospital in Columbia, Mississippi">
+          <figcaption class="figure__plate">
             <div>
               <strong>2013</strong>
               <span>Joined us after practicing in Bay Springs</span>
             </div>
-          </div>
-        </div>
+          </figcaption>
+        </figure>
       </div>
       <div class="reveal" data-delay="1">
         <p class="eyebrow">Doctor of Veterinary Medicine</p>
@@ -135,7 +129,7 @@
   </div>
 </section>
 
-<section class="section section--lg section--cream">
+<section class="section section--lg section--gray">
   <div class="shell shell--wide">
     <div class="section-head section-head--center reveal">
       <p class="eyebrow eyebrow--center">Making an appointment</p>
@@ -159,7 +153,7 @@
   "@context": "https://schema.org",
   "@type": "ProfilePage",
   "name": "Our Veterinarians",
-  "url": "{{ site.url }}/veterinarians.html",
+  "url": "{{ site.url }}/team.html",
   "about": { "@id": "{{ site.url }}/#practice" },
   "mainEntity": [
     {
@@ -188,7 +182,7 @@
     "@type": "BreadcrumbList",
     "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "Home", "item": "{{ site.url }}/" },
-      { "@type": "ListItem", "position": 2, "name": "Our Veterinarians", "item": "{{ site.url }}/veterinarians.html" }
+      { "@type": "ListItem", "position": 2, "name": "Our Veterinarians", "item": "{{ site.url }}/team.html" }
     ]
   }
 }

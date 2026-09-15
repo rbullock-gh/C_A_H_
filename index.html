@@ -26,7 +26,7 @@
 <meta name="geo.region" content="US-MS">
 <meta name="geo.placename" content="Columbia, Mississippi">
 
-<link rel="preload" href="assets/fonts/fraunces-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/newsreader-latin-var.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/inter-latin-var.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/css/styles.css">
 <link rel="icon" href="assets/favicon/favicon.svg" type="image/svg+xml">
@@ -61,12 +61,14 @@
   <symbol id="i-chip" viewBox="0 0 24 24"><rect x="7" y="7" width="10" height="10" rx="1.5"/><path d="M10 3v4m4-4v4m-4 10v4m4-4v4M3 10h4m-4 4h4m10-4h4m-4 4h4"/></symbol>
   <symbol id="i-house" viewBox="0 0 24 24"><path d="M3.5 10.5 12 3.5l8.5 7"/><path d="M5.5 9.8V20h13V9.8"/><path d="M10 20v-5h4v5"/></symbol>
   <symbol id="i-facebook" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.52 1.49-3.91 3.77-3.91 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.78-1.63 1.57v1.89h2.78l-.45 2.91h-2.33V22c4.78-.76 8.44-4.92 8.44-9.94Z"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2.5"/><path d="M3 10h18M8 3v4m8-4v4"/></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 4.5A1.5 1.5 0 0 1 5.5 3H19v15H5.5A1.5 1.5 0 0 0 4 19.5v-15Z"/><path d="M4 19.5A1.5 1.5 0 0 0 5.5 21H19v-3"/><path d="M8 7.5h7M8 11h7"/></symbol>
 </svg>
 
 <header class="header" data-header>
   <div class="shell shell--wide header__bar">
     <a class="brand" href="index.html">
-      <img class="brand__mark" src="assets/img/logo-mark.svg" width="46" height="46" alt="" aria-hidden="true">
+      <img class="brand__mark" src="assets/img/logo-mark.svg" width="44" height="44" alt="" aria-hidden="true">
       <span class="brand__text">
         <span class="brand__name">Columbia Animal Hospital</span>
         <span class="brand__place">Columbia, Mississippi</span>
@@ -77,9 +79,10 @@
       <ul class="nav__list">
         <li><a class="nav__link" href="index.html" aria-current="page">Home</a></li>
         <li><a class="nav__link" href="about.html">About</a></li>
-        <li><a class="nav__link" href="veterinarians.html">Our Veterinarians</a></li>
         <li><a class="nav__link" href="services.html">Services</a></li>
-        <li><a class="nav__link" href="faq.html">FAQ</a></li>
+        <li><a class="nav__link" href="team.html">Our Team</a></li>
+        <li><a class="nav__link" href="new-patients.html">New Patients</a></li>
+        <li><a class="nav__link" href="resources.html">Resources</a></li>
         <li><a class="nav__link" href="contact.html">Contact</a></li>
       </ul>
     </nav>
@@ -87,14 +90,14 @@
     <div class="header__actions">
       <a class="header__phone" href="tel:+16017363041">
         <svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg>
-        <span class="header__phone-text">
+        <span>
           <strong>(601) 736-3041</strong>
           <span>Call the hospital</span>
         </span>
       </a>
-      <a class="btn" href="tel:+16017363041">
-        <svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg>
-        <span class="btn__label">Call to schedule</span>
+      <a class="btn btn--primary btn--sm" href="request-appointment.html">
+        <svg class="icon" aria-hidden="true"><use href="#i-calendar"></use></svg>
+        <span class="btn__label">Request an Appointment</span>
       </a>
       <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="nav-panel">
         <svg class="icon nav-toggle__open" aria-hidden="true"><use href="#i-menu"></use></svg>
@@ -109,133 +112,141 @@
       <ul class="nav-panel__list">
         <li><a class="nav-panel__link" href="index.html">Home <svg class="icon" aria-hidden="true"><use href="#i-chevron-right"></use></svg></a></li>
         <li><a class="nav-panel__link" href="about.html">About <svg class="icon" aria-hidden="true"><use href="#i-chevron-right"></use></svg></a></li>
-        <li><a class="nav-panel__link" href="veterinarians.html">Our Veterinarians <svg class="icon" aria-hidden="true"><use href="#i-chevron-right"></use></svg></a></li>
         <li><a class="nav-panel__link" href="services.html">Services <svg class="icon" aria-hidden="true"><use href="#i-chevron-right"></use></svg></a></li>
-        <li><a class="nav-panel__link" href="faq.html">FAQ <svg class="icon" aria-hidden="true"><use href="#i-chevron-right"></use></svg></a></li>
-        <li><a class="nav-panel__link" href="contact.html">Contact &amp; Directions <svg class="icon" aria-hidden="true"><use href="#i-chevron-right"></use></svg></a></li>
+        <li><a class="nav-panel__link" href="team.html">Our Team <svg class="icon" aria-hidden="true"><use href="#i-chevron-right"></use></svg></a></li>
+        <li><a class="nav-panel__link" href="new-patients.html">New Patients <svg class="icon" aria-hidden="true"><use href="#i-chevron-right"></use></svg></a></li>
+        <li><a class="nav-panel__link" href="resources.html">Resources <svg class="icon" aria-hidden="true"><use href="#i-chevron-right"></use></svg></a></li>
+        <li><a class="nav-panel__link" href="contact.html">Contact <svg class="icon" aria-hidden="true"><use href="#i-chevron-right"></use></svg></a></li>
       </ul>
     </nav>
     <div class="nav-panel__cta">
-      <a class="btn btn--lg" href="tel:+16017363041">
+      <a class="btn btn--primary btn--lg" href="request-appointment.html">
+        <svg class="icon" aria-hidden="true"><use href="#i-calendar"></use></svg>
+        Request an Appointment
+      </a>
+      <a class="btn btn--outline" href="tel:+16017363041">
         <svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg>
         (601) 736-3041
       </a>
-      <a class="btn btn--ghost" href="https://www.google.com/maps/dir/?api=1&amp;destination=1409+Hwy+98E%2C+Columbia%2C+MS+39429" target="_blank" rel="noopener">
-        <svg class="icon" aria-hidden="true"><use href="#i-directions"></use></svg>
-        Get directions
-      </a>
     </div>
-    <p class="nav-panel__hours">1409 Hwy 98E, Columbia, MS 39429<br>Mon–Fri 7:30 AM – 5:30 PM · Sat 8:00 AM – 12:00 PM · Sun closed</p>
+    <p class="nav-panel__meta">1409 Hwy 98E, Columbia, MS 39429<br>Mon–Fri 7:30 AM – 5:30 PM · Sat 8:00 AM – 12:00 PM · Sun closed</p>
   </div>
 </header>
 
 <main id="main">
 <section class="hero">
-  <div class="hero__panel">
-    <div class="hero__content">
-      <p class="hero__since">
-        <svg class="icon" aria-hidden="true"><use href="#i-paw"></use></svg>
-        Caring for Columbia since 1975
-      </p>
-      <h1>Compassionate care for <em>every stage</em> of their life</h1>
-      <p class="hero__lede">
-        A full-service companion animal hospital on Highway 98 East, looking after the dogs
-        and cats of Columbia, Foxworth and the surrounding communities for five decades.
-      </p>
-      <div class="hero__actions">
-        <a class="btn btn--lg" href="tel:+16017363041">
-          <svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg>
-          Call (601) 736-3041
-        </a>
-        <a class="btn btn--lg btn--ghostOnDark" href="services.html">
-          Explore our services
-          <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
-        </a>
+  <div class="shell shell--wide">
+    <div class="hero__grid">
+      <div class="hero__content">
+        <p class="hero__badge">
+          <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-paw"></use></svg></span>
+          Caring for Columbia since 1975
+        </p>
+        <h1>Gentle, expert care for <em>every stage</em> of their life</h1>
+        <p class="hero__lede">
+          A full-service companion animal hospital on Highway 98 East — looking after the dogs
+          and cats of Columbia, Foxworth and the surrounding communities for five decades.
+        </p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="request-appointment.html">
+            <svg class="icon" aria-hidden="true"><use href="#i-calendar"></use></svg>
+            Request an Appointment
+          </a>
+          <a class="btn" href="tel:+16017363041">
+            <svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg>
+            Call Us
+          </a>
+          <a class="btn btn--outline" href="services.html">
+            Our Services
+            <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+          </a>
+        </div>
+      </div>
+      <div class="hero__photo">
+        <!-- Tablet and up. Hiding it with display:none was not enough — measured
+             at 390px the browser still fetched the whole file, at high priority,
+             competing with the fonts on exactly the connection that can least
+             afford it. A <source media> that does not match is never fetched.
+             Keep this breakpoint and the one in the stylesheet in step. -->
+        <picture>
+          <source media="(min-width: 48rem)" srcset="assets/img/hero-care.webp">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+               width="1536" height="1016" fetchpriority="high"
+               alt="Three happy dogs sitting side by side — a brindle mixed breed, a black and white collie mix, and a brown and white terrier mix">
+        </picture>
       </div>
     </div>
   </div>
-  <div class="hero__photo">
-    <!-- Tablet and up (768px). Hiding it with display:none was not enough —
-         measured at 390px the browser still fetched all 208 kB, at high
-         priority, competing with the fonts on exactly the connection that can
-         least afford it. A <source media> that does not match is never fetched,
-         so phones get the 1x1 fallback and nothing else. Keep this breakpoint
-         and the one in the stylesheet in step. -->
-    <picture>
-      <source media="(min-width: 48rem)" srcset="assets/img/hero-care.webp">
-      <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-           width="1536" height="1016" fetchpriority="high"
-           alt="Three happy dogs sitting side by side — a brindle mixed breed, a black and white collie mix, and a brown and white terrier mix">
-    </picture>
-  </div>
 </section>
 
-<section class="hero__strip" aria-label="Hospital at a glance">
-  <div class="shell shell--wide">
-    <div class="hero__strip-inner">
-      <a class="hero__strip-item" href="tel:+16017363041">
-        <span class="icon-tile icon-tile--tan"><svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg></span>
-        <span>
-          <span class="hero__strip-label">Call the hospital</span>
-          <strong>(601) 736-3041</strong>
-          <span>Tap to call from your phone</span>
-        </span>
-      </a>
-      <a class="hero__strip-item" href="https://www.google.com/maps/dir/?api=1&amp;destination=1409+Hwy+98E%2C+Columbia%2C+MS+39429" target="_blank" rel="noopener">
-        <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-pin"></use></svg></span>
-        <span>
-          <span class="hero__strip-label">Find us</span>
-          <strong>1409 Hwy 98E</strong>
-          <span>Columbia, MS 39429</span>
-        </span>
-      </a>
-      <a class="hero__strip-item" href="contact.html#hours">
-        <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-clock"></use></svg></span>
-        <span>
-          <span class="hero__strip-label">Opening hours</span>
-          <strong>7:30 AM – 5:30 PM</strong>
-          <span>Monday to Friday &middot; Sat 8:00 AM – 12:00 PM</span>
-        </span>
-      </a>
-      <a class="hero__strip-item" href="#emergency">
-        <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-alert"></use></svg></span>
-        <span>
-          <span class="hero__strip-label">After hours</span>
-          <strong>On-call veterinarian</strong>
-          <span>For emergencies outside our hours</span>
-        </span>
-      </a>
-    </div>
-  </div>
+<section class="hero__proof" aria-label="Hospital at a glance">
+  <a class="hero__proof-item" href="tel:+16017363041">
+    <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg></span>
+    <span>
+      <span class="hero__proof-label">Call the hospital</span>
+      <strong>(601) 736-3041</strong>
+      <span class="sub">Tap to call from your phone</span>
+    </span>
+  </a>
+  <a class="hero__proof-item" href="https://www.google.com/maps/dir/?api=1&amp;destination=1409+Hwy+98E%2C+Columbia%2C+MS+39429" target="_blank" rel="noopener">
+    <span class="icon-tile icon-tile--green"><svg class="icon" aria-hidden="true"><use href="#i-pin"></use></svg></span>
+    <span>
+      <span class="hero__proof-label">Find us</span>
+      <strong>1409 Hwy 98E</strong>
+      <span class="sub">Columbia, MS 39429</span>
+    </span>
+  </a>
+  <a class="hero__proof-item" href="contact.html#hours">
+    <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-clock"></use></svg></span>
+    <span>
+      <span class="hero__proof-label">Opening hours</span>
+      <strong>7:30 AM – 5:30 PM</strong>
+      <span class="sub">Monday to Friday &middot; Sat 8:00 AM – 12:00 PM</span>
+    </span>
+  </a>
+  <a class="hero__proof-item" href="#emergency">
+    <span class="icon-tile icon-tile--green"><svg class="icon" aria-hidden="true"><use href="#i-alert"></use></svg></span>
+    <span>
+      <span class="hero__proof-label">After hours</span>
+      <strong>On-call veterinarian</strong>
+      <span class="sub">For emergencies outside our hours</span>
+    </span>
+  </a>
 </section>
 
-<section class="section trust">
+<section class="section section--lg" id="about">
   <div class="shell shell--wide">
-    <div class="trust__grid">
-      <div class="reveal">
-        <p class="trust__year"><span>Caring for Columbia since</span>1975</p>
+    <div class="split split--wide-text">
+      <div class="split__media reveal">
+        <figure class="figure">
+          <img src="assets/img/about-hospital.svg" width="1200" height="900" alt="Columbia Animal Hospital on Highway 98 East in Columbia, Mississippi">
+          <figcaption class="figure__plate">
+            <div>
+              <strong>1975</strong>
+              <span>The year our doors first opened in Columbia</span>
+            </div>
+          </figcaption>
+        </figure>
       </div>
       <div class="reveal" data-delay="1">
-        <h2>Fifty years of the same front door on Highway&nbsp;98</h2>
-        <p class="lede mt-6">
-          Columbia Animal Hospital opened in 1975 as a mixed animal practice, looking after
-          farm animals and family pets alike. In 2005 we became a small animal hospital
-          exclusively, so that our doctors, our equipment and our attention could go entirely
-          to dogs and cats.
-        </p>
-        <div class="stat-row">
-          <div class="stat">
-            <strong>1975</strong>
-            <span>Caring for pets in Columbia</span>
-          </div>
-          <div class="stat">
-            <strong>2005</strong>
-            <span>Small animal exclusive</span>
-          </div>
-          <div class="stat">
-            <strong>Dogs &amp; cats</strong>
-            <span>Companion animal medicine</span>
-          </div>
+        <p class="eyebrow">About the hospital</p>
+        <h2>Fifty years on Highway 98 East</h2>
+        <div class="prose mt-6">
+          <p>
+            Columbia Animal Hospital was established in 1975. In the decades since, the hospital
+            has undergone significant changes to better serve clients and their pets — new
+            equipment, new doctors, and a steadily narrowing focus.
+          </p>
+          <p>
+            The largest of those changes came in 2005, when we became a small animal clinic
+            exclusively, so that our training, our equipment and our attention could go entirely
+            to dogs and cats.
+          </p>
+        </div>
+        <div class="stats stats--ruled mt-8">
+          <div class="stat"><strong>1975</strong><span>Caring for pets in Columbia</span></div>
+          <div class="stat"><strong>2005</strong><span>Small animal exclusive</span></div>
+          <div class="stat"><strong>3</strong><span>Veterinarians on the team</span></div>
         </div>
         <div class="stack-actions">
           <a class="link-arrow" href="about.html">
@@ -248,94 +259,77 @@
   </div>
 </section>
 
-<section class="section section--lg" id="services">
+<section class="section section--lg section--gray" id="services">
   <div class="shell shell--wide">
-    <div class="section-head reveal">
-      <p class="eyebrow">What we do</p>
-      <h2>Veterinary care under one roof</h2>
+    <div class="section-head section-head--center reveal">
+      <p class="eyebrow eyebrow--center">Veterinary services</p>
+      <h2>Everything your pet needs, under one roof</h2>
       <p>
-        From a first puppy visit to surgery, dental work and diagnostic imaging — with grooming
-        and boarding in the same building, so the people handling your pet already know them.
+        From a first puppy visit through surgery, dental work and diagnostic imaging — with
+        grooming and boarding in the same building, so the people handling your pet already
+        know them.
       </p>
     </div>
 
     <div class="services-grid">
-      <a class="card service-card service-card--feature reveal" href="services/surgery.html">
-        <span class="icon-tile icon-tile--dark"><svg class="icon" aria-hidden="true"><use href="#i-scalpel"></use></svg></span>
-        <span class="service-card__text">
-          <h3>Surgery</h3>
-          <p>
-            A state-of-the-art surgical suite equipped with innovative tools. Before surgery our
-            veterinarians recommend blood work, which can reveal problems a physical exam cannot,
-            so anesthesia can be given as safely as possible. Your pet's vital signs are
-            monitored throughout, and they are kept warm and watched while they recover.
-          </p>
-          <span class="link-arrow">
-            About surgery at our hospital
-            <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
-          </span>
-        </span>
+      <a class="card service-card reveal" href="services/surgery.html">
+        <span class="icon-tile icon-tile--lg"><svg class="icon" aria-hidden="true"><use href="#i-scalpel"></use></svg></span>
+        <h3>Surgery</h3>
+        <p>A state-of-the-art surgical suite, pre-surgical blood work, and vital signs monitored from anesthesia through recovery.</p>
+        <span class="link-arrow">Learn more <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg></span>
       </a>
-
       <a class="card service-card reveal" data-delay="1" href="services/dental-care.html">
-        <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-tooth"></use></svg></span>
+        <span class="icon-tile icon-tile--lg"><svg class="icon" aria-hidden="true"><use href="#i-tooth"></use></svg></span>
         <h3>Dental care</h3>
-        <p>Cleanings, and the reason they matter: tartar bacteria can reach the heart, liver and kidneys.</p>
+        <p>Cleanings from as young as one year old. Tartar bacteria can reach the heart, liver and kidneys.</p>
         <span class="link-arrow">Learn more <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg></span>
       </a>
-
       <a class="card service-card reveal" data-delay="2" href="services/digital-radiography.html">
-        <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-scan"></use></svg></span>
+        <span class="icon-tile icon-tile--lg"><svg class="icon" aria-hidden="true"><use href="#i-scan"></use></svg></span>
         <h3>Digital radiography</h3>
-        <p>Clear x-ray images in seconds, so treatment can begin straight away.</p>
+        <p>Clear x-ray images in seconds, and a veterinary radiologist's second opinion when a case calls for it.</p>
         <span class="link-arrow">Learn more <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg></span>
       </a>
-
       <a class="card service-card reveal" href="services/heartworm-testing.html">
-        <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-shield"></use></svg></span>
+        <span class="icon-tile icon-tile--lg icon-tile--green"><svg class="icon" aria-hidden="true"><use href="#i-shield"></use></svg></span>
         <h3>Heartworm testing</h3>
         <p>Heartworms are especially prevalent in south Mississippi. Results are often ready while you wait.</p>
         <span class="link-arrow">Learn more <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg></span>
       </a>
-
       <a class="card service-card reveal" data-delay="1" href="services/dermatology.html">
-        <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-droplet"></use></svg></span>
+        <span class="icon-tile icon-tile--lg icon-tile--green"><svg class="icon" aria-hidden="true"><use href="#i-droplet"></use></svg></span>
         <h3>Dermatology</h3>
         <p>Skin scrapings, ear and skin cytologies, and medicated baths for itching and infection.</p>
         <span class="link-arrow">Learn more <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg></span>
       </a>
-
-      <a class="card service-card reveal" data-delay="2" href="services/grooming.html">
-        <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-scissors"></use></svg></span>
-        <h3>Grooming</h3>
-        <p>Trimming, cleaning and medicated bathing. Our groomers book up quickly, so call ahead.</p>
-        <span class="link-arrow">Learn more <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg></span>
-      </a>
-
-      <a class="card service-card reveal" href="services/boarding.html">
-        <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-house"></use></svg></span>
-        <h3>Boarding</h3>
-        <p>Climate-controlled, supervised by our veterinarians, with cats housed away from the dogs.</p>
-        <span class="link-arrow">Learn more <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg></span>
-      </a>
-
-      <a class="card service-card reveal" data-delay="1" href="services/microchipping.html">
-        <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-chip"></use></svg></span>
-        <h3>Microchipping</h3>
-        <p>Permanent identification carrying a code unique to your pet.</p>
-        <span class="link-arrow">Learn more <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg></span>
-      </a>
-
       <a class="card service-card reveal" data-delay="2" href="services/reproductive-services.html">
-        <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-heart"></use></svg></span>
+        <span class="icon-tile icon-tile--lg icon-tile--green"><svg class="icon" aria-hidden="true"><use href="#i-heart"></use></svg></span>
         <h3>Reproductive services</h3>
-        <p>Support through every phase, from artificial insemination to the birthing process.</p>
+        <p>Support through every phase, from artificial insemination through to the birthing process.</p>
+        <span class="link-arrow">Learn more <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg></span>
+      </a>
+      <a class="card service-card reveal" href="services/grooming.html">
+        <span class="icon-tile icon-tile--lg"><svg class="icon" aria-hidden="true"><use href="#i-scissors"></use></svg></span>
+        <h3>Grooming</h3>
+        <p>Trimming, cleaning and medicated bathing by experienced groomers. They book up quickly.</p>
+        <span class="link-arrow">Learn more <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg></span>
+      </a>
+      <a class="card service-card reveal" data-delay="1" href="services/boarding.html">
+        <span class="icon-tile icon-tile--lg"><svg class="icon" aria-hidden="true"><use href="#i-house"></use></svg></span>
+        <h3>Boarding</h3>
+        <p>Climate-controlled and supervised by our veterinarians, with cats housed away from the dogs.</p>
+        <span class="link-arrow">Learn more <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg></span>
+      </a>
+      <a class="card service-card reveal" data-delay="2" href="services/microchipping.html">
+        <span class="icon-tile icon-tile--lg"><svg class="icon" aria-hidden="true"><use href="#i-chip"></use></svg></span>
+        <h3>Microchipping</h3>
+        <p>Permanent identification carrying a code unique to your pet, readable at most clinics and shelters.</p>
         <span class="link-arrow">Learn more <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg></span>
       </a>
     </div>
 
-    <div class="stack-actions stack-actions--center mt-7">
-      <a class="btn btn--ghost" href="services.html">
+    <div class="stack-actions stack-actions--center mt-8">
+      <a class="btn btn--outline" href="services.html">
         See all services
         <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
       </a>
@@ -343,108 +337,88 @@
   </div>
 </section>
 
-<section class="section section--lg section--cream" id="why">
+<section class="section section--lg section--dark" id="why">
   <div class="shell shell--wide">
     <div class="split split--wide-text">
-      <div class="split__media reveal">
-        <div class="frame">
-          <div class="frame__img">
-            <img src="assets/img/why-exam.svg" width="1200" height="900" alt="A veterinary technician holding a cat during an examination at Columbia Animal Hospital">
-          </div>
-          <div class="frame__badge">
-            <div>
-              <strong>50 yrs</strong>
-              <span>Caring for pets in Columbia and Foxworth</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="reveal" data-delay="1">
-        <p class="eyebrow">Why families choose us</p>
-        <h2>The same hospital your neighbors have trusted for decades</h2>
+      <div class="reveal">
+        <p class="eyebrow eyebrow--light">Why Columbia Animal Hospital</p>
+        <h2>The hospital your neighbors have trusted for decades</h2>
+        <p class="lede mt-6">
+          Long enough that we are treating the pets of people we first met as children — and
+          equipped well enough that most of what your pet needs happens in this building.
+        </p>
         <ul class="marklist">
           <li>
-            <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-stethoscope"></use></svg></span>
+            <span class="icon-tile icon-tile--dark"><svg class="icon" aria-hidden="true"><use href="#i-stethoscope"></use></svg></span>
             <strong>Experienced local veterinarians</strong>
-            <span>
-              All three of our doctors are graduates of the Mississippi State University
-              College of Veterinary Medicine, and between them they have spent most of their
-              careers in Columbia.
-            </span>
+            <span>All three of our doctors are graduates of the Mississippi State University College of Veterinary Medicine, and between them they have spent most of their careers in Columbia.</span>
           </li>
           <li>
-            <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-scan"></use></svg></span>
+            <span class="icon-tile icon-tile--dark"><svg class="icon" aria-hidden="true"><use href="#i-scan"></use></svg></span>
             <strong>Modern diagnostics on site</strong>
-            <span>
-              Digital radiography produces images in seconds and can be sent to a veterinary
-              radiologist for a second opinion. Heartworm results are often ready while you wait.
-            </span>
+            <span>Digital radiography produces images in seconds and can be sent to a veterinary radiologist for a second opinion. Heartworm results are often ready while you wait.</span>
           </li>
           <li>
-            <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-paw"></use></svg></span>
+            <span class="icon-tile icon-tile--dark"><svg class="icon" aria-hidden="true"><use href="#i-paw"></use></svg></span>
             <strong>Dogs and cats, exclusively</strong>
-            <span>
-              We narrowed our focus to companion animals in 2005 so our training and our equipment
-              go entirely to the pets who live in your house.
-            </span>
+            <span>We narrowed our focus to companion animals in 2005 so our training and our equipment go entirely to the pets who live in your house.</span>
           </li>
           <li>
-            <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-heart"></use></svg></span>
+            <span class="icon-tile icon-tile--dark"><svg class="icon" aria-hidden="true"><use href="#i-heart"></use></svg></span>
             <strong>Care for the whole life of the pet</strong>
-            <span>
-              First vaccinations, spay and neuter, dental work, the difficult later years — the
-              same team, and records that go back as far as your family does with us.
-            </span>
+            <span>First vaccinations, spay and neuter, dental work, the difficult later years — the same team, and records that go back as far as your family does with us.</span>
           </li>
         </ul>
+      </div>
+      <div class="split__media reveal" data-delay="1">
+        <figure class="figure figure--tall">
+          <img src="assets/img/why-exam.svg" width="1200" height="900" alt="A veterinarian examining a cat at Columbia Animal Hospital in Columbia, Mississippi">
+        </figure>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section section--lg" id="veterinarians">
+<section class="section section--lg" id="team">
   <div class="shell shell--wide">
     <div class="section-head section-head--center reveal">
-      <p class="eyebrow eyebrow--center">Our veterinarians</p>
-      <h2>The doctors who will see your pet</h2>
-      <p>Three veterinarians, all trained at Mississippi State, and a combined practice history in Columbia measured in decades rather than years.</p>
+      <p class="eyebrow eyebrow--center">Meet the team</p>
+      <h2>The veterinarians who will see your pet</h2>
+      <p>Three doctors, all trained at Mississippi State, with a combined history in Columbia measured in decades rather than years.</p>
     </div>
-
-    <div class="vets-grid vets-grid--stagger">
-      <a class="vet-card reveal" href="veterinarians.html#dr-janelle-loper">
-        <span class="vet-card__portrait">
-          <img src="assets/img/vet-loper.svg" width="800" height="1000" alt="Portrait of Dr. Janelle Loper, veterinarian at Columbia Animal Hospital">
-          <span class="vet-card__years">With us since 2008</span>
-        </span>
-        <span class="vet-card__body">
-          <h3>Dr. Janelle Loper</h3>
-          <span class="vet-card__role">Doctor of Veterinary Medicine</span>
-          <p>A 2002 graduate of the Mississippi State University College of Veterinary Medicine, treating the clients of Columbia Animal Hospital since 2008.</p>
-          <span class="link-arrow">Read full profile <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg></span>
-        </span>
-      </a>
-
-      <a class="vet-card reveal" data-delay="1" href="veterinarians.html#dr-pat-sanford">
-        <span class="vet-card__portrait">
+    <div class="team-grid">
+      <a class="team-card reveal" href="team.html#dr-pat-sanford">
+        <span class="team-card__portrait">
           <img src="assets/img/vet-sanford.svg" width="800" height="1000" alt="Portrait of Dr. Pat Sanford, veterinarian at Columbia Animal Hospital">
-          <span class="vet-card__years">With us since 1985</span>
+          <span class="team-card__tag">With us since 1985</span>
         </span>
-        <span class="vet-card__body">
+        <span class="team-card__body">
           <h3>Dr. Pat Sanford</h3>
-          <span class="vet-card__role">Doctor of Veterinary Medicine</span>
-          <p>A 1985 graduate of the Mississippi State University College of Veterinary Medicine, who joined Columbia Animal Hospital the same year he qualified.</p>
+          <span class="team-card__role">Doctor of Veterinary Medicine</span>
+          <p>A 1985 graduate of the Mississippi State University College of Veterinary Medicine, who joined the hospital the same year he qualified.</p>
           <span class="link-arrow">Read full profile <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg></span>
         </span>
       </a>
-
-      <a class="vet-card reveal" data-delay="2" href="veterinarians.html#dr-bridgett-williams">
-        <span class="vet-card__portrait">
-          <img src="assets/img/vet-williams.svg" width="800" height="1000" alt="Portrait of Dr. Bridgett Williams, veterinarian at Columbia Animal Hospital">
-          <span class="vet-card__years">With us since 2013</span>
+      <a class="team-card reveal" data-delay="1" href="team.html#dr-janelle-loper">
+        <span class="team-card__portrait">
+          <img src="assets/img/vet-loper.svg" width="800" height="1000" alt="Portrait of Dr. Janelle Loper, veterinarian at Columbia Animal Hospital">
+          <span class="team-card__tag">With us since 2008</span>
         </span>
-        <span class="vet-card__body">
+        <span class="team-card__body">
+          <h3>Dr. Janelle Loper</h3>
+          <span class="team-card__role">Doctor of Veterinary Medicine</span>
+          <p>A 2002 graduate of the Mississippi State University College of Veterinary Medicine, treating our clients' pets since 2008.</p>
+          <span class="link-arrow">Read full profile <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg></span>
+        </span>
+      </a>
+      <a class="team-card reveal" data-delay="2" href="team.html#dr-bridgett-williams">
+        <span class="team-card__portrait">
+          <img src="assets/img/vet-williams.svg" width="800" height="1000" alt="Portrait of Dr. Bridgett Williams, veterinarian at Columbia Animal Hospital">
+          <span class="team-card__tag">With us since 2013</span>
+        </span>
+        <span class="team-card__body">
           <h3>Dr. Bridgett Williams</h3>
-          <span class="vet-card__role">Doctor of Veterinary Medicine</span>
+          <span class="team-card__role">Doctor of Veterinary Medicine</span>
           <p>A 2010 graduate of the Mississippi State University College of Veterinary Medicine, who joined us in 2013 after practicing in Bay Springs.</p>
           <span class="link-arrow">Read full profile <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg></span>
         </span>
@@ -453,13 +427,89 @@
   </div>
 </section>
 
-<section class="section section--lg emergency" id="emergency">
+<section class="section section--lg section--gray" id="reviews">
+  <div class="shell">
+    <div class="section-head section-head--center reveal">
+      <p class="eyebrow eyebrow--center">In our clients' words</p>
+      <h2>What people say about us</h2>
+    </div>
+    <div class="review-panel reveal">
+      <div>
+        <blockquote>
+          To provide professional, compassionate veterinary care to clients and their furry
+          family members.
+        </blockquote>
+        <cite>Our mission, and the standard we ask to be judged against</cite>
+      </div>
+      <div>
+        <p style="font-size:var(--step-0);line-height:1.72;color:var(--muted)">
+          Our clients leave reviews on our Facebook page, where you can read them in full and
+          in their own words rather than as selected quotes.
+        </p>
+        <div class="stack-actions">
+          <a class="btn btn--outline" href="https://www.facebook.com/ColumbiaAnimalHospitalMS/" target="_blank" rel="noopener">
+            <svg class="icon" aria-hidden="true"><use href="#i-facebook"></use></svg>
+            Read reviews on Facebook
+          </a>
+        </div>
+        <p style="margin-top:var(--sp-5);font-size:var(--step--1);color:var(--muted)">
+          Been in to see us? A few words about your visit helps other pet owners in Columbia
+          find their way to us.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--lg" id="new-patients">
+  <div class="shell shell--wide">
+    <div class="section-head reveal">
+      <p class="eyebrow">New patients</p>
+      <h2>What happens on your first visit</h2>
+      <p>New to the hospital? Here is how a first appointment usually goes, so nothing about it is a surprise.</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal">
+        <span class="step__num">Step one</span>
+        <h3>Call to book</h3>
+        <p>Appointments are made by phone on (601) 736-3041. Tell us what is going on and roughly how old your pet is.</p>
+      </div>
+      <div class="step reveal" data-delay="1">
+        <span class="step__num">Step two</span>
+        <h3>Bring what you have</h3>
+        <p>Any vaccination records from a previous veterinarian, and the packaging of any medication or food your pet is on.</p>
+      </div>
+      <div class="step reveal" data-delay="2">
+        <span class="step__num">Step three</span>
+        <h3>The examination</h3>
+        <p>A full physical exam, a conversation about what you have been seeing at home, and any testing the doctor recommends.</p>
+      </div>
+      <div class="step reveal" data-delay="3">
+        <span class="step__num">Step four</span>
+        <h3>A plan you understand</h3>
+        <p>What we found, what we suggest, and what it involves — explained before anything is decided.</p>
+      </div>
+    </div>
+    <div class="stack-actions">
+      <a class="btn btn--primary" href="new-patients.html">
+        New patient information
+        <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+      </a>
+      <a class="btn btn--outline" href="tel:+16017363041">
+        <svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg>
+        (601) 736-3041
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section section--lg section--dark" id="emergency">
   <div class="shell shell--wide">
     <div class="emergency__grid">
       <div class="reveal">
         <p class="eyebrow eyebrow--light">After-hours care</p>
         <h2>If something happens outside our hours</h2>
-        <p class="lede mt-6" style="color:rgba(250,247,241,0.85)">
+        <p class="lede mt-6">
           Columbia Animal Hospital has an on-call veterinarian available after hours in the case
           of an emergency. If your pet needs help when the hospital is closed, call us and follow
           the instructions you are given.
@@ -469,15 +519,15 @@
           <p>
             <strong>We are not a 24-hour emergency hospital.</strong>
             Our building is staffed during the posted hours below. After hours an on-call
-            veterinarian is available for emergencies — please do not assume someone is at the
-            hospital, and call first rather than driving over.
+            veterinarian is available for emergencies — please call first rather than driving
+            over, as nobody may be at the hospital to meet you.
           </p>
         </div>
       </div>
-      <div class="call-panel reveal" data-delay="1">
+      <div class="call-card reveal" data-delay="1">
         <p class="eyebrow eyebrow--light">One number, any hour</p>
-        <a class="call-panel__number" href="tel:+16017363041">(601) 736-3041</a>
-        <p>Columbia Animal Hospital · 1409 Hwy 98E, Columbia, MS 39429</p>
+        <a class="call-card__number" href="tel:+16017363041">(601) 736-3041</a>
+        <p>Columbia Animal Hospital &middot; 1409 Hwy 98E, Columbia, MS 39429</p>
         <a class="btn btn--onDark" href="tel:+16017363041">
           <svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg>
           Call the hospital
@@ -487,10 +537,26 @@
   </div>
 </section>
 
-<section class="section section--lg section--cream" id="location">
+<section class="section section--lg section--gray" id="gallery">
+  <div class="shell shell--wide">
+    <div class="section-head section-head--center reveal">
+      <p class="eyebrow eyebrow--center">Inside the hospital</p>
+      <h2>Where your pet will be cared for</h2>
+    </div>
+    <div class="gallery reveal">
+      <figure><img src="assets/img/gallery-welcome.svg" width="1200" height="1200" alt="A dog being greeted at the front desk of Columbia Animal Hospital" loading="lazy"></figure>
+      <figure><img src="assets/img/gallery-reception.svg" width="1000" height="1000" alt="The reception and waiting area at Columbia Animal Hospital" loading="lazy"></figure>
+      <figure><img src="assets/img/gallery-exam.svg" width="1000" height="1000" alt="An examination room at Columbia Animal Hospital" loading="lazy"></figure>
+      <figure><img src="assets/img/gallery-treatment.svg" width="1000" height="1000" alt="The treatment area at Columbia Animal Hospital" loading="lazy"></figure>
+      <figure><img src="assets/img/gallery-boarding.svg" width="1000" height="1000" alt="A boarding run at Columbia Animal Hospital" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<section class="section section--lg" id="location">
   <div class="shell shell--wide">
     <div class="section-head reveal">
-      <p class="eyebrow">Visit us</p>
+      <p class="eyebrow">Hours &amp; location</p>
       <h2>On Highway 98 East, minutes from downtown Columbia</h2>
     </div>
     <div class="location__grid">
@@ -509,12 +575,12 @@
             <li data-day="0"><span class="day">Sunday</span> <span class="time time--closed">Closed</span></li>
           </ul>
           <p class="hours-card__note">
-            An on-call veterinarian is available after hours in the case of an emergency.
-            <a href="#emergency">How after-hours care works</a>.
+            All times are US Central. An on-call veterinarian is available after hours in the case
+            of an emergency — <a href="#emergency">how after-hours care works</a>.
           </p>
         </div>
 
-        <ul class="info-list mt-7">
+        <ul class="info-list mt-8">
           <li>
             <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-pin"></use></svg></span>
             <h3>Address</h3>
@@ -527,9 +593,12 @@
             </div>
           </li>
           <li>
-            <span class="icon-tile icon-tile--tan"><svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg></span>
+            <span class="icon-tile icon-tile--green"><svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg></span>
             <h3>Phone</h3>
-            <div><a href="tel:+16017363041">(601) 736-3041</a></div>
+            <div>
+              <a href="tel:+16017363041">(601) 736-3041</a>
+              <span class="sub">Appointments, grooming, boarding and questions</span>
+            </div>
           </li>
         </ul>
       </div>
@@ -538,7 +607,7 @@
         <div class="map__placeholder">
           <div>
             <p><strong>1409 Hwy 98E, Columbia, MS 39429</strong></p>
-            <p class="mt-6"><a class="btn btn--ghost" href="https://www.google.com/maps/dir/?api=1&amp;destination=1409+Hwy+98E%2C+Columbia%2C+MS+39429" target="_blank" rel="noopener">Open in Google Maps</a></p>
+            <p class="mt-6"><a class="btn btn--outline" href="https://www.google.com/maps/dir/?api=1&amp;destination=1409+Hwy+98E%2C+Columbia%2C+MS+39429" target="_blank" rel="noopener">Open in Google Maps</a></p>
           </div>
         </div>
       </div>
@@ -546,10 +615,48 @@
   </div>
 </section>
 
-<section class="section section--lg closer">
-  <div class="closer__bg">
-    <img src="assets/img/closer-community.svg" width="1800" height="900" alt="" aria-hidden="true">
+<section class="section section--lg section--gray" id="faq">
+  <div class="shell shell--narrow">
+    <div class="section-head section-head--center reveal">
+      <p class="eyebrow eyebrow--center">Questions we hear often</p>
+      <h2>Good to know before you come in</h2>
+    </div>
+    <div class="faq-list">
+      <details class="faq reveal">
+        <summary>How often should my pet see a veterinarian?</summary>
+        <div class="faq__body">
+          <p>We recommend that a healthy pet visit the clinic at least once each year — to properly boost vaccinations, identify any health issues your pet may be experiencing without obvious signs, and monitor their aging process.</p>
+        </div>
+      </details>
+      <details class="faq reveal">
+        <summary>When should puppies and kittens be vaccinated?</summary>
+        <div class="faq__body">
+          <p>Puppies and kittens require several booster vaccinations, given three weeks apart, to protect them from viruses common to this area. They are vaccinated at six, nine, twelve and fifteen weeks of age, with annual vaccines recommended one year after the final booster.</p>
+        </div>
+      </details>
+      <details class="faq reveal">
+        <summary>At what age should my pet be spayed or neutered?</summary>
+        <div class="faq__body">
+          <p>Columbia Animal Hospital recommends not having your pet sterilized any earlier than six months of age. This allows your pet to mature with their reproductive organs and the corresponding hormones, which allows for a normal aging process.</p>
+        </div>
+      </details>
+      <details class="faq reveal">
+        <summary>How do I make an appointment?</summary>
+        <div class="faq__body">
+          <p>By phone. Call <a href="tel:+16017363041">(601) 736-3041</a> during our opening hours — Monday to Friday, 7:30 AM – 5:30 PM, and Saturday, 8:00 AM – 12:00 PM. Tell us what is going on and we will find you a time.</p>
+        </div>
+      </details>
+    </div>
+    <div class="stack-actions stack-actions--center">
+      <a class="btn btn--outline" href="resources.html">
+        All questions and pet care resources
+        <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+      </a>
+    </div>
   </div>
+</section>
+
+<section class="section section--lg closer">
   <div class="shell">
     <div class="closer__inner reveal">
       <h2>Your pet deserves compassionate, experienced care.</h2>
@@ -558,16 +665,16 @@
         have been putting off — call Columbia Animal Hospital and we will find a time.
       </p>
       <div class="closer__actions">
-        <a class="btn btn--lg btn--onDark" href="tel:+16017363041">
-          <svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg>
-          Call (601) 736-3041
+        <a class="btn btn--primary btn--lg" href="request-appointment.html">
+          <svg class="icon" aria-hidden="true"><use href="#i-calendar"></use></svg>
+          Request an Appointment
         </a>
-        <a class="btn btn--lg btn--ghostOnDark" href="contact.html">
-          Contact &amp; directions
-          <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+        <a class="btn btn--ghostDark btn--lg" href="tel:+16017363041">
+          <svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg>
+          (601) 736-3041
         </a>
       </div>
-      <p class="closer__meta">1409 Hwy 98E, Columbia, MS 39429 · Mon–Fri 7:30 AM – 5:30 PM · Sat 8:00 AM – 12:00 PM · Sun closed</p>
+      <p class="closer__meta">1409 Hwy 98E, Columbia, MS 39429 &middot; Mon–Fri 7:30 AM – 5:30 PM · Sat 8:00 AM – 12:00 PM · Sun closed</p>
     </div>
   </div>
 </section>
@@ -658,13 +765,13 @@
     <div class="footer__grid">
       <div class="footer__brand">
         <a class="brand" href="index.html">
-          <img class="brand__mark" src="assets/img/logo-mark.svg" width="46" height="46" alt="" aria-hidden="true">
+          <img class="brand__mark" src="assets/img/logo-mark.svg" width="44" height="44" alt="" aria-hidden="true">
           <span class="brand__text">
             <span class="brand__name">Columbia Animal Hospital</span>
             <span class="brand__place">Columbia, Mississippi</span>
           </span>
         </a>
-        <p>Caring for the dogs and cats of Columbia and Foxworth since 1975.</p>
+        <p>A full-service companion animal hospital caring for the dogs and cats of Columbia and Foxworth since 1975.</p>
         <div class="social">
           <a href="https://www.facebook.com/ColumbiaAnimalHospitalMS/" target="_blank" rel="noopener">
             <svg class="icon" aria-hidden="true"><use href="#i-facebook"></use></svg>
@@ -674,13 +781,13 @@
       </div>
 
       <div>
-        <h2>Pages</h2>
+        <h2>Explore</h2>
         <ul class="footer__list">
-          <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About the hospital</a></li>
-          <li><a href="veterinarians.html">Our veterinarians</a></li>
           <li><a href="services.html">Services</a></li>
-          <li><a href="faq.html">Questions we hear often</a></li>
+          <li><a href="team.html">Our team</a></li>
+          <li><a href="new-patients.html">New patients</a></li>
+          <li><a href="resources.html">Pet care resources</a></li>
           <li><a href="contact.html">Contact &amp; directions</a></li>
         </ul>
       </div>
@@ -692,7 +799,6 @@
           <li><a href="services/dental-care.html">Dental care</a></li>
           <li><a href="services/digital-radiography.html">Digital radiography</a></li>
           <li><a href="services/heartworm-testing.html">Heartworm testing</a></li>
-          <li><a href="services/dermatology.html">Dermatology</a></li>
           <li><a href="services/grooming.html">Grooming</a></li>
           <li><a href="services/boarding.html">Boarding</a></li>
         </ul>
@@ -710,7 +816,7 @@
           <li><span>Saturday</span> <span class="time">8:00 AM – 12:00 PM</span></li>
           <li><span>Sunday</span> <span class="time">Closed</span></li>
         </ul>
-        <p style="margin-top:var(--sp-4);font-size:var(--step--1);line-height:1.6">
+        <p style="margin-top:var(--sp-5);font-size:var(--step--1);line-height:1.68">
           An on-call veterinarian is available after hours for emergencies. We are not a
           24-hour emergency hospital.
         </p>
@@ -720,7 +826,7 @@
     <div class="footer__bottom">
       <p>&copy; 2026 Columbia Animal Hospital. All rights reserved.</p>
       <nav aria-label="Footer">
-        <a href="contact.html">Contact</a>
+        <a href="request-appointment.html">Request an appointment</a>
         <a href="https://www.google.com/maps/dir/?api=1&amp;destination=1409+Hwy+98E%2C+Columbia%2C+MS+39429" target="_blank" rel="noopener">Directions</a>
         <a href="tel:+16017363041">(601) 736-3041</a>
       </nav>
@@ -733,9 +839,9 @@
     <svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg>
     Call (601) 736-3041
   </a>
-  <a href="https://www.google.com/maps/dir/?api=1&amp;destination=1409+Hwy+98E%2C+Columbia%2C+MS+39429" target="_blank" rel="noopener">
-    <svg class="icon" aria-hidden="true"><use href="#i-directions"></use></svg>
-    Directions
+  <a href="request-appointment.html">
+    <svg class="icon" aria-hidden="true"><use href="#i-calendar"></use></svg>
+    Appointment
   </a>
 </div>
 

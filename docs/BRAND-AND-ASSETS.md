@@ -2,41 +2,38 @@
 
 ## Colour
 
-Every color on this site was measured before it was used. The ratios below are against
-`--cream` (`#FAF7F1`), the page ground, unless stated otherwise.
+White-led and editorial, with near-black sections for drama and two warm accents so it never
+reads cold or clinical. Ratios are against `--warm-white` (`#FCFBF9`) unless stated.
 
-| Token | Value | On cream | Use |
+| Token | Value | On white | Use |
 |---|---|---|---|
-| `--ink` | `#18261F` | 14.7:1 | Headings |
-| `--body` | `#3D4A43` | 8.7:1 | Body copy |
-| `--muted` | `#5E6E65` | 5.0:1 | Captions, meta |
-| `--forest` | `#1E4034` | 10.7:1 | Primary brand; white on it is 11.4:1 |
-| `--forest-deep` | `#143026` | 13.3:1 | Darkest surface; white on it is 14.2:1 |
-| `--forest-soft` | `#2C5344` | — | Raised surface on dark grounds |
-| `--clay` | `#A8512E` | 5.1:1 | Call-to-action fill; white on it is 5.4:1 |
-| `--clay-deep` | `#8E4527` | 6.5:1 | CTA hover, small link text |
-| `--cream-deep` | `#F0E9DC` | — | Alternating section band |
-| `--sage-pale` | `#DCE6DC` | — | Tint surface. **Never a text color** |
-| `--tan-pale` | `#EFE4D3` | — | Mat behind framed photographs |
+| `--ink` | `#15151A` | 18.2:1 | Headings, primary buttons |
+| `--body` | `#3D3D45` | 10.8:1 | Body copy |
+| `--muted` | `#6B6B74` | 5.3:1 | Captions and meta |
+| `--charcoal` | `#1E1E23` | — | Dark section ground; white on it is 16.6:1 |
+| `--charcoal-soft` | `#2B2B32` | — | Raised surface on dark |
+| `--on-dark` | `#EDEAE5` | 13.8:1 on charcoal | Body copy on dark |
+| `--on-dark-muted` | `#A8A8B0` | 7.0:1 on charcoal | Meta on dark |
+| `--gray-50` | `#F6F4F1` | — | Alternating band |
+| `--line` | `#E6E2DC` | — | Hairlines and card borders |
+| `--line-strong` | `#8E8A83` | 3.0:1 | Form borders and real UI boundaries |
 
-### The two mid-tones need three tokens each
+### Both accents are mid-tones, so both need several tokens
 
-Sage and tan are mid-tones. A single value cannot serve as a fill, as large text on a light
-ground, and as small text on a light ground — the numbers simply do not allow it:
-
-| Colour | Value | On cream | Verdict |
+| Token | Value | On white | Verdict |
 |---|---|---|---|
-| `--sage` | `#7E9C88` | **2.8:1** | **Fill only.** Never text on light. 4.7:1 on `--forest-deep`, so it is fine as text on dark |
-| `--sage-deep` | `#557463` | 4.8:1 | Large text and icons on light |
-| `--sage-text` | `#456052` | 6.4:1 | Small text on light |
-| `--tan` | `#C7A57E` | **2.2:1** | **Fill only.** 6.2:1 on `--forest-deep` — this is why the tan accents live on the dark bands |
-| `--tan-deep` | `#96714A` | 4.1:1 | **Large text and icons only** |
+| `--amber` | `#C77B2B` | 3.3:1 | **Fill only.** White on it is also 3.3:1 and **fails** — amber buttons take *dark* text, where the ratio is 5.5:1 |
+| `--amber-deep` | `#A8641F` | 4.7:1 | Small text, links and eyebrows on white |
+| `--amber-glow` | `#E0A458` | 7.6:1 on charcoal | The accent on dark sections |
+| `--amber-soft` | `#F6E8D6` | — | Tint surface behind icons |
+| `--green` | `#4F7D6B` | 4.7:1 | Fill, and white on it is 4.7:1 — this one *can* take white text |
+| `--green-deep` | `#3F6B5A` | 6.1:1 | Hover and small text |
+| `--green-glow` | `#8FB8A6` | 7.6:1 on charcoal | The accent on dark |
+| `--green-soft` | `#E8F0EC` | — | Tint surface |
 
-This is the trap worth remembering: a dark or saturated brand color usually works as one
-token; a mid-tone will not, and finding that out after the build means touching every
-component. Run the numbers first.
-
-Re-check any new color before using it:
+The amber row is the trap worth remembering. A mid-tone accent that looks fine as a fill will
+fail the moment you put white text on it, and finding that out after the build means touching
+every button. Measure first. The formula:
 
 ```python
 def lum(h):
@@ -49,22 +46,24 @@ def ratio(a, b):
     return (max(la, lb) + 0.05) / (min(la, lb) + 0.05)
 ```
 
-AA needs 4.5:1 for body text, 3:1 for large text (18.66px bold or 24px) and for UI
-boundaries.
+AA needs 4.5:1 for body text, 3:1 for large text (18.66px bold or 24px) and for UI boundaries.
 
 ## Type
 
 | Role | Face | Why |
 |---|---|---|
-| Display | **Fraunces** | A variable serif with warmth and a little character. It reads as a practice with a history rather than a chain, which is the whole positioning. Set with `SOFT 20` and `WONK 0` — the expressive end of its axes is a step too far for a medical business |
-| Body and UI | **Inter** | Neutral, legible at small sizes, and it does not compete with the headings |
+| Display | **Newsreader** (variable, 200–700, optical sizing) | A warm editorial serif. It carries the premium, established feel the brief asked for without the fashion-magazine coldness of a high-contrast Didone, and it is not the serif every template reaches for |
+| Body and UI | **Inter** | Neutral and legible at small sizes; it does not compete with the headings |
 
-Both are **self-hosted** in `assets/fonts/`, latin subset only, as variable WOFF2 — 115 kB
-for the pair. That removes a third-party connection from the critical path and means the
-site keeps working if Google Fonts is blocked or slow. They are preloaded in the `<head>`.
+Headings sit at weight 400 rather than bold. At the sizes used here the serif already has
+presence, and letting it stay light is most of what separates *expensive* from *loud*.
 
-Sizes come from a fluid scale (`--step--1` to `--step-7`) that interpolates between 390px
-and 1440px, so there are no font-size breakpoints to maintain.
+Both faces are **self-hosted** in `assets/fonts/`, latin subset only, as variable WOFF2 —
+about 180 kB for the pair. That keeps a third-party connection off the critical path and means
+the site still works if Google Fonts is blocked. Both are preloaded in the `<head>`.
+
+Sizes come from a fluid scale (`--step--2` to `--step-9`) interpolating between 390px and
+1600px, so there are no font-size breakpoints to maintain.
 
 ## The mark
 

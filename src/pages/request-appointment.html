@@ -1,0 +1,176 @@
+<!--json
+{
+  "slug": "request-appointment",
+  "nav": "",
+  "out": "request-appointment.html",
+  "priority": "0.9",
+  "title": "Request an Appointment | Columbia Animal Hospital, MS",
+  "description": "Book your pet's appointment at Columbia Animal Hospital in Columbia, Mississippi. Call (601) 736-3041, Mon-Fri 7:30 AM-5:30 PM and Saturday mornings."
+}
+-->
+
+<section class="page-head">
+  <div class="shell shell--wide">
+    <ol class="crumbs">
+      <li><a href="index.html">Home</a></li>
+      <li><span aria-current="page">Request an Appointment</span></li>
+    </ol>
+    <h1>Request an appointment</h1>
+    <p class="page-head__lede">
+      Appointments at Columbia Animal Hospital are made by phone — you will speak to someone who
+      can see the day's schedule, ask what is going on, and judge how soon your pet needs to be
+      seen.
+    </p>
+    <div class="page-head__actions">
+      <a class="btn btn--primary btn--lg" href="{{ contact.phoneLink }}">
+        <svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg>
+        Call {{ contact.phoneDisplay }}
+      </a>
+      <a class="btn btn--outline btn--lg" href="{{ contact.directionsUrl }}" target="_blank" rel="noopener">
+        <svg class="icon" aria-hidden="true"><use href="#i-directions"></use></svg>
+        Get directions
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="shell shell--wide">
+    <div class="location__grid">
+      <div class="reveal">
+        <p class="eyebrow">Before you call</p>
+        <h2>What helps us find the right slot</h2>
+        <ul class="marklist">
+          <li>
+            <span class="marklist__num">1</span>
+            <strong>Your pet's name and rough age</strong>
+            <span>If you have been here before, that is usually enough for us to find their record.</span>
+          </li>
+          <li>
+            <span class="marklist__num">2</span>
+            <strong>What you are seeing, and since when</strong>
+            <span>Limping since Tuesday, off their food for two days, scratching an ear raw — specifics help us judge urgency.</span>
+          </li>
+          <li>
+            <span class="marklist__num">3</span>
+            <strong>Anything they may have eaten or got into</strong>
+            <span>Medications, plants, antifreeze, a bone, a toy. Bring the packaging if you have it.</span>
+          </li>
+          <li>
+            <span class="marklist__num">4</span>
+            <strong>For grooming or boarding, your dates</strong>
+            <span>Both book up quickly. For boarding, call four weeks ahead if a vaccination booster is due.</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="reveal" data-delay="1">
+        <div class="call-card call-card--light">
+          <p class="eyebrow eyebrow--center">Call the hospital</p>
+          <a class="call-card__number" href="{{ contact.phoneLink }}">{{ contact.phoneDisplay }}</a>
+          <p>1409 Hwy 98E, Columbia, MS 39429</p>
+          <a class="btn btn--primary" href="{{ contact.phoneLink }}">
+            <svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg>
+            Tap to call
+          </a>
+        </div>
+
+        <div class="hours-card mt-6" id="hours">
+          <div class="hours-card__head">
+            <h3>When we can take your call</h3>
+            <span class="status" data-status data-state="closed">
+              <span class="status__dot"></span>
+              <span data-status-label>Hours</span>
+            </span>
+          </div>
+          <ul class="hours-list">
+            <li data-day="1,2,3,4,5"><span class="day">Monday – Friday</span> <span class="time">{{ hours.weekdays }}</span></li>
+            <li data-day="6"><span class="day">Saturday</span> <span class="time">{{ hours.saturday }}</span></li>
+            <li data-day="0"><span class="day">Sunday</span> <span class="time time--closed">{{ hours.sunday }}</span></li>
+          </ul>
+          <p class="hours-card__note">
+            All times are US Central. An on-call veterinarian is available after hours in the case
+            of an emergency — call the hospital and follow the instructions you are given.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--lg section--gray">
+  <div class="shell shell--wide">
+    <div class="section-head section-head--center reveal">
+      <p class="eyebrow eyebrow--center">What you can book</p>
+      <h2>Appointments, grooming and boarding</h2>
+      <p>All three go through the same number. Say which one you are calling about and we will put you through.</p>
+    </div>
+    <div class="services-grid">
+      <div class="card service-card reveal">
+        <span class="icon-tile icon-tile--lg"><svg class="icon" aria-hidden="true"><use href="#i-stethoscope"></use></svg></span>
+        <h3>A veterinary appointment</h3>
+        <p>Wellness visits, vaccinations, a problem you have noticed, dental work, surgery, or a second opinion.</p>
+      </div>
+      <div class="card service-card reveal" data-delay="1">
+        <span class="icon-tile icon-tile--lg"><svg class="icon" aria-hidden="true"><use href="#i-scissors"></use></svg></span>
+        <h3>Grooming</h3>
+        <p>Our groomers are very popular and can often book up quickly, so call well ahead of the date you want.</p>
+      </div>
+      <div class="card service-card reveal" data-delay="2">
+        <span class="icon-tile icon-tile--lg"><svg class="icon" aria-hidden="true"><use href="#i-house"></use></svg></span>
+        <h3>Boarding</h3>
+        <p>We recommend pets be current on vaccinations before a stay. If a booster is due, contact us four weeks in advance.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--lg section--dark">
+  <div class="shell shell--wide">
+    <div class="emergency__grid">
+      <div class="reveal">
+        <p class="eyebrow eyebrow--light">Urgent situations</p>
+        <h2>If your pet cannot wait for an appointment</h2>
+        <p class="lede mt-6">
+          Call the hospital rather than booking the next open slot, and say what is happening.
+          During our posted hours we will tell you whether to come straight in.
+        </p>
+        <div class="notice">
+          <svg class="icon" aria-hidden="true"><use href="#i-alert"></use></svg>
+          <p>
+            <strong>We are not a 24-hour emergency hospital.</strong>
+            Outside our hours an on-call veterinarian is available for emergencies. Call first
+            and follow the instructions you are given — please do not assume someone is at the
+            building.
+          </p>
+        </div>
+      </div>
+      <div class="call-card reveal" data-delay="1">
+        <p class="eyebrow eyebrow--light">One number, any hour</p>
+        <a class="call-card__number" href="{{ contact.phoneLink }}">{{ contact.phoneDisplay }}</a>
+        <p>Columbia Animal Hospital &middot; Columbia, Mississippi</p>
+        <a class="btn btn--onDark" href="{{ contact.phoneLink }}">
+          <svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg>
+          Call now
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "name": "Request an appointment at Columbia Animal Hospital",
+  "url": "{{ site.url }}/request-appointment.html",
+  "mainEntity": { "@id": "{{ site.url }}/#practice" },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "{{ site.url }}/" },
+      { "@type": "ListItem", "position": 2, "name": "Request an Appointment", "item": "{{ site.url }}/request-appointment.html" }
+    ]
+  }
+}
+</script>

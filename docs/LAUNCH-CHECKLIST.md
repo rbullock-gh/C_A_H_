@@ -20,7 +20,7 @@ a far more damaging error than a page with three doctors instead of four.
 **Ask the practice.** Then either:
 
 - *Still practicing* → add him. Copy the pattern of any existing doctor block in
-  `src/pages/veterinarians.html`, add a card to the home page grid, and add a `Person`
+  `src/pages/team.html`, add a card to the home page grid, and add a `Person`
   entry to the `employee` array in the home page JSON-LD and to `mainEntity` on the
   veterinarians page.
 - *Retired* → consider a line in the About page history. Fifty years is worth saying.
@@ -48,6 +48,42 @@ Confirm it, then correct whichever listings are wrong. A visitor who arrives at 
 locked door does not come back.
 
 ---
+
+## 3b. Decide what "Request an Appointment" should do
+
+The site now leads with a **Request an Appointment** call to action, in the header, the hero,
+the footer, the mobile bar and every service page. Right now every one of them lands on
+`request-appointment.html`, which explains how booking works and puts the phone number front
+and centre.
+
+**There is deliberately no form.** The practice publishes no booking system and no email
+address, so a form would have nowhere to send — and a form that silently goes nowhere costs
+you the appointment *and* the client's trust. If you want one:
+
+1. Pick somewhere for it to go — a practice email address, or a form service that emails you.
+2. Add the form to `src/pages/request-appointment.html` with a real `action`, and mark which
+   fields are required.
+3. Test it end to end, from a phone, before it goes live. Then keep the phone number where it
+   is: most people will still call.
+
+## 3c. Collect real testimonials
+
+The reviews section on the home page carries the practice's own mission statement and a link
+to the Facebook page where clients already leave reviews. **No testimonial on this site was
+written by us**, and the Facebook rating is deliberately absent from the structured data —
+that is a third party's rating, not first-party review markup, and publishing it as the latter
+is a policy violation.
+
+To add real ones: collect them first-party with the client's permission, then paste into the
+reviews section using this shape, which is what the styles already expect:
+
+```html
+<blockquote>Their words, unedited.</blockquote>
+<cite>First name, and their pet's name — Columbia, MS</cite>
+```
+
+Use real names with permission. An invented quote is the fastest way to lose a client's trust,
+and people local enough to be reading this will notice a name that does not exist.
 
 ## 4. Point the site at its domain
 
@@ -120,10 +156,10 @@ over:
 | `/` and `/Home.aspx` | `/` |
 | `/ContactUs.aspx` | `/contact.html` |
 | `/FAQs.aspx` | `/faq.html` |
-| `/AboutUs/DrPatSanford.aspx` | `/veterinarians.html#dr-pat-sanford` |
-| `/AboutUs/DrJanelleLoper.aspx` | `/veterinarians.html#dr-janelle-loper` |
-| `/AboutUs/DrBridgettWilliams.aspx` | `/veterinarians.html#dr-bridgett-williams` |
-| `/AboutUs/DrWallaceCarson.aspx` | `/veterinarians.html` (or his own block, after item 1) |
+| `/AboutUs/DrPatSanford.aspx` | `/team.html#dr-pat-sanford` |
+| `/AboutUs/DrJanelleLoper.aspx` | `/team.html#dr-janelle-loper` |
+| `/AboutUs/DrBridgettWilliams.aspx` | `/team.html#dr-bridgett-williams` |
+| `/AboutUs/DrWallaceCarson.aspx` | `/team.html` (or his own block, after item 1) |
 | `/OurServices/Surgery.aspx` | `/services/surgery.html` |
 | `/OurServices/DentalCare.aspx` | `/services/dental-care.html` |
 | `/OurServices/Dermatology.aspx` | `/services/dermatology.html` |

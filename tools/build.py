@@ -93,7 +93,7 @@ def build_page(src_path: pathlib.Path, data: dict, layout: str) -> pathlib.Path:
     # The header marks the current page. Front matter sets nav to one of the keys
     # below; every other key resolves to an empty attribute.
     current = page.get("nav", "")
-    for key in ("Home", "About", "Vets", "Services", "Faq", "Contact"):
+    for key in ("Home", "About", "Services", "Team", "New", "Resources", "Contact"):
         page[f"nav{key}"] = ' aria-current="page"' if current == key else ""
 
     # Same idea for the "other services" list in the service-page sidebar.
