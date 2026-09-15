@@ -18,13 +18,20 @@ too little to touch a pale kitten. And because every subject is scaled to the
 same fraction of the plate, a kitten and a full-grown dog read at the same size
 in the grid instead of one dwarfing the next.
 
-Add a card by adding a row to CARDS: source stem, output name, the region of the
-source to look in, and any shapes to rub out inside it. Those two matter for the
-group photographs, where the dogs stand shoulder to shoulder: the region gets
-close to one dog, and the shapes trace the diagonal seam a rectangle cannot
-follow — an ear leaning over the neighbour, a shoulder pressed against one. Pass
-None for a photograph with one animal in it.
+Add a card with a Card row: the source stem, the output name, the region of the
+source to look in, any shapes to rub out inside it, and a turn. The region and
+the shapes matter for the group photographs, where the dogs stand shoulder to
+shoulder: the region gets close to one dog, and the shapes trace the diagonal
+seam a rectangle cannot follow — an ear leaning over the neighbour, a shoulder
+pressed against one. The turn is for a dog photographed leaning into the frame:
+standing it upright makes it a portrait like the rest instead of one animal
+arriving from the side of its card. A photograph of one animal, shot square,
+needs none of the three.
+
+A turn happens first, so a region or a shape on a turned card is measured on the
+turned picture, not the original.
 """
+import collections
 import pathlib
 import sys
 
@@ -56,20 +63,25 @@ COLLIE_SIDE = [(980, 100), (1068, 100), (1068, 175), (1062, 195), (1032, 245),
 TERRIER_SIDE = [(996, 340), (1030, 340), (1030, 1016), (978, 1016), (984, 750),
                 (990, 600), (999, 380)]
 
-# source stem, name, region to look in, shapes to rub out inside it
+Card = collections.namedtuple("Card", "stem name region erase turn")
+Card.__new__.__defaults__ = (None, None, 0)
+
 CARDS = [
     # the trio stand shoulder to shoulder, so each one has its neighbours cut away
-    ("hero-care",          "brindle",       (0, 120, 562, 1016),    [BRINDLE_COLLIE]),
-    ("hero-care",          "collie",        (556, 0, 1016, 1016),
-     [[(556, 130), (574, 130), (574, 255), (556, 255)], TERRIER_SIDE]),
-    ("hero-care",          "terrier",       (980, 120, 1536, 1016), [COLLIE_SIDE]),
-    ("reviews-dog",        "cocker",        None,                   None),
-    # single-subject studio portraits, already alone in the frame
-    ("pet-shepherd",       "shepherd",      None,                   None),
-    ("pet-kitten-ginger",  "kitten-ginger", None,                   None),
-    ("pet-kitten-tabby",   "kitten-tabby",  None,                   None),
-    ("pet-cat-tuxedo",     "cat-tuxedo",    None,                   None),
-    ("pet-cat-siamese",    "cat-siamese",   None,                   None),
+    Card("hero-care", "brindle", (0, 120, 562, 1016), [BRINDLE_COLLIE]),
+    Card("hero-care", "collie", (556, 0, 1016, 1016),
+         [[(556, 130), (574, 130), (574, 255), (556, 255)], TERRIER_SIDE]),
+    Card("hero-care", "terrier", (980, 120, 1536, 1016), [COLLIE_SIDE]),
+    # the cocker was shot leaning in from the top corner, head tilted and chest
+    # running off to the other one. Stood up and cut below the ears it is a
+    # portrait; left alone it is the one card an animal walks into from the side.
+    Card("reviews-dog", "cocker", (0, 0, 1188, 840), turn=-24),
+    # single-subject studio portraits, already alone and square in the frame
+    Card("pet-shepherd", "shepherd"),
+    Card("pet-kitten-ginger", "kitten-ginger"),
+    Card("pet-kitten-tabby", "kitten-tabby"),
+    Card("pet-cat-tuxedo", "cat-tuxedo"),
+    Card("pet-cat-siamese", "cat-siamese"),
 ]
 
 
@@ -120,11 +132,13 @@ def subject_box(mask: Image.Image) -> tuple[int, int, int, int]:
 def main() -> int:
     OUT.mkdir(parents=True, exist_ok=True)
     made = []
-    for stem, name, region, erase in CARDS:
+    for stem, name, region, erase, turn in CARDS:
         src = IMG / f"{stem}.webp"
         if not src.exists():
             sys.exit(f"make-pet-cards: {src.relative_to(ROOT)} is missing")
         im = Image.open(src).convert("RGBA")
+        if turn:
+            im = im.rotate(turn, resample=Image.BICUBIC, expand=True)
         if erase:
             alpha = im.getchannel("A")
             pen = ImageDraw.Draw(alpha)
