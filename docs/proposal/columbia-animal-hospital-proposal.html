@@ -447,6 +447,14 @@ td:first-child { color: var(--ink); font-weight: 600; min-width: 9.5rem; }
 .cost dt { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); }
 .cost dd { margin: 0; }
 .cost-note { margin-top: 0.3rem; font-size: 0.88rem; color: var(--body); line-height: 1.5; }
+.cost .figure { font-family: var(--font-display); font-size: 1.85rem; line-height: 1.15;
+  color: var(--ink); letter-spacing: -0.02em; }
+.cost .figure small { display: block; font-family: var(--font-body); font-size: 0.9rem;
+  font-weight: 600; letter-spacing: 0; color: var(--muted); margin-top: 0.35rem; }
+.cost > div.pick { border-color: var(--amber); border-width: 2px; background: var(--amber-soft); }
+.cost .tag { justify-self: start; font-size: 0.6rem; font-weight: 700; letter-spacing: 0.16em;
+  text-transform: uppercase; color: #7A4712; background: var(--white);
+  border: 1px solid var(--amber); border-radius: 999px; padding: 0.2rem 0.55rem; }
 
 /* closing */
 .closing {
@@ -524,10 +532,10 @@ footer p { max-width: none; }
   <div class="draft-notice">
     <strong>Do not send this document yet.</strong>
     <p>
-      Five details are left blank on purpose, because they are yours to set:
-      <code>[[ PRICE ]]</code>, <code>[[ TIMELINE ]]</code>, <code>[[ YOUR NAME ]]</code>,
-      <code>[[ YOUR PHONE ]]</code> and <code>[[ YOUR EMAIL ]]</code>. They all sit together in
-      the block near the end titled <em>To be completed before sending</em>.
+      Three details are left blank, because only you can supply them:
+      <code>[[ YOUR NAME ]]</code>, <code>[[ YOUR PHONE ]]</code> and
+      <code>[[ YOUR EMAIL ]]</code>. They sit together in the block near the end titled
+      <em>To be completed before sending</em>. The price and the timeline are filled in.
       Search this file for <code>[[</code> and replace every hit — then delete this box.
       Nothing goes to the practice until that is done.
     </p>
@@ -888,24 +896,72 @@ footer p { max-width: none; }
     </div>
   </section>
 
+  <section>
+    <h2><span class="num">What it costs</span>Two ways to do this, and the same site either way</h2>
+    <p class="section-lead">
+      You are already paying someone every month for the site you have. The first option is built
+      to sit in that same place on your books. The second is for a practice that would rather own
+      a thing outright than rent it, which after fifty years in one building is a fair instinct.
+    </p>
+    <dl class="cost">
+      <div class="pick">
+        <span class="tag">Recommended</span>
+        <dt>Launch and look after it</dt>
+        <dd class="figure">$1,500 to start<small>then $200 a month</small></dd>
+        <p class="cost-note">
+          Twelve months, then month to month — cancel any time after that and the site comes with
+          you. Covers hosting, backups, security updates, uptime monitoring, and the changes a
+          practice actually needs: hours, a new doctor, a service added, a photograph swapped.
+          The listing corrections are in here too. <strong>Year one, $3,900.</strong>
+        </p>
+      </div>
+      <div>
+        <dt>Buy it outright</dt>
+        <dd class="figure">$4,500 once<small>the site is yours</small></dd>
+        <p class="cost-note">
+          Paid half on signature and half the day it goes live. Yours to keep, on any host you
+          like, with nothing owed after. Looking after it afterwards is $95 a month if you want
+          that, and nothing at all if you do not.
+        </p>
+      </div>
+    </dl>
+    <dl class="cost">
+      <div>
+        <dt>Live by</dt>
+        <dd class="figure">Two to three weeks<small>from the day you say go</small></dd>
+        <p class="cost-note">
+          The site is built. Most of that window is waiting on the three answers above and a
+          photograph of the building — not on me.
+        </p>
+      </div>
+      <div>
+        <dt>Included either way</dt>
+        <dd class="figure">The whole move<small>nothing extra at launch</small></dd>
+        <p class="cost-note">
+          Every old address redirected to its new page so nothing you have built up in search is
+          lost, the domain pointed, the structured data and sitemap submitted, and the wrong
+          listings corrected.
+        </p>
+      </div>
+    </dl>
+    <div class="note">
+      <span class="arrow" aria-hidden="true">&rarr;</span>
+      <p>
+        <strong>Photography is not in either number.</strong> Sixteen slots on the site are still
+        waiting on real pictures — your building, your rooms, your team at work. A local
+        photographer for half a day will cover it, or a good phone and a bright morning will get
+        most of the way there. I would rather tell you that than quietly bill you for stock
+        photographs of somebody else's practice.
+      </p>
+    </div>
+  </section>
+
   <section class="fillin">
     <h2><span class="num">Placeholders</span>To be completed before sending</h2>
     <p class="section-lead">
-      Everything in this block is blank on purpose. Replace all five before this document goes to
-      the practice.
+      Three details are blank on purpose. Replace all three before this document goes to the
+      practice.
     </p>
-    <dl class="cost">
-      <div>
-        <dt>Website build</dt>
-        <dd><span class="slot">[[ PRICE ]]</span></dd>
-        <p class="cost-note">One time. Everything listed above, yours to keep, on any host.</p>
-      </div>
-      <div>
-        <dt>Launch</dt>
-        <dd><span class="slot">[[ TIMELINE ]]</span></dd>
-        <p class="cost-note">From the day the three questions above are answered.</p>
-      </div>
-    </dl>
     <dl class="cost">
       <div>
         <dt>Prepared by</dt>
