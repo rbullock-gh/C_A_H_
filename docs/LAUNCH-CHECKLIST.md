@@ -80,8 +80,8 @@ locked door does not come back.
 
 ## 3a. The proposal is priced
 
-`docs/proposal/columbia-animal-hospital-proposal.html` now carries a price: **$1,500 to launch
-and $200 a month**, or **$4,500 once** to own it outright. Three markers are left —
+`docs/proposal/columbia-animal-hospital-proposal.html` now carries a price: **$2,500 to launch
+and $200 a month**, or **$5,500 once** to own it outright. Three markers are left —
 `[[ YOUR NAME ]]`, `[[ YOUR PHONE ]]`, `[[ YOUR EMAIL ]]` — and the document must not go out
 until they are replaced and the dashed notice at the top is deleted.
 
