@@ -50,6 +50,12 @@ SLOTS = {
     "cta-dog": (717, 1197, "plain", "Cut-out dog for the closing call to action (client supplied)"),
     "welcome-dog": (977, 855, "plain", "Cut-out dog with paws over an edge (client supplied)"),
     "team-photo": (2000, 669, "labelled", "The team at the Highway 98 East sign (client supplied)"),
+    # the studio portraits tools/make-pet-cards.py builds the service cards from
+    "pet-shepherd": (1254, 1254, "plain", "Australian shepherd on a pale sweep (client supplied)"),
+    "pet-kitten-ginger": (1254, 1254, "plain", "Ginger kitten on a pale sweep (client supplied)"),
+    "pet-kitten-tabby": (1254, 1254, "plain", "Grey tabby kitten on a pale sweep (client supplied)"),
+    "pet-cat-tuxedo": (1254, 1254, "plain", "Tuxedo cat on a pale sweep (client supplied)"),
+    "pet-cat-siamese": (1254, 1254, "plain", "Siamese cat on a pale sweep (client supplied)"),
 }
 
 CREAM = "#F0E9DC"

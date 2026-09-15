@@ -18,6 +18,11 @@ each photo in `incoming/` before importing it.
 | `cta-dog` | `cta-dog.webp` | Cut-out dog for the closing call to action (client supplied) | Supplied by the client. Background removed in-house (rembg, isnet-general-use, alpha matting). Source and licence of the original not recorded — confirm commercial usage rights before launch. |
 | `welcome-dog` | `welcome-dog.webp` | Cut-out dog with paws over an edge (client supplied) | Supplied by the client. Background removed in-house (rembg, isnet-general-use, alpha matting). Source and licence of the original not recorded — confirm commercial usage rights before launch. |
 | `team-photo` | `team-photo.webp` | The team at the Highway 98 East sign (client supplied) | Supplied by the client. The practice's own team at their Highway 98 East sign; identity confirmed from the sign, which reads 601-736-3041. People are identifiable — confirm staff consent before publishing. |
+| `pet-shepherd` | `pet-shepherd.webp` | Australian shepherd on a pale sweep (client supplied) | Supplied by the client. Source and licence of the original not recorded — confirm commercial usage rights before launch. |
+| `pet-kitten-ginger` | `pet-kitten-ginger.webp` | Ginger kitten on a pale sweep (client supplied) | Supplied by the client. Source and licence of the original not recorded — confirm commercial usage rights before launch. |
+| `pet-kitten-tabby` | `pet-kitten-tabby.webp` | Grey tabby kitten on a pale sweep (client supplied) | Supplied by the client. Source and licence of the original not recorded — confirm commercial usage rights before launch. |
+| `pet-cat-tuxedo` | `pet-cat-tuxedo.webp` | Tuxedo cat on a pale sweep (client supplied) | Supplied by the client. Source and licence of the original not recorded — confirm commercial usage rights before launch. |
+| `pet-cat-siamese` | `pet-cat-siamese.webp` | Siamese cat on a pale sweep (client supplied) | Supplied by the client. Source and licence of the original not recorded — confirm commercial usage rights before launch. |
 
 ## Still on placeholders
 
