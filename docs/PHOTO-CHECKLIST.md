@@ -13,6 +13,12 @@ and **they are the largest single upgrade left in this project.**
 `python3 tools/photos.py list` prints what is filled and what is not. That command is the
 live answer; the shot list below is the brief for taking the photographs.
 
+**The five `gallery-*` slots have no section on the site at the moment.** The interior gallery
+on the home page was five labelled placeholders in a row, which said nothing about this
+practice, so it has been taken out. The slots and their placeholders are kept: photograph the
+reception, an exam room, the treatment area and a boarding run, and the section goes back in
+with something worth showing.
+
 ## How to swap them in
 
 Save each photo into `incoming/` using the slot's name and your own extension —

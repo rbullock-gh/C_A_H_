@@ -12,8 +12,11 @@ All sixteen pages are in the one file. The header and footer appear once; each
 page's <main> is stored alongside, and a small router swaps them when a link is
 clicked, so navigation works from file:// exactly as it does on a server.
 
-The live map iframe becomes a static panel — a frame needs a real page — and
-the footer is relabelled so a forwarded copy is never mistaken for the live site.
+The map loads for real. An iframe pointed at an https URL is a document
+navigation, not a fetch, so it is not subject to the same-origin rules that stop
+a file:// page loading its own fonts — the frame opens exactly as it does on a
+server, as long as the machine is online. The footer is relabelled so a
+forwarded copy is never mistaken for the live site.
 """
 import base64
 import mimetypes
@@ -110,8 +113,6 @@ def main() -> int:
         body = re.sub(r'href="\.\./([^"]+)"', r'href="\1"', body)
         body = re.sub(r'href="(?!https?:|tel:|mailto:|#|data:)([a-z0-9\-/]+\.html)"',
                       lambda mm: f'href="#/{mm.group(1)}"', body)
-        # a live map cannot load from file://; leave the static panel in place
-        body = body.replace('data-map="', 'data-map-disabled="')
         mains[rel] = body
         t = re.search(r"<title>(.*?)</title>", html)
         titles[rel] = t.group(1) if t else "Columbia Animal Hospital"

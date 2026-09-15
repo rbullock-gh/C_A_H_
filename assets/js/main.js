@@ -159,7 +159,14 @@
         frame.loading = 'lazy';
         frame.referrerPolicy = 'no-referrer-when-downgrade';
         frame.setAttribute('allowfullscreen', '');
-        map.textContent = '';
+        /* The frame is laid over the panel rather than replacing it, and the
+           panel only goes once the frame has actually loaded. On a slow
+           connection that leaves the address and the directions link on screen
+           instead of an empty grey box. */
+        frame.addEventListener('load', function () {
+          var panel = map.querySelector('.map__placeholder');
+          if (panel) panel.parentNode.removeChild(panel);
+        });
         map.appendChild(frame);
         obs.disconnect();
       });
