@@ -1,12 +1,16 @@
 /**
- * Render the proposal to a PDF.
+ * Render both proposals to PDF.
  *
  *     node tools/proposal-pdf.mjs
  *
- * The proposal is an HTML document so it can be read on a phone and kept in
- * version control as text. A PDF is what actually gets emailed and printed, so
- * it is generated rather than maintained separately — edit the HTML, run this,
- * and the two cannot drift.
+ * There are two, because they do different jobs. The one-sheet is what gets
+ * left on a desk: two pages, printed both sides, about ninety seconds of
+ * reading. The long one is the proof, for the reply that says "send me
+ * something" — with a stranger, its length is part of the argument.
+ *
+ * Both are HTML so they can be read on a phone and kept in version control as
+ * text. The PDFs are what get emailed and printed, so they are generated rather
+ * than maintained separately — edit the HTML, run this, and they cannot drift.
  *
  * Margins are half an inch top and bottom and nothing at the sides: the
  * document sets its own horizontal gutter, and leaving the sides to it lets the
@@ -21,18 +25,25 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const SRC = path.join(ROOT, 'docs/proposal/columbia-animal-hospital-proposal.html');
-const OUT = path.join(ROOT, 'docs/proposal/Columbia-Animal-Hospital-Website-Proposal.pdf');
+const JOBS = [
+  ['docs/proposal/columbia-animal-hospital-one-sheet.html',
+   'docs/proposal/Columbia-Animal-Hospital-One-Sheet.pdf'],
+  ['docs/proposal/columbia-animal-hospital-proposal.html',
+   'docs/proposal/Columbia-Animal-Hospital-Website-Proposal.pdf'],
+];
 
 const browser = await chromium.launch(process.env.CHROMIUM ? { executablePath: process.env.CHROMIUM } : {});
-const page = await browser.newPage();
-await page.goto('file://' + SRC, { waitUntil: 'networkidle' });
-await page.emulateMedia({ media: 'print' });
-await page.pdf({
-  path: OUT,
-  format: 'Letter',
-  printBackground: true,
-  margin: { top: '0.5in', bottom: '0.5in', left: '0', right: '0' },
-});
+for (const [src, out] of JOBS) {
+  const page = await browser.newPage();
+  await page.goto('file://' + path.join(ROOT, src), { waitUntil: 'networkidle' });
+  await page.emulateMedia({ media: 'print' });
+  await page.pdf({
+    path: path.join(ROOT, out),
+    format: 'Letter',
+    printBackground: true,
+    margin: { top: '0.5in', bottom: '0.5in', left: '0', right: '0' },
+  });
+  await page.close();
+  console.log('  ' + out);
+}
 await browser.close();
-console.log('  ' + path.relative(ROOT, OUT));

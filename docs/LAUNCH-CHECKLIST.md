@@ -83,9 +83,16 @@ locked door does not come back.
 `docs/proposal/columbia-animal-hospital-proposal.html` is complete: **$2,500 to launch and
 $150 a month**, or **$5,500 once** to own it outright, prepared by Ryan Bullock,
 (769) 313-6636, ryanbullock09@gmail.com. Nothing is left blank and the draft notice is gone.
-`docs/proposal/Columbia-Animal-Hospital-Website-Proposal.pdf` is the version to email or print:
-thirteen pages, Letter, with the phone number and the email address live. Edit the HTML and run
-`node tools/proposal-pdf.mjs` to rebuild it, so the two never drift apart.
+There are two documents, because they do different jobs:
+
+| File | Pages | For |
+|---|---|---|
+| `Columbia-Animal-Hospital-One-Sheet.pdf` | 2 | What gets left on the desk. One sheet, printed both sides, about ninety seconds of reading. |
+| `Columbia-Animal-Hospital-Website-Proposal.pdf` | 13 | The proof, for the reply that says "send me something". With a stranger its length is part of the argument. |
+
+Both are generated from the HTML beside them — edit that and run `node tools/proposal-pdf.mjs`,
+so the two can never drift apart. Print the one-sheet **in colour**: the dark masthead and the
+amber card carrying the recommended price both die in greyscale.
 
 ## 3b. Decide what "Request an Appointment" should do
 
