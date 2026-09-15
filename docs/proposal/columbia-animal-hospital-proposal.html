@@ -174,31 +174,6 @@ h1 em { font-style: italic; color: var(--amber-glow); }
 
 /* ---------- the do-not-send notice -------------------------------------- */
 
-.draft-notice {
-  margin-top: clamp(1.5rem, 4vw, 2.25rem);
-  padding: 1.15rem 1.35rem;
-  background: var(--amber-soft);
-  border: 1px solid #E4C79B;
-  border-left: 5px solid var(--amber);
-  border-radius: 0 12px 12px 0;
-  color: var(--ink);
-  font-size: 0.95rem;
-  display: grid;
-  gap: 0.5rem;
-}
-.draft-notice p { max-width: none; color: var(--body); }
-.draft-notice strong { display: block; font-size: 1.02rem; }
-.draft-notice code {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-  font-size: 0.9em;
-  background: rgba(255, 255, 255, 0.72);
-  border: 1px solid #E4C79B;
-  border-radius: 4px;
-  padding: 0.08em 0.36em;
-  white-space: nowrap;
-  color: var(--ink);
-}
-
 /* ---------- sections ---------------------------------------------------- */
 
 section { margin-top: clamp(2.75rem, 6vw, 4.25rem); }
@@ -413,27 +388,6 @@ td:first-child { color: var(--ink); font-weight: 600; min-width: 9.5rem; }
 .note .arrow { color: var(--green-deep); font-weight: 700; }
 
 /* the fill-in block */
-.fillin {
-  border: 2px dashed var(--amber);
-  background: var(--amber-soft);
-  border-radius: 14px;
-  padding: clamp(1.4rem, 4vw, 2.25rem);
-}
-.fillin h2 { margin-bottom: 0.5rem; }
-.fillin .section-lead { color: var(--ink); }
-.fillin p { max-width: none; }
-.slot {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-  font-size: 0.95em;
-  font-weight: 700;
-  color: #7A4712;
-  background: var(--white);
-  border: 1px dashed var(--amber);
-  border-radius: 5px;
-  padding: 0.12em 0.45em;
-  display: inline-block;
-  white-space: nowrap;
-}
 .cost { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 1rem; margin: 1.5rem 0 0; }
 .cost > div {
   padding: 1.3rem 1.3rem;
@@ -490,17 +444,26 @@ footer p { max-width: none; }
 
 @media print {
   body { background: #fff; font-size: 10.5pt; padding-bottom: 0; }
-  .masthead, .panel {
+  .masthead, .panel, .issues > div, .asks > li, .answers > div, .note, .cost > div {
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
   }
-  .draft-notice, .fillin, .issues > div, .asks > li, .answers > div, .note, .cost > div {
-    -webkit-print-color-adjust: exact;
-    print-color-adjust: exact;
+  /* A section must be allowed to break across a page. Holding each one whole
+     puts every heading on a sheet of its own and turns nine pages into
+     nineteen, most of them half empty. What has to stay whole is a card — a
+     cost box or a finding split down the middle is the thing that actually
+     reads as broken. */
+  .issues > div, .asks > li, .answers > div, .cost > div, .panel, .note {
+    break-inside: avoid;
   }
-  section { break-inside: avoid-page; }
   h2, h3 { break-after: avoid; }
-  .issues > div, .asks > li, .cost > div, .panel, .note { break-inside: avoid; }
+  p, li { orphans: 2; widows: 2; }
+  /* Chromium fragments a CSS grid badly across a page boundary — the numbered
+     walk-through came out as three pages of one-word columns. Flex survives the
+     break, and each step is kept whole anyway. */
+  .path li { display: flex; gap: 1rem; align-items: flex-start; break-inside: avoid; }
+  .path li::before { flex: 0 0 2.8rem; }
+  .path li > span { flex: 1 1 auto; }
   a { color: var(--ink); text-decoration: none; }
 }
 </style>

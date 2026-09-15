@@ -83,7 +83,9 @@ locked door does not come back.
 `docs/proposal/columbia-animal-hospital-proposal.html` is complete: **$2,500 to launch and
 $150 a month**, or **$5,500 once** to own it outright, prepared by Ryan Bullock,
 (769) 313-6636, ryanbullock09@gmail.com. Nothing is left blank and the draft notice is gone.
-Open it in a browser and print to PDF if a paper copy is wanted — it has a print stylesheet.
+`docs/proposal/Columbia-Animal-Hospital-Website-Proposal.pdf` is the version to email or print:
+thirteen pages, Letter, with the phone number and the email address live. Edit the HTML and run
+`node tools/proposal-pdf.mjs` to rebuild it, so the two never drift apart.
 
 ## 3b. Decide what "Request an Appointment" should do
 
