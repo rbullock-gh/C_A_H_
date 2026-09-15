@@ -67,10 +67,16 @@ Sizes come from a fluid scale (`--step--2` to `--step-9`) interpolating between 
 
 ## The mark
 
-**No logo file for the practice could be obtained** — every image host was blocked. So
-`tools/make-brand.py` draws a paw mark in the brand green and generates everything from it:
+The site uses **the practice's own logo**: a sitting dog in silhouette with a cat cut out of
+it in negative space. It was read off the sign on Highway 98 East in the team photograph the
+client supplied, thresholded, and traced to a vector path with `potrace`. The cat is a hole in
+the dog, so the path carries `fill-rule="evenodd"` — do not drop that attribute or the cat
+disappears.
+
+It sits on a near-black rounded tile, which is how the sign itself presents it.
 
 ```bash
+pip install cairosvg
 python3 tools/make-brand.py
 ```
 
@@ -84,13 +90,12 @@ python3 tools/make-brand.py
 | `assets/img/og-image.png` | 1200×630 | Link previews |
 | `assets/img/logo-mark.png` | 256×256 | Schema `logo` |
 
-**If the practice has real artwork, use it.** Replace these outputs and delete the script
-rather than trying to match it — and note that the artwork should drive the surface colors,
-not the other way round. The header here is light because the clinic name is set in dark
-forest type; a reversed logo would allow a dark header instead. On a dark ground, put real
-artwork on a light plate rather than recolouring it. Recolouring is altering someone's brand.
+**This is a trace, not the original artwork.** It is faithful enough to use and crisp at every
+size the site needs, but whoever fabricated the sign will hold a real vector file. If the
+practice can get it, replace `LOGO_PATH` in `tools/make-brand.py` with the real path data and
+re-run — everything else regenerates from that one value.
 
-## Editing the common things
+## Editing the common things## Editing the common things
 
 | Change | Where |
 |---|---|

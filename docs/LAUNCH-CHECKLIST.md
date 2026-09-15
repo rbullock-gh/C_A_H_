@@ -117,12 +117,28 @@ Record where every stock image came from and under what licence. `tools/photos.p
 Pixabay all permit commercial use without attribution — keep the record regardless, because a
 licence you cannot evidence is a licence you do not have.
 
-## 6. Supply a real logo, if one exists
+## 5b. Get consent for the team photograph, and a photograph of the building
 
-No logo file could be obtained, so `tools/make-brand.py` draws a paw mark in the brand green
-and generates the favicons and share card from it. If the practice has real artwork, replace
-the outputs and delete that script rather than trying to match it. See
-[`BRAND-AND-ASSETS.md`](BRAND-AND-ASSETS.md).
+The team photograph on the home page and the Our Team page shows around a dozen identifiable
+people. **Confirm every one of them is happy to appear on the website** before it goes live.
+People leave jobs, and a website is more public than a noticeboard.
+
+There is still **no photograph of the building**. The exterior shot supplied during the build
+was a different Columbia Animal Hospital — its sign reads 903-234-0869, an East Texas number,
+with a different logo. It is not on the site. A phone snapshot of the real building on
+Highway 98 East, taken from the road on a bright day, is all that is needed, and it matters:
+it is what a first-time client matches against when they are looking for the turning.
+
+## 6. Supply the original logo artwork, if it exists
+
+The mark on the site is **the practice's own dog-and-cat silhouette**, traced from the sign in
+the team photograph. It is unmistakably their logo and it renders cleanly from 32px up.
+
+But it is traced from a photograph of a sign, not from original artwork. **If the practice has
+the original file** — whoever made the sign will have one, in some vector format — use that
+instead: put it in place of `assets/img/logo-mark.svg`, update `LOGO_PATH` in
+`tools/make-brand.py`, and re-run it to regenerate the favicons, touch icon and share card.
+See [`BRAND-AND-ASSETS.md`](BRAND-AND-ASSETS.md).
 
 ## 7. Clean up the listings
 

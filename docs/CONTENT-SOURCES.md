@@ -22,6 +22,13 @@ recovered once is marked MEDIUM and was either rewritten in our own words or lef
 
 ## Verified and used
 
+### Photography and brand
+
+| Claim | Source | Confidence |
+|---|---|---|
+| The team photograph is this practice | Supplied by the client; the sign in it reads **601-736-3041**, matching the verified number character for character | HIGH |
+| The logo is a dog-and-cat silhouette, white on black | Read off the practice's own sign in that photograph, and traced from it | HIGH as a mark; MEDIUM as artwork — it is traced from a photograph, not from original files |
+
 ### Business identity
 
 | Claim | Source | Confidence |
@@ -144,4 +151,5 @@ What was left out, and why. This is the part that cannot be reconstructed later.
 | **Staff names other than the veterinarians** | No technician, groomer or office-manager name is published. One first name appeared inside a customer review; that is not published staff content. |
 | **"Award-winning", "best in Marion County", "trusted by thousands"** | Unsupportable. |
 | **Emergency-hospital referral partner** | None is named on the existing site. |
+| **A supplied photograph of a building** | The client sent an exterior shot whose sign reads **903-234-0869** with a single-dog logo on green. This practice's number is (601) 736-3041 and its logo is a dog-and-cat silhouette on black — both visible on the sign in the team photograph. 903 is an East Texas area code. It is a different Columbia Animal Hospital, and it is not published. See the name-collision note at the top. |
 | **Real photographs** | None could be obtained — every image host was blocked by the network policy. The client has since approved **licensed stock photography** for the general care and service slots, with real staff photographs to follow. Two slots are excluded from that: `about-hospital` and `contact-building` show *this* practice's building, and a stock photograph of some other clinic presented as theirs would be a straightforward misrepresentation. See `PHOTO-CHECKLIST.md`. |
