@@ -71,8 +71,11 @@ def main() -> int:
         if src.get("count"):
             where = html.escape(src.get("name", "Google"))
             line = f'Read all {src["count"]} reviews on {where}'
-            inner = (f'<a href="{html.escape(src["url"])}" target="_blank" rel="noopener">{line}</a>'
-                     if src.get("url") else line)
+            if src.get("url"):
+                inner = (f'<a class="btn btn--outline" href="{html.escape(src["url"])}" '
+                         f'target="_blank" rel="noopener">{line}</a>')
+            else:
+                inner = line
             tail = f'\n    <p class="review-source">{inner}</p>'
         body = f'\n    <div class="review-grid reveal">\n{cards}\n    </div>{tail}\n  '
         print(f"  {len(reviews)} review(s) rendered")

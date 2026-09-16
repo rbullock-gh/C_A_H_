@@ -2,10 +2,11 @@
   "_comment": "Real client reviews and nothing else, copied verbatim from the practice's public Google listing. Nothing in this file may be written by us, and nothing may be edited: a review Google truncated with a 'More' link is excluded rather than trimmed, because a shortened quote is no longer the reviewer's sentence. Names are first name and last initial. tools/make-reviews.py renders it into the home page.",
   "source": {
     "name": "Google",
-    "url": "",
+    "url": "https://www.google.com/maps/search/?api=1&query=Columbia+Animal+Hospital%2C+1409+Hwy+98E%2C+Columbia%2C+MS+39429",
     "count": 303,
     "rating": null,
-    "asOf": "2026-09"
+    "asOf": "2026-09",
+    "_urlNote": "A Maps search scoped by the full address. If the practice supplies the listing's own share link or its Place ID, put that here instead — it lands on the same place one redirect sooner."
   },
   "reviews": [
     {
