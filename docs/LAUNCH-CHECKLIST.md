@@ -77,14 +77,19 @@ after-hours copy say exactly that. It is on the home page (`#emergency`), the co
 the FAQ and the footer — all four are in `src/`. This is the single most useful improvement
 available to this website.
 
-## 3. Confirm the Saturday opening time — BLOCKER
+## 3. Saturday opening time — CHECKED, NOT A BLOCKER
 
-The official site, the Facebook page and three directories say **8:00 AM**. Pawlicy and
-GeniusVets say 7:30 AM. This site uses **8:00 AM**, in `src/data.json` under `hours` and in
-the `openingHoursSpecification` the build generates from it.
+Research during the build found Pawlicy and GeniusVets showing 7:30 AM against the practice's
+own 8:00 AM, and it was carried as a blocker on that basis. **It was re-checked and the hours
+look consistent**, so it has been taken out of the proposal, the one-sheet and the visit brief.
 
-Confirm it, then correct whichever listings are wrong. A visitor who arrives at 7:30 to a
-locked door does not come back.
+This site uses **Sat 8:00 AM – 12:00 PM**, in `src/data.json` under `hours` and in the
+`openingHoursSpecification` the build generates from it. That is unchanged and correct.
+
+Left here rather than deleted so nobody re-derives the discrepancy from the old research and
+puts it back. If a listing does turn out to be wrong later, correcting it is still worth doing —
+a visitor who arrives to a locked door does not come back — it is just not a launch blocker and
+not something to raise with the practice as a finding.
 
 ---
 
@@ -298,7 +303,6 @@ These directly affect map rankings and are quick wins:
 |---|---|---|
 | Wrong street number **1498** | Marion County Development Partnership | Claim the listing, correct to 1409 |
 | Street written as **Old Hwy 98 E** | US Companies | Correct or request removal |
-| Saturday shown as **7:30 AM** | Pawlicy, GeniusVets | Correct to 8:00 AM once confirmed |
 | Two Yelp pages for one business | Yelp | Merge |
 | A Yelp listing under **CARSON WALLACE DR** at the same address | Yelp | Merge or remove |
 | An unclaimed Facebook place page | Facebook | Merge into the real page |

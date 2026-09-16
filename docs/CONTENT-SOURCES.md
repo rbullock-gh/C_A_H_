@@ -106,9 +106,12 @@ Ordered by how much damage getting it wrong would do. The first is a launch bloc
    (601) 736-3041, the only published number. Confirm what happens when that number is
    called outside hours and reword if needed. This is the single most useful content gap to
    close.
-3. **Saturday opening time.** The official site, Facebook and three directories say 8:00 AM.
-   Pawlicy and GeniusVets say 7:30 AM. 8:00 AM is used here. If 8:00 is right, correct those
-   two listings; a wrong opening time costs walk-ins.
+3. **Saturday opening time — resolved, not a discrepancy.** Early research found Pawlicy and
+   GeniusVets showing 7:30 AM against the practice's own 8:00 AM, and it was carried as an open
+   question on that basis. Re-checked and the hours look consistent, so it has been dropped from
+   the proposal, the one-sheet and the visit brief. The site publishes **Sat 8:00 AM – 12:00 PM**,
+   the practice's own figure, and that is unchanged. Recorded rather than deleted so the
+   discrepancy is not re-derived from the old research and put back.
 4. **Address formatting.** The site writes `1409 Hwy 98E` — no space before the "E" — and
    that form is used here for consistency with the current site and the brief. Six different
    renderings are live across the web (`Highway 98 E`, `Hwy 98 E`, `HIGHWAY 98 E`,
