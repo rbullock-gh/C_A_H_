@@ -267,7 +267,51 @@ def check_browser(page_list: list[str]) -> None:
 import { chromium } from '/opt/node22/lib/node_modules/playwright/index.mjs';
 const urls = process.argv.slice(2);
 const b = await chromium.launch();
-const out = { overflow: [], hiddenNoJs: [], errors: [], smallTaps: [], brokenImages: [] };
+const out = { overflow: [], hiddenNoJs: [], errors: [], smallTaps: [], brokenImages: [], contrast: [] };
+
+// WCAG 2.1 contrast. Worth measuring rather than trusting, because the way this
+// breaks is silent: a component built for a dark section, dropped into a light
+// one, renders near-white text on near-white and nothing errors. Text sitting
+// over a gradient or a photograph is skipped — the ground there is pixels, not
+// a colour, and guessing at it only produces false alarms.
+function contrastFailures() {
+  const px = v => { v /= 255; return v <= 0.04045 ? v / 12.92 : ((v + 0.055) / 1.055) ** 2.4; };
+  const lum = c => 0.2126 * px(c[0]) + 0.7152 * px(c[1]) + 0.0722 * px(c[2]);
+  const nums = s => (s.match(/[\d.]+/g) || []).map(Number);
+  const flatten = (fg, bg) => { const a = fg[3] === undefined ? 1 : fg[3];
+    return [0, 1, 2].map(i => fg[i] * a + bg[i] * (1 - a)); };
+  function ground(el) {
+    for (let n = el; n && n !== document.documentElement; n = n.parentElement) {
+      const cs = getComputedStyle(n);
+      if (cs.backgroundImage && cs.backgroundImage !== 'none') return null;
+      const c = nums(cs.backgroundColor);
+      if (c.length === 3 || (c[3] !== undefined && c[3] > 0.92)) return c.slice(0, 3);
+    }
+    return [255, 255, 255];
+  }
+  const bad = [];
+  const sel = 'p, li, h1, h2, h3, h4, a, strong, em, span, cite, dd, dt, figcaption, blockquote, label, td, th';
+  for (const el of document.querySelectorAll(sel)) {
+    const own = [...el.childNodes].filter(n => n.nodeType === 3).map(n => n.textContent.trim()).join('');
+    if (own.length < 4) continue;
+    const cs = getComputedStyle(el);
+    if (cs.visibility === 'hidden' || cs.display === 'none' || parseFloat(cs.opacity) === 0) continue;
+    const r = el.getBoundingClientRect();
+    if (!r.width || !r.height) continue;
+    const bg = ground(el);
+    if (!bg) continue;
+    const fg = flatten(nums(cs.color), bg);
+    const a = lum(fg), b2 = lum(bg);
+    const ratio = (Math.max(a, b2) + 0.05) / (Math.min(a, b2) + 0.05);
+    const size = parseFloat(cs.fontSize);
+    const large = size >= 24 || (size >= 18.66 && parseInt(cs.fontWeight, 10) >= 700);
+    const need = large ? 3 : 4.5;
+    if (ratio + 0.005 < need)
+      bad.push(`${el.tagName.toLowerCase()}.${(el.className || '').toString().trim().split(/\s+/)[0]} `
+        + `"${own.slice(0, 30)}" ${ratio.toFixed(2)}:1 needs ${need}:1`);
+  }
+  return bad.slice(0, 6);
+}
 for (const url of urls) {
   for (const w of [390, 820, 1440]) {
     const p = await b.newPage({ viewport: { width: w, height: 900 } });
@@ -298,6 +342,12 @@ for (const url of urls) {
         return bad.slice(0, 6);
       });
       small.forEach(s => out.smallTaps.push(`${url}: ${s}`));
+    }
+    if (w === 1440) {
+      await p.evaluate(() => document.querySelectorAll('.reveal').forEach(n => n.classList.add('is-in')));
+      await p.waitForTimeout(120);
+      const dim = await p.evaluate(contrastFailures);
+      dim.forEach(d => out.contrast.push(`${url}: ${d}`));
     }
     await p.close();
   }
@@ -354,6 +404,11 @@ console.log(JSON.stringify(out));
             fail(f"tap target below the WCAG 24x24 minimum at 390px — {t}")
     else:
         print("    tap targets      all clear 24x24 at 390px (WCAG 2.5.8)")
+    if data.get("contrast"):
+        for c in data["contrast"][:10]:
+            fail(f"text below the WCAG AA contrast minimum — {c}")
+    else:
+        print("    contrast         all text meets WCAG AA (4.5:1, 3:1 large)")
     for e in data["errors"]:
         fail(f"page error {e}")
 

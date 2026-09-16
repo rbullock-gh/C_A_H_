@@ -23,7 +23,7 @@ reads cold or clinical. Ratios are against `--warm-white` (`#FCFBF9`) unless sta
 | Token | Value | On white | Verdict |
 |---|---|---|---|
 | `--amber` | `#C77B2B` | 3.3:1 | **Fill only.** White on it is also 3.3:1 and **fails** — amber buttons take *dark* text, where the ratio is 5.5:1 |
-| `--amber-deep` | `#A8641F` | 4.7:1 | Small text, links and eyebrows on white |
+| `--amber-deep` | `#9C5C1B` | 4.7:1 | Small text, links and eyebrows on white |
 | `--amber-glow` | `#E0A458` | 7.6:1 on charcoal | The accent on dark sections |
 | `--amber-soft` | `#F6E8D6` | — | Tint surface behind icons |
 | `--green` | `#4F7D6B` | 4.7:1 | Fill, and white on it is 4.7:1 — this one *can* take white text |

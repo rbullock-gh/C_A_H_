@@ -85,7 +85,8 @@
 
   /* --- amber: the warm accent. A mid-tone, so three tokens. ----------- */
   --amber: #C77B2B;           /* FILL. Dark text on it (5.5:1), never white */
-  --amber-deep: #A8641F;      /*  4.7:1 — small text and links on white */
+  --amber-deep: #9C5C1B;      /*  5.1:1 on --warm-white, 4.8:1 on --gray-50.
+                                 Both grounds, because eyebrows sit on both. */
   --amber-glow: #E0A458;      /*  7.6:1 on charcoal — the accent on dark */
   --amber-soft: #F6E8D6;      /* tint surface */
 
@@ -234,8 +235,11 @@ a:hover { color: var(--ink); }
 .section--dark { background: var(--charcoal); color: var(--on-dark); }
 .section--dark h2, .section--dark h3, .section--dark h4 { color: var(--white); }
 .section--dark .lede { color: var(--on-dark); }
-.section--dark a { color: var(--amber-glow); }
-.section--dark a:hover { color: var(--white); }
+/* Prose links only. A button carries its own foreground, and this rule is
+   more specific than .btn, so without the :not() a white button in a dark
+   section drew amber text on white. */
+.section--dark a:not(.btn) { color: var(--amber-glow); }
+.section--dark a:not(.btn):hover { color: var(--white); }
 
 .skip-link {
   position: absolute; left: var(--sp-4); top: -100%; z-index: 200;
@@ -788,8 +792,11 @@ a.card:hover .icon-tile { background: var(--amber); color: var(--ink); transform
   margin-top: var(--sp-7);
 }
 .notice .icon { color: var(--amber-glow); width: 1.35rem; height: 1.35rem; margin-top: 0.15rem; }
-.notice p { font-size: var(--step--1); line-height: 1.68; margin: 0; color: var(--on-dark); }
-.notice strong { color: var(--white); }
+.notice p { font-size: var(--step--1); line-height: 1.68; margin: 0; color: var(--body); }
+.notice strong { color: var(--ink); }
+/* The same box sits on the dark after-hours band on the home page. */
+.section--dark .notice p { color: var(--on-dark); }
+.section--dark .notice strong { color: var(--white); }
 
 .call-card {
   padding: var(--sp-8) var(--sp-7); border-radius: var(--radius-xl);
@@ -2460,9 +2467,9 @@ Preview build &middot; not the live site &middot; photography is placeholder
   <div class="shell shell--wide">
     <div class="emergency__grid">
       <div class="reveal">
-        <p class="eyebrow eyebrow--light">After-hours care</p>
+        <p class="eyebrow">After-hours care</p>
         <h2>If something happens when we are closed</h2>
-        <p class="lede mt-6" style="color:rgba(250,247,241,0.85)">
+        <p class="lede mt-6">
           Columbia Animal Hospital has an on-call veterinarian available after hours in the case
           of an emergency. Call the hospital and follow the instructions you are given.
         </p>
@@ -2476,7 +2483,7 @@ Preview build &middot; not the live site &middot; photography is placeholder
         </div>
       </div>
       <div class="call-card reveal" data-delay="1">
-        <p class="eyebrow eyebrow--light">One number, any hour</p>
+        <p class="eyebrow">One number, any hour</p>
         <a class="call-card__number" href="tel:+16017363041">(601) 736-3041</a>
         <p>1409 Hwy 98E, Columbia, MS 39429</p>
         <a class="btn btn--onDark" href="tel:+16017363041">
