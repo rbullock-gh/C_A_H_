@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Columbia Animal Hospital — everything I need to know</title>
+<meta name="robots" content="noindex">
+<style>
+/* ==========================================================================
+   Columbia Animal Hospital — website proposal
+   The same design system as the site this document is selling: a warm white
+   ground, near-black sections, an amber accent and a eucalyptus green.
+   Self-contained. No external requests, no linked fonts, no images.
+   ========================================================================== */
+
+:root {
+  color-scheme: light;
+
+  /* neutrals */
+  --white: #FFFFFF;
+  --warm-white: #FCFBF9;
+  --gray-50: #F6F4F1;
+  --gray-100: #EDEAE5;
+  --line: #E6E2DC;
+  --line-strong: #8E8A83;
+
+  --ink: #15151A;
+  --body: #3D3D45;
+  --muted: #6B6B74;
+
+  --charcoal: #1E1E23;
+  --charcoal-soft: #2B2B32;
+  --on-dark: #EDEAE5;
+  --on-dark-muted: #A8A8B0;
+
+  /* amber — fill takes dark text, never white */
+  --amber: #C77B2B;
+  --amber-deep: #A8641F;
+  --amber-glow: #E0A458;
+  --amber-soft: #F6E8D6;
+
+  /* eucalyptus */
+  --green: #4F7D6B;
+  --green-deep: #3F6B5A;
+  --green-glow: #8FB8A6;
+  --green-soft: #E8F0EC;
+
+  /* type — system fallbacks only, nothing to download */
+  --font-display: 'Iowan Old Style', 'Palatino Linotype', Palatino, 'Book Antiqua',
+    Georgia, 'Times New Roman', serif;
+  --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, sans-serif;
+
+  --measure: 66ch;
+  --gutter: clamp(1.1rem, 5vw, 2.5rem);
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  padding-inline: var(--gutter);
+  padding-block: 0 clamp(3rem, 7vw, 5rem);
+  background: var(--warm-white);
+  color: var(--body);
+  font-family: var(--font-body);
+  font-size: 1.02rem;
+  line-height: 1.68;
+  -webkit-font-smoothing: antialiased;
+  overflow-wrap: break-word;
+}
+
+.wrap { max-width: 940px; margin-inline: auto; }
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  line-height: 1.12;
+  letter-spacing: -0.005em;
+  text-wrap: balance;
+  color: var(--ink);
+  margin: 0;
+}
+
+p { margin: 0; max-width: var(--measure); }
+
+a { color: var(--amber-deep); text-underline-offset: 3px; }
+a:focus-visible, .btn:focus-visible {
+  outline: 3px solid var(--amber-deep);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+strong { color: var(--ink); font-weight: 600; }
+
+/* ---------- masthead ---------------------------------------------------- */
+
+.masthead {
+  margin-inline: calc(-1 * var(--gutter));
+  padding-inline: var(--gutter);
+  padding-block: clamp(2.5rem, 6vw, 4.5rem) clamp(2.25rem, 5vw, 3.5rem);
+  background: var(--charcoal);
+  border-bottom: 5px solid var(--amber);
+  color: var(--on-dark);
+}
+.masthead .wrap { display: grid; gap: 1.4rem; }
+
+.kicker {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--amber-glow);
+}
+.kicker::before { content: ""; width: 30px; height: 2px; background: var(--amber-glow); flex: none; }
+
+h1 {
+  font-size: clamp(2.3rem, 6vw, 4rem);
+  color: var(--white);
+  letter-spacing: -0.015em;
+}
+h1 em { font-style: italic; color: var(--amber-glow); }
+
+.standfirst {
+  font-size: clamp(1.05rem, 2vw, 1.22rem);
+  color: var(--on-dark);
+  max-width: 58ch;
+}
+
+.docmeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.4rem 3rem;
+  margin: 0;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.16);
+}
+.docmeta div { display: grid; gap: 0.3rem; }
+.docmeta dt {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--on-dark-muted);
+}
+.docmeta dd {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.16rem;
+  color: var(--white);
+}
+.docmeta dd small { display: block; font-family: var(--font-body); font-size: 0.82rem; color: var(--on-dark-muted); }
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--charcoal);
+  background: var(--amber-glow);
+  padding: 0.3rem 0.8rem;
+  border-radius: 100px;
+}
+
+/* ---------- the do-not-send notice -------------------------------------- */
+
+/* ---------- sections ---------------------------------------------------- */
+
+section { margin-top: clamp(2.75rem, 6vw, 4.25rem); }
+
+h2 {
+  font-size: clamp(1.7rem, 3.6vw, 2.5rem);
+  margin-bottom: 0.8rem;
+}
+h2 .num {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--amber-deep);
+  margin-bottom: 0.7rem;
+}
+
+h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.4rem;
+}
+
+.section-lead { color: var(--body); font-size: 1.06rem; margin-bottom: 1.6rem; }
+.stack > * + * { margin-top: 1rem; }
+
+/* four questions */
+.answers {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(215px, 1fr));
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  overflow: hidden;
+}
+.answers > div { background: var(--white); padding: 1.4rem 1.3rem; display: grid; gap: 0.45rem; align-content: start; }
+.answers q {
+  font-family: var(--font-display);
+  font-size: 1.22rem;
+  color: var(--ink);
+  quotes: none;
+}
+.answers p { font-size: 0.95rem; color: var(--body); }
+
+/* the problems worth fixing */
+.issues { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); }
+.issues > div {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--amber);
+  border-radius: 10px;
+  padding: 1.25rem 1.25rem 1.35rem;
+  display: grid;
+  gap: 0.4rem;
+  align-content: start;
+}
+.issues .tag {
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.issues h3 { font-size: 1.16rem; }
+.issues p { font-size: 0.95rem; max-width: none; }
+
+/* the ordered path */
+.path { list-style: none; margin: 0; padding: 0; display: grid; counter-reset: step; }
+.path li {
+  counter-increment: step;
+  display: grid;
+  grid-template-columns: 2.8rem 1fr;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--line);
+  align-items: start;
+}
+.path li:last-child { border-bottom: 0; }
+.path li::before {
+  content: counter(step, decimal-leading-zero);
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  color: var(--amber-deep);
+  line-height: 1.3;
+}
+.path strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--ink);
+}
+.path span:last-child { color: var(--body); font-size: 0.96rem; max-width: var(--measure); }
+
+/* checklists */
+.checks { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.75rem; }
+.checks li { display: grid; grid-template-columns: 1.3rem 1fr; gap: 0.75rem; align-items: start; }
+.checks li::before {
+  content: "";
+  width: 14px; height: 8px;
+  margin-top: 0.52rem;
+  border-left: 2.5px solid var(--green);
+  border-bottom: 2.5px solid var(--green);
+  transform: rotate(-45deg);
+  flex: none;
+}
+.checks span { color: var(--body); }
+
+/* asks — numbered, because they are a sequence of decisions */
+.asks { list-style: none; margin: 0; padding: 0; display: grid; gap: 1rem; counter-reset: ask; }
+.asks > li {
+  counter-increment: ask;
+  background: var(--gray-50);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 1.25rem 1.3rem;
+  display: grid;
+  gap: 0.4rem;
+}
+.asks h3::before {
+  content: counter(ask) ". ";
+  color: var(--amber-deep);
+}
+.asks p { font-size: 0.97rem; max-width: none; }
+.asks .why {
+  font-size: 0.88rem;
+  color: var(--muted);
+  border-left: 2px solid var(--green-glow);
+  padding-left: 0.8rem;
+}
+
+/* page list */
+.pages { display: grid; gap: 1.25rem; }
+.pages h3 { font-size: 1.05rem; font-family: var(--font-body); font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); }
+.chips { display: flex; flex-wrap: wrap; gap: 0.45rem; margin: 0.6rem 0 0; padding: 0; }
+.chips li {
+  list-style: none;
+  padding: 0.4rem 0.85rem;
+  background: var(--amber-soft);
+  border-radius: 100px;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--ink);
+}
+.chips.chips--green li { background: var(--green-soft); }
+
+/* search terms */
+.terms { display: flex; flex-wrap: wrap; gap: 0.45rem; margin: 1.2rem 0 0; padding: 0; }
+.terms li {
+  list-style: none;
+  padding: 0.4rem 0.85rem;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 100px;
+  font-size: 0.87rem;
+  color: var(--body);
+}
+
+/* deliverables table */
+.table-scroll { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-size: 0.97rem; }
+caption { text-align: left; color: var(--muted); font-size: 0.88rem; padding-bottom: 0.7rem; }
+th, td { text-align: left; padding: 0.85rem 0.9rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+th {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border-bottom: 2px solid var(--line-strong);
+}
+td:first-child { color: var(--ink); font-weight: 600; min-width: 9.5rem; }
+
+/* dark pull panel */
+.panel {
+  margin-top: 1.75rem;
+  padding: clamp(1.5rem, 3.5vw, 2.25rem);
+  background: var(--charcoal);
+  color: var(--on-dark);
+  border-radius: 14px;
+  display: grid;
+  gap: 0.85rem;
+}
+.panel h3 { color: var(--white); }
+.panel p { color: var(--on-dark); }
+.panel .quote {
+  font-family: var(--font-display);
+  font-size: clamp(1.35rem, 3vw, 1.95rem);
+  line-height: 1.2;
+  color: var(--amber-glow);
+  max-width: 28ch;
+}
+.panel .small { color: var(--on-dark-muted); font-size: 0.92rem; }
+
+/* honest notes */
+.note {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.85rem;
+  padding: 1.1rem 1.3rem;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--green);
+  border-radius: 0 11px 11px 0;
+  font-size: 0.95rem;
+  color: var(--body);
+  margin-top: 1.5rem;
+}
+.note p { max-width: none; }
+.note .arrow { color: var(--green-deep); font-weight: 700; }
+
+/* the fill-in block */
+.cost { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 1rem; margin: 1.5rem 0 0; }
+.cost > div {
+  padding: 1.3rem 1.3rem;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  display: grid;
+  gap: 0.4rem;
+  align-content: start;
+}
+.cost dt { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); }
+.cost dd { margin: 0; }
+.cost-note { margin-top: 0.3rem; font-size: 0.88rem; color: var(--body); line-height: 1.5; }
+.cost .figure { font-family: var(--font-display); font-size: 1.85rem; line-height: 1.15;
+  color: var(--ink); letter-spacing: -0.02em; }
+.cost .figure small { display: block; font-family: var(--font-body); font-size: 0.9rem;
+  font-weight: 600; letter-spacing: 0; color: var(--muted); margin-top: 0.35rem; }
+.cost > div.pick { border-color: var(--amber); border-width: 2px; background: var(--amber-soft); }
+.cost .tag { justify-self: start; font-size: 0.6rem; font-weight: 700; letter-spacing: 0.16em;
+  text-transform: uppercase; color: #7A4712; background: var(--white);
+  border: 1px solid var(--amber); border-radius: 999px; padding: 0.2rem 0.55rem; }
+
+/* closing */
+.closing {
+  margin-top: clamp(2.75rem, 6vw, 4.25rem);
+  padding-top: 2rem;
+  border-top: 3px solid var(--amber);
+  display: grid;
+  gap: 1.1rem;
+}
+.sign {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  color: var(--ink);
+}
+
+footer { margin-top: 2.5rem; color: var(--muted); font-size: 0.85rem; }
+footer p { max-width: none; }
+
+/* ---------- responsive -------------------------------------------------- */
+
+@media (max-width: 620px) {
+  .path li { grid-template-columns: 2.2rem 1fr; gap: 0.75rem; }
+  .docmeta { gap: 1.1rem 2rem; }
+  .answers { border-radius: 10px; }
+  body { font-size: 1rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: .001ms !important; transition-duration: .001ms !important; }
+}
+
+/* ---------- print ------------------------------------------------------- */
+
+@media print {
+  body { background: #fff; font-size: 10.5pt; padding-bottom: 0; }
+  .masthead, .panel, .issues > div, .asks > li, .answers > div, .note, .cost > div {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  /* A section must be allowed to break across a page. Holding each one whole
+     puts every heading on a sheet of its own and turns nine pages into
+     nineteen, most of them half empty. What has to stay whole is a card — a
+     cost box or a finding split down the middle is the thing that actually
+     reads as broken. */
+  .issues > div, .asks > li, .answers > div, .cost > div, .panel, .note {
+    break-inside: avoid;
+  }
+  h2, h3 { break-after: avoid; }
+  p, li { orphans: 2; widows: 2; }
+  /* Chromium fragments a CSS grid badly across a page boundary — the numbered
+     walk-through came out as three pages of one-word columns. Flex survives the
+     break, and each step is kept whole anyway. */
+  .path li { display: flex; gap: 1rem; align-items: flex-start; break-inside: avoid; }
+  .path li::before { flex: 0 0 2.8rem; }
+  .path li > span { flex: 1 1 auto; }
+  a { color: var(--ink); text-decoration: none; }
+}
+</style>
+<style>
+/* Ryan's brief, not the practice's document. Bullets, because this gets read
+   in a car park with thirty seconds to spare, not front to back. */
+body { font-size: 15px; }
+.wrap { max-width: 840px; }
+.masthead { padding-block: 1.6rem 1.3rem; }
+.masthead h1 { font-size: clamp(1.6rem, 4vw, 2.1rem); }
+.mine { display: inline-flex; align-items: center; gap: .5rem; font-family: var(--font-body);
+  font-size: .62rem; font-weight: 700; letter-spacing: .2em; text-transform: uppercase;
+  color: var(--charcoal); background: var(--amber); border-radius: 999px; padding: .32rem .8rem; }
+section { margin-top: 1.5rem; }
+h2 { font-size: 1.35rem; }
+h2 .num { font-size: .58rem; }
+h3 { font-size: 1.02rem; margin-top: .9rem; }
+p { margin: .45rem 0; font-size: .95rem; }
+ul { list-style: none; margin: .5rem 0 0; padding: 0; display: grid; gap: .42rem; }
+li { position: relative; padding-left: 1.35rem; font-size: .94rem; line-height: 1.5; }
+li::before { content: '\2014'; position: absolute; left: 0; top: 0; color: var(--amber-deep);
+  font-weight: 700; }
+li strong { color: var(--ink); }
+ul.nope li::before { content: '\00D7'; color: #9B2C2C; font-size: 1.05em; }
+ul.tight { gap: .3rem; }
+.say { margin: .7rem 0; padding: .75rem 1rem; border-left: 4px solid var(--amber);
+  background: var(--amber-soft); border-radius: 0 10px 10px 0; font-family: var(--font-display);
+  font-size: 1.08rem; line-height: 1.42; color: var(--ink); }
+.why { font-size: .88rem; color: var(--body); margin-top: -.1rem; }
+.card { background: var(--white); border: 1px solid var(--line); border-radius: 12px;
+  padding: .9rem 1.05rem; margin-top: .75rem; }
+.card h3 { margin-top: 0; }
+.hot { border-color: var(--amber); background: var(--amber-soft); }
+.grid2 { display: grid; gap: .7rem; }
+@media (min-width: 40rem) { .grid2 { grid-template-columns: 1fr 1fr; } }
+@media print {
+  body { font-size: 9.6pt; }
+  section { margin-top: 1rem; }
+  h2 { font-size: 1.22rem; break-inside: avoid; }
+  .say, .card { break-inside: avoid; }
+  .masthead { padding-block: 1.2rem 1rem; }
+}
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <p><span class="mine">My notes — do not hand this over</span></p>
+    <h1>Columbia Animal Hospital<br>everything I need to know</h1>
+    <p class="lede">
+      1409 Hwy 98E &middot; (601) 736-3041 &middot; Mon&ndash;Fri 7:30&ndash;5:30, Sat 8:00&ndash;12:00.
+      Dr. Pat Sanford (owner, since 1985) &middot; Dr. Janelle Loper (2008) &middot;
+      Dr. Bridgett Williams (2013).
+    </p>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <section>
+    <h2><span class="num">The pitch</span>Renovation, not rescue</h2>
+    <p>
+      They just renovated the building. That is the whole angle — and it beats every other one,
+      because it is a compliment with a gap in it and nobody gets defensive about it.
+    </p>
+    <div class="say">
+      "Y'all just did the renovations — place looks great. I do websites, and I noticed the site
+      hasn't caught up with the building yet. So I went ahead and built what it could look like.
+      Can I show you? It's got your doctors on it."
+    </div>
+    <ul>
+      <li><strong>Never say they are losing clients.</strong> Columbia has exactly two vet
+        practices and this is the bigger one. Everyone already knows where they are. Claim a
+        problem they do not have and a man who has run this place since 1985 knows instantly that
+        I do not understand his business.</li>
+      <li><strong>I am finishing something they started</strong>, not fixing something broken.</li>
+      <li><strong>Show before I talk.</strong> Open the laptop, turn it round, shut up. They will
+        recognise their own doctors and their own sign. That does the selling.</li>
+      <li><strong>Today is not the sale.</strong> Today is a name and a good time to come back.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2><span class="num">Them</span>Facts I should have straight</h2>
+    <div class="grid2">
+      <div class="card">
+        <h3>The practice</h3>
+        <ul class="tight">
+          <li>Since 1975. Small-animal exclusive since 2005.</li>
+          <li>Three veterinarians, about eleven staff in the team photo.</li>
+          <li>Surgery, dental, x-ray, heartworm, dermatology, reproductive, grooming, boarding,
+            microchipping.</li>
+          <li><strong>303 Google reviews.</strong> Twelve of the best are on the site I built.</li>
+          <li>Their own on-call vet after hours — not in the Hattiesburg emergency network.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>The market</h3>
+        <ul class="tight">
+          <li>Columbia ~6,000 people. Marion County ~24,000, about 9,100 households.</li>
+          <li><strong>Only one other clinic in town</strong> — Marion Pet Care, appears to be a
+            single vet. Everything else is 22+ miles.</li>
+          <li>Hattiesburg is 34 miles and has around 30 practices. That is where anything
+            "advanced" leaks to.</li>
+          <li>Median household income $45,110 county, $38,507 city. Money is not loose here.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="num">Money</span>The price, and what they pay now</h2>
+    <ul>
+      <li><strong>$3,500 once, and the site is theirs.</strong> Half on signature, half the day it
+        goes live.</li>
+      <li><strong>$75 a month afterwards, optional.</strong> Hosting, backups, updates, changes.
+        Cancel any month, or decline it and host it themselves.</li>
+      <li><strong>Included:</strong> every old page redirected, the domain pointed, the sitemap
+        submitted, the wrong listings corrected. <strong>Not included:</strong> photography.</li>
+      <li><strong>They almost certainly pay nothing today.</strong> Their site sits on
+        vetsourcecms.com, and Vetsource makes its money on pharmacy margin — no enrolment fee, no
+        monthly charge, no cancellation fee. <strong>I cannot win this on price and should not
+        try.</strong></li>
+      <li><strong>The line that kills the objection before it lands:</strong> they can keep the
+        Vetsource pharmacy and still own a proper website. The two are separable.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2><span class="num">The big one</span>"It's out of our budget"</h2>
+    <p>
+      A practice with three vets in a town this size is not literally unable to find $3,500. So
+      this sentence almost always means something else. <strong>Do not discount in the room.</strong>
+      Dropping the price at the first push teaches them the price was never real, and invites a
+      second push.
+    </p>
+    <div class="say">"Totally fair. Is it the number, or is it the timing?"</div>
+    <p class="why">
+      One question, and it splits into the two answers that need completely different responses.
+    </p>
+
+    <div class="card hot">
+      <h3>If they say <em>timing</em> — that is likely true here</h3>
+      <ul class="tight">
+        <li>They just spent money on the renovation. Believe them.</li>
+        <li><strong>Move the payments, not the price.</strong> Offer thirds — about $1,170 a month
+          across three months. Same total, fits a different cash-flow month.</li>
+        <li>Or set a start date rather than a discount: <em>"Want me to hold this and start in
+          January?"</em></li>
+        <li>Ask when their budget year turns over. That gives me a date and a reason to come back
+          that is theirs, not mine.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>If they say <em>the number</em> — it is a value conversation, not a price one</h3>
+      <ul class="tight">
+        <li><strong>Anchor against what they just spent.</strong> A building renovation runs to
+          tens of thousands. Every client walks through the website before they walk through the
+          door, usually on a phone. It is the one room that did not get touched.</li>
+        <li><strong>Cut scope, never the rate.</strong> Fewer pages, they supply the photographs,
+          they do their own listing corrections. Less work for less money is honest. The same work
+          for less money is not.</li>
+        <li><strong>My floor is $2,500.</strong> Below that I am working for free and teaching a
+          client that my numbers are soft.</li>
+        <li>Compare to what a vet-specific vendor charges: VIN's eVetSites is $109&ndash;$169 a
+          <em>month</em>, forever, and they never own it. Three years of that is $4,000&ndash;$6,000
+          and they still have nothing.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>If it is really a no</h3>
+      <ul class="tight">
+        <li>Take it gracefully and leave the sheet. <em>"No problem at all — I'll leave this with
+          you in case it comes up later."</em></li>
+        <li>A no today is not a no forever, and the site does not expire.</li>
+        <li><strong>Never argue.</strong> The one thing that turns a "not right now" into a
+          "never" is a stranger pushing.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="num">Also</span>Other things they might say</h2>
+    <ul>
+      <li><strong>"We already have a website."</strong> — "You do, and it works. It is just built
+        on a platform Vetsource does not really sell any more, and it was laid out before everybody
+        moved to phones." Never say theirs is bad.</li>
+      <li><strong>"Who did you say you are with?"</strong> — "Just me. I live here in town." Local
+        is the whole advantage; do not dress it up as an agency.</li>
+      <li><strong>"Where did you get our doctors' photos?"</strong> — From what the practice already
+        publishes. Nothing goes live until they say so, and consent for everyone shown is on the
+        pre-launch list in writing.</li>
+      <li><strong>"Will we lose our Google ranking?"</strong> — No. Every old address redirects to
+        its new page. That is included, not an extra.</li>
+      <li><strong>"Send me something."</strong> — Yes, and do it that day. The thirteen-page version
+        exists for exactly this.</li>
+      <li><strong>"That's not my call."</strong> — "I know. Who is, and when are they usually
+        around?" That is the whole goal today anyway.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2><span class="num">Ask</span>Questions, not statements</h2>
+    <p>
+      Whoever is at the desk lives every problem on my list. Ask, and they tell me — then it goes
+      back to Dr. Sanford as something a staff member raised, not something a salesman claimed.
+    </p>
+    <ul>
+      <li>"Do y'all ever get people showing up Saturday morning before you open?"
+        <em>Three directories say 7:30, they open at 8:00.</em></li>
+      <li>"When somebody calls after hours — what happens? Where do they find that number?"
+        <em>The strongest card. A care problem, not a marketing one.</em></li>
+      <li>"How much of the phone is people asking things already written down somewhere?"</li>
+      <li>"If y'all ever wanted to move the website, do you know what you'd be able to take with
+        you?" <em>Do not answer it. Leave it with them.</em></li>
+      <li>"Who handles the website now — does the office pay for that, or does it come with the
+        Vetsource account?"</li>
+      <li>"Is Dr. Carson still with y'all?"</li>
+    </ul>
+    <p class="why">
+      Every one of these can be dropped. "I noticed X — does that cause y'all any trouble?" and if
+      the answer is no, move on.
+    </p>
+  </section>
+
+  <section>
+    <h2><span class="num">Pocket</span>Findings — for later, not the opener</h2>
+    <ul>
+      <li>Marion County Development Partnership lists <strong>1498</strong> Hwy 98 East. US
+        Companies lists <strong>Old</strong> Hwy 98 E. Both wrong.</li>
+      <li>Three directories put Saturday at <strong>7:30</strong>; they open at 8:00.</li>
+      <li>The whole site is also live at <em>columbiaanimalhospital.vetsourcecms.com</em>, so search
+        engines split the credit between two copies.</li>
+      <li>Their site says a vet is available after hours and <strong>never says how to reach
+        one</strong>. One old review claims they stopped doing after-hours entirely — worth
+        checking, carefully.</li>
+      <li>Four reviews mention <strong>walk-ins</strong>, two of them recent. Neither website says
+        so anywhere. That is a selling point they are sitting on.</li>
+      <li>A separate Yelp listing exists under "Carson Wallace DR" at their address.</li>
+      <li>People searching for them land on the <strong>Pennsylvania</strong> practice's review
+        pages.</li>
+      <li><strong>Front desk is the recurring criticism in their reviews.</strong> Do not raise it
+        with whoever is at that desk. Ever.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2><span class="num">Get</span>What I need to find out today</h2>
+    <ul>
+      <li><strong>Look at the sign in the car park.</strong> The building photo on the site reads
+        903-234-0869 with a single-dog logo. If the real sign does not match, take a phone photo
+        from the road — that fixes two slots.</li>
+      <li>Dr. Wallace Carson — still there, retired, or gone?</li>
+      <li>How a client actually reaches the on-call vet.</li>
+      <li>Saturday opening time, confirmed.</li>
+      <li>The Google star rating, and their listing link.</li>
+      <li>Whether the office pays anything for the website today.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2><span class="num">Careful</span>Don't</h2>
+    <ul class="nope">
+      <li><strong>Don't run down their current site in front of staff.</strong> Somebody in that
+        building may have picked it.</li>
+      <li><strong>Don't leave the thirteen-page version.</strong> One sheet. The long one is for
+        when they ask.</li>
+      <li><strong>Don't discount to keep the conversation alive.</strong></li>
+      <li><strong>Don't ask for the doctor's cell number.</strong></li>
+      <li><strong>Don't pitch "more clients".</strong> They do not have that problem.</li>
+      <li><strong>Don't linger.</strong> Be the person who was easy, not the one who would not
+        leave.</li>
+    </ul>
+  </section>
+
+  <div class="card hot">
+    <h3>If Dr. Sanford walks out himself</h3>
+    <p>
+      Same opening. Hand him the laptop and let him scroll. When he asks the price, say it plainly
+      — <strong>$3,500, once, and the site is his</strong>, $75 a month afterwards only if he wants
+      it looked after — then stop talking. First one to fill the silence loses.
+    </p>
+    <p>
+      Anything I do not know: <strong>"I don't know, let me find out."</strong> He has run that
+      practice for forty years and will spot a bluff instantly. The other answer he will respect.
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>After</h3>
+    <ul class="tight">
+      <li>Write the name and the good time down in front of them.</li>
+      <li>Thank them and go.</li>
+      <li><strong>Follow up Monday.</strong> Cold deals close on the second or third visit, almost
+        never the first.</li>
+      <li>The floor today: somebody says "leave it with me", I say thanks, I walk out. Nothing bad
+        happens. Nothing I have now is at risk.</li>
+    </ul>
+  </div>
+
+</div>
+</body>
+</html>
