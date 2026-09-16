@@ -128,5 +128,10 @@
     "file": "svc-reproductive-services.webp",
     "describes": "Puppies or a nursing mother, calm setting",
     "credit": "Supplied by the client. A generic clinical photograph, not this practice's own rooms, equipment or staff \u2014 the alt text says what is in the frame and claims nothing about the building. No identifiable person is shown. Source and licence of the original not recorded; confirm commercial usage rights before launch."
+  },
+  "contact-building": {
+    "file": "contact-building.webp",
+    "describes": "The building and car park from the road",
+    "credit": "Supplied by the client and placed at their explicit direction. The same photograph as `about-hospital` \u2014 see that entry. NOT VERIFIED AS THIS PRACTICE: the sign in the photograph reads 903-234-0869 with a single-dog logo on green, where Columbia Animal Hospital of Columbia MS is 601-736-3041 with a dog-and-cat logo on black. 903 is an East Texas area code. This slot exists so a first-time client can recognise the building from the road, so a wrong building here does the opposite of its job. Confirm or replace before launch."
   }
 }

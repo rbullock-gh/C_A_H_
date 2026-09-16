@@ -7,6 +7,11 @@ one until they are done.
 
 ## 0. Verify the building photograph — BLOCKER
 
+> **It is now in two places.** The same photograph fills `about-hospital` on the home page and the
+> About page, and `contact-building` at the foot of the Contact page. The Contact slot is the one
+> whose whole job is letting a first-time client recognise the building from the road, so if this
+> is the wrong building it does not merely decorate badly — it sends people to the wrong place.
+
 The exterior photograph on the home page and the About page was supplied by the client and
 placed at their explicit direction. **It has not been verified as this practice.**
 
