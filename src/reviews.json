@@ -1,0 +1,11 @@
+{
+  "_comment": "Real client reviews, and nothing else. Every entry must be a quote somebody actually left, copied verbatim, with the name as it appears publicly. Nothing in this file may be written by us. tools/make-reviews.py renders it into the home page; an empty list leaves the section as it is.",
+  "source": {
+    "name": "Google",
+    "url": "",
+    "count": null,
+    "rating": null,
+    "asOf": ""
+  },
+  "reviews": []
+}

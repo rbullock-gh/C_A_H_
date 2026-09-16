@@ -1174,6 +1174,34 @@ a.card:hover .icon-tile { background: var(--amber); color: var(--ink); transform
 
 
 /* --------------------------------------------------------------------------
+   CLIENT REVIEWS
+   Quotes people actually left, rendered from src/reviews.json by
+   tools/make-reviews.py. Set in the display face at a readable size, because a
+   testimonial shrunk to caption size reads as filler — and these are the only
+   words on the site written by somebody who is not the practice.
+   -------------------------------------------------------------------------- */
+.review-grid { display: grid; gap: var(--sp-5); margin-top: var(--sp-8);
+  grid-template-columns: 1fr; }
+@media (min-width: 46rem) { .review-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 68rem) { .review-grid { grid-template-columns: repeat(3, 1fr);
+  gap: var(--sp-6); } }
+.review { margin: 0; padding: var(--sp-6); background: var(--white);
+  border: 1px solid var(--line); border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-xs); display: flex; flex-direction: column; }
+.review blockquote { margin: 0; font-family: var(--font-display);
+  font-size: var(--step-1); line-height: 1.5; color: var(--ink);
+  letter-spacing: -0.01em; }
+.review blockquote::before { content: '\201C'; }
+.review blockquote::after { content: '\201D'; }
+.review figcaption { margin-top: auto; padding-top: var(--sp-5);
+  font-size: var(--step--1); font-weight: 600; color: var(--body); }
+.review figcaption span { display: block; margin-top: 0.2rem; font-weight: 400;
+  font-size: var(--step--2); color: var(--muted); letter-spacing: 0.04em; }
+.review-source { margin-top: var(--sp-6); text-align: center;
+  font-size: var(--step--1); }
+.review-source a { color: var(--amber-deep); }
+
+/* --------------------------------------------------------------------------
    PET CARDS
    A real animal above the heading on every service card, shown whole rather
    than cropped to its face. tools/make-pet-cards.py sets each animal on a
