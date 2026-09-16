@@ -119,7 +119,12 @@ def main() -> int:
 
     # ---- assemble the shell ------------------------------------------------
     doc = shell
-    doc = re.sub(r'<link rel="stylesheet" href="[^"]+">', f"<style>\n{css}\n</style>", doc)
+    # A lambda, not a replacement string. re.sub parses escapes in a replacement,
+    # so a backslash in the stylesheet is eaten on the way in: content: '\201C'
+    # came out as content: 'C', which put a literal C at the front of every
+    # review and a D at the end of it. A callable is handed the text verbatim.
+    doc = re.sub(r'<link rel="stylesheet" href="[^"]+">',
+                 lambda _: f"<style>\n{css}\n</style>", doc)
     doc = re.sub(r'<script src="[^"]+" defer></script>', "", doc)
     doc = re.sub(r'<link rel="preload"[^>]*>', "", doc)
     doc = re.sub(r'<link rel="(?:icon|apple-touch-icon|manifest)"[^>]*>', "", doc)
@@ -182,6 +187,14 @@ Preview build &middot; not the live site &middot; photography is placeholder
     # main.js exposes window.__cahInit for exactly this: the router calls it
     # after swapping <main>, so no surgery on the script is needed here.
     doc = doc.replace("</body>", f"{store}\n<script>\n{js}\n</script>\n{router}\n</body>")
+
+    # Guard: every backslash escape in the stylesheet and the script has to
+    # survive into the demo. This is the check that would have caught the C.
+    for name, source in (("stylesheet", css), ("script", js)):
+        want = source.count("\\")
+        if want and doc.count("\\") < want:
+            sys.exit(f"build-demo: {name} lost backslash escapes on the way in "
+                     f"({want} expected, {doc.count(chr(92))} in the document)")
 
     # Nothing may still point at a file on disk: this is meant to open from a
     # USB stick with no assets folder beside it. Fail loudly rather than ship a
