@@ -80,9 +80,17 @@ locked door does not come back.
 
 ## 3a. The proposal is ready to send
 
-`docs/proposal/columbia-animal-hospital-proposal.html` is complete: **$2,500 to launch and
-$150 a month**, or **$5,500 once** to own it outright, prepared by Ryan Bullock,
-(769) 313-6636, ryanbullock09@gmail.com. Nothing is left blank and the draft notice is gone.
+`docs/proposal/columbia-animal-hospital-proposal.html` is complete: **$3,500 once, and $75 a
+month only if they want it looked after**, prepared by Ryan Bullock, (769) 313-6636,
+ryanbullock09@gmail.com. Nothing is left blank and the draft notice is gone.
+
+The price is one payment rather than a subscription because the research says their current site
+almost certainly costs them nothing. It sits on `vetsourcecms.com`, and Vetsource takes its
+revenue on pharmacy margin — no enrolment fee, no monthly service charge, no cancellation fee on
+the core program, and a $499/month client app given away to the same customers. A monthly bill
+would therefore be a **new** expense against a free incumbent, while a one-time purchase is a
+single decision. The published vet-specific comparable is VIN's eVetSites at $109–$169 a month
+with no setup fee, which also caps what any recurring charge can credibly be.
 There are two documents, because they do different jobs:
 
 | File | Pages | For |
