@@ -41,6 +41,11 @@ they are looking for the turning. If it shows the wrong building, they drive pas
 
 ## 1. Confirm Dr. Wallace Carson's status — BLOCKER
 
+> **Deliberately not in the client-facing documents.** Asking a practice in writing whether a
+> colleague of fifty years is still with them is a question that can land very badly when the
+> answer is sad, and a cold proposal is the wrong place for it. It is a question to ask out loud,
+> and it is in the sender's own visit brief instead.
+
 The existing site has a live, indexed bio page for **Dr. Wallace Carson**
 (`/AboutUs/DrWallaceCarson.aspx`): Mississippi State undergraduate, DVM from Auburn
 University College of Veterinary Medicine in 1974, with the practice since 1975. The brief
