@@ -139,6 +139,32 @@ reviews section using this shape, which is what the styles already expect:
 Use real names with permission. An invented quote is the fastest way to lose a client's trust,
 and people local enough to be reading this will notice a name that does not exist.
 
+### Twelve real reviews are now on the home page — and three things came with them
+
+The practice's Google listing carries **303 reviews**. Twelve are on the site, copied verbatim
+from the public listing into `src/reviews.json`, named by first name and last initial. Anything
+Google had truncated behind a "More" link was left out rather than trimmed, because a shortened
+quote stops being the reviewer's sentence. **Still outstanding: the star rating and the listing
+URL**, so the page can say "4.x from 303" and link out. Ask the practice, or read it off Google
+Maps in thirty seconds.
+
+**Three things the reviews revealed that matter more than the quotes:**
+
+1. **A client disputes the after-hours claim.** One reviewer writes that the practice "no longer
+   help[s] with after hours emergency visits" and describes driving at 3am with a dog having a
+   seizure. The review is old — edited about ten years ago — and the practice's own site still
+   advertises an on-call veterinarian. **This site publishes that claim.** It is now blocker 2 and
+   it is not merely "how do clients reach the on-call vet" any more; it is "is this still true."
+2. **They take walk-ins, and the site never says so.** Four separate reviews mention it, two of
+   them within the last eight months: "I can just walk in as needed", "saw us quickly even as a
+   walk-in", "You don't need an appointment for basic stuff". For a practice whose nearest
+   alternative is 22 miles away this is a real selling point, and it is nowhere on either site.
+   Confirm it and it belongs on the home page.
+3. **The front desk is the recurring criticism.** Several reviewers praise the doctors and
+   complain about reception in the same breath. Nothing goes on the website about it, and it is
+   not a thing to raise with whoever is at that desk — but the practice may not know, and it is
+   worth an owner hearing once.
+
 ### What a search for existing reviews turned up
 
 Every review host is blocked from this environment, so this is what search results carried,

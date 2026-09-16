@@ -68,13 +68,12 @@ def main() -> int:
                     sys.exit(f"make-reviews: review {i} has no {field}")
         cards = "\n".join(card(r) for r in reviews)
         tail = ""
-        if src.get("url") and src.get("count"):
-            tail = (
-                '\n    <p class="review-source">\n'
-                f'      <a href="{html.escape(src["url"])}" target="_blank" rel="noopener">'
-                f'Read all {src["count"]} reviews on {html.escape(src.get("name", "Google"))}</a>\n'
-                "    </p>"
-            )
+        if src.get("count"):
+            where = html.escape(src.get("name", "Google"))
+            line = f'Read all {src["count"]} reviews on {where}'
+            inner = (f'<a href="{html.escape(src["url"])}" target="_blank" rel="noopener">{line}</a>'
+                     if src.get("url") else line)
+            tail = f'\n    <p class="review-source">{inner}</p>'
         body = f'\n    <div class="review-grid reveal">\n{cards}\n    </div>{tail}\n  '
         print(f"  {len(reviews)} review(s) rendered")
 

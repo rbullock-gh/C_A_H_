@@ -1,11 +1,84 @@
 {
-  "_comment": "Real client reviews, and nothing else. Every entry must be a quote somebody actually left, copied verbatim, with the name as it appears publicly. Nothing in this file may be written by us. tools/make-reviews.py renders it into the home page; an empty list leaves the section as it is.",
+  "_comment": "Real client reviews and nothing else, copied verbatim from the practice's public Google listing. Nothing in this file may be written by us, and nothing may be edited: a review Google truncated with a 'More' link is excluded rather than trimmed, because a shortened quote is no longer the reviewer's sentence. Names are first name and last initial. tools/make-reviews.py renders it into the home page.",
   "source": {
     "name": "Google",
     "url": "",
-    "count": null,
+    "count": 303,
     "rating": null,
-    "asOf": ""
+    "asOf": "2026-09"
   },
-  "reviews": []
+  "reviews": [
+    {
+      "name": "Billy D.",
+      "date": "2020",
+      "about": "A client of 30 years",
+      "quote": "The awesome vets at Columbia Animal Hospital have taken amazing care of my animals for over 30 years! I trust them completely! Dr Pat Sanford and Dr Loper have been such a great blessing to me! Thanks for all the years of amazing service!"
+    },
+    {
+      "name": "Ronnie",
+      "date": "2023",
+      "about": "On saying goodbye",
+      "quote": "We had to put our pet of 18 years to rest and they couldn't have been more thoughtful and considerate of our feelings. They made sure our pet was comfortable throughout his passing and all our feelings were considered. We appreciate it greatly!"
+    },
+    {
+      "name": "Janis S.",
+      "date": "2021",
+      "about": "Surgery",
+      "quote": "Dr Loper did excellent surgery on my kitten. Would highly recommend her. She's a wonderful doctor and person. She's compassionate and that's important."
+    },
+    {
+      "name": "Rhonda B.",
+      "date": "2023",
+      "about": "Three German shepherds",
+      "quote": "Love Dr Williams and her team I trust her w my 3 German shepherds n all their issues I highly recommend this team They know what they are doing"
+    },
+    {
+      "name": "ReNee W.",
+      "date": "2026",
+      "about": "",
+      "quote": "Great people, great service. They listen, they're friendly and they take great care of my fur babies. And! I can just walk in as needed."
+    },
+    {
+      "name": "Jason C.",
+      "date": "2026",
+      "about": "",
+      "quote": "Took great care of our pet, saw us quickly even as a walk-in. Prices were reasonable."
+    },
+    {
+      "name": "Rick W.",
+      "date": "2024",
+      "about": "An emergency",
+      "quote": "They took great care of our baby after she got bitten by a copperhead"
+    },
+    {
+      "name": "Tammy W.",
+      "date": "2022",
+      "about": "A client since 2007",
+      "quote": "We've been using Columbia Animal Hospital for our pets since 2007. The whole staff is filled with true animal lovers. They've done multiple surgeries from tail dockings, to spaying. They deserve 10 stars instead of just 5."
+    },
+    {
+      "name": "Jack",
+      "date": "2022",
+      "about": "",
+      "quote": "The vets here have always treated our animals well and the pricing structure is better than what I've seen in Hattiesburg."
+    },
+    {
+      "name": "David G.",
+      "date": "2024",
+      "about": "Grooming",
+      "quote": "My Morkie came out looking wonderful. This groomer does a great job at a very reasonable price."
+    },
+    {
+      "name": "Katherine D.",
+      "date": "2023",
+      "about": "",
+      "quote": "We are so thankful for this clinic. Such a wonderful group of people. They really love what they do. Our lab, Suzy Q loves Dr. Bridgett!"
+    },
+    {
+      "name": "Suzanne B.",
+      "date": "2019",
+      "about": "Forty years a client",
+      "quote": "Being bringing my 4 legged fur babies to them since I was 3 yrs old. That's 40 yrs of service! They are always great!"
+    }
+  ]
 }
