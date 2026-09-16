@@ -225,9 +225,14 @@ cache hard.
 
 ## 5. Replace the placeholder photography
 
-Fourteen slots hold real photographs now — the three doctors at work, the animals on the
-service cards, the team at the sign. Seventeen are still labelled placeholders, and
-`python3 tools/photos.py list` prints which is which at any moment. See
+Twenty-four slots hold real photographs now — all nine service pages, the three doctors at work,
+the animals on the service cards, the exam-room shot and the team at the sign. Eight are still
+labelled placeholders, and `python3 tools/photos.py list` prints which is which at any moment.
+
+**Of the eight, five belong to the interior gallery that is currently off the home page**, so the
+ones that actually matter are `contact-building`, `closer-community` and `about-history` — and all
+three are photographs of this practice's own building and people, which is exactly why nobody else
+can supply them. See
 [`PHOTO-CHECKLIST.md`](PHOTO-CHECKLIST.md) for the shot list, then drop files into
 `incoming/` named after their slot and run:
 

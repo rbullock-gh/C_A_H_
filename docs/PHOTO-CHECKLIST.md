@@ -108,15 +108,15 @@ blue-filtered clinical interiors, and anything with visible non-US signage or br
 | ~~`vet-loper`~~ | 560×700 | **filled** | Dr. Janelle Loper listening to a corgi — supplied by the client | `index.html`, `team.html` |
 | ~~`vet-sanford`~~ | 560×700 | **filled** | Dr. Pat Sanford listening to a puppy — supplied by the client | `index.html`, `team.html` |
 | ~~`vet-williams`~~ | 560×700 | **filled** | Dr. Bridgett Williams holding a kitten — supplied by the client | `index.html`, `team.html` |
-| `svc-surgery.svg` | 1200×800 | labelled | Surgical suite, prepped and clean | `services/surgery.html` |
-| `svc-dental-care.svg` | 1200×800 | labelled | Dental cleaning in progress, or a dog's teeth | `services/dental-care.html` |
-| `svc-digital-radiography.svg` | 1200×800 | labelled | Digital x-ray image on a monitor | `services/digital-radiography.html` |
-| `svc-heartworm-testing.svg` | 1200×800 | labelled | Blood draw or in-house test being run | `services/heartworm-testing.html` |
-| `svc-dermatology.svg` | 1200×800 | labelled | Skin or ear examination close up | `services/dermatology.html` |
-| `svc-grooming.svg` | 1200×800 | labelled | Groomer working with a dog on the table | `services/grooming.html` |
-| `svc-boarding.svg` | 1200×800 | labelled | Clean boarding run, or a dog on its daily walk | `services/boarding.html` |
-| `svc-microchipping.svg` | 1200×800 | labelled | Scanner being passed over a pet's shoulders | `services/microchipping.html` |
-| `svc-reproductive-services.svg` | 1200×800 | labelled | Puppies or a nursing mother, calm setting | `services/reproductive-services.html` |
+| ~~`svc-surgery`~~ | 1200×800 | **filled** | Surgical suite, prepped and clean — supplied by the client | `services/surgery.html` |
+| ~~`svc-dental-care`~~ | 1200×800 | **filled** | Dental cleaning in progress, or a dog's teeth — supplied by the client | `services/dental-care.html` |
+| ~~`svc-digital-radiography`~~ | 1200×800 | **filled** | Digital x-ray image on a monitor — supplied by the client | `services/digital-radiography.html` |
+| ~~`svc-heartworm-testing`~~ | 1200×800 | **filled** | Blood draw or in-house test being run — supplied by the client | `services/heartworm-testing.html` |
+| ~~`svc-dermatology`~~ | 1200×800 | **filled** | Skin or ear examination close up — supplied by the client | `services/dermatology.html` |
+| ~~`svc-grooming`~~ | 1200×800 | **filled** | Groomer working with a dog on the table — supplied by the client | `services/grooming.html` |
+| ~~`svc-boarding`~~ | 1200×800 | **filled** | Clean boarding run, or a dog on its daily walk — supplied by the client | `services/boarding.html` |
+| ~~`svc-microchipping`~~ | 1200×800 | **filled** | Scanner being passed over a pet's shoulders — supplied by the client | `services/microchipping.html` |
+| ~~`svc-reproductive-services`~~ | 1200×800 | **filled** | Puppies or a nursing mother, calm setting — supplied by the client | `services/reproductive-services.html` |
 | `contact-building.svg` | 1400×900 | labelled | The building and car park from the road | `contact.html` |
 
 ## Priority
@@ -126,4 +126,7 @@ If only a few photographs can be taken, take these five:
 1. ~~**`hero-care`**~~ — done. The client supplied the three-dog studio photograph.
 2. ~~**`vet-loper`, `vet-sanford`, `vet-williams`**~~ — done. Each doctor at work, with a
    patient, which is better than the head-and-shoulders portrait originally asked for.
-3. **`contact-building`** — so a first-time client recognizes the building from the road.
+3. ~~**The nine service pages**~~ — done. The client supplied all nine.
+4. **`contact-building`** — so a first-time client recognizes the building from the road. With the
+   service pages filled, this is now the most valuable photograph left in the project, and the
+   only one nobody but the practice can take.

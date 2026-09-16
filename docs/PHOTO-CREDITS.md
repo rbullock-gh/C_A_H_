@@ -18,6 +18,15 @@ each photo in `incoming/` before importing it.
 | `vet-loper` | `vet-loper.webp` | Dr. Janelle Loper examining a corgi (client supplied) | Supplied by the client. The practice's own veterinarian at work in the hospital. The person is identifiable — confirm consent before publishing. |
 | `vet-sanford` | `vet-sanford.webp` | Dr. Pat Sanford examining a puppy (client supplied) | Supplied by the client. The practice's own veterinarian at work in the hospital. The person is identifiable — confirm consent before publishing. |
 | `vet-williams` | `vet-williams.webp` | Dr. Bridgett Williams holding a kitten (client supplied) | Supplied by the client. The practice's own veterinarian at work in the hospital. The person is identifiable — confirm consent before publishing. |
+| `svc-surgery` | `svc-surgery.webp` | Surgical suite, prepped and clean | Supplied by the client. A generic clinical photograph, not this practice's own rooms, equipment or staff — the alt text says what is in the frame and claims nothing about the building. No identifiable person is shown. Source and licence of the original not recorded; confirm commercial usage rights before launch. |
+| `svc-dental-care` | `svc-dental-care.webp` | Dental cleaning in progress, or a dog's teeth | Supplied by the client. A generic clinical photograph, not this practice's own rooms, equipment or staff — the alt text says what is in the frame and claims nothing about the building. No identifiable person is shown. Source and licence of the original not recorded; confirm commercial usage rights before launch. |
+| `svc-digital-radiography` | `svc-digital-radiography.webp` | Digital x-ray image on a monitor | Supplied by the client. A generic clinical photograph, not this practice's own rooms, equipment or staff — the alt text says what is in the frame and claims nothing about the building. No identifiable person is shown. Source and licence of the original not recorded; confirm commercial usage rights before launch. |
+| `svc-heartworm-testing` | `svc-heartworm-testing.webp` | Blood draw or in-house test being run | Supplied by the client. A generic clinical photograph, not this practice's own rooms, equipment or staff — the alt text says what is in the frame and claims nothing about the building. No identifiable person is shown. Source and licence of the original not recorded; confirm commercial usage rights before launch. |
+| `svc-dermatology` | `svc-dermatology.webp` | Skin or ear examination close up | Supplied by the client. A generic clinical photograph, not this practice's own rooms, equipment or staff — the alt text says what is in the frame and claims nothing about the building. No identifiable person is shown. Source and licence of the original not recorded; confirm commercial usage rights before launch. |
+| `svc-grooming` | `svc-grooming.webp` | Groomer working with a dog on the table | Supplied by the client. A generic clinical photograph, not this practice's own rooms, equipment or staff — the alt text says what is in the frame and claims nothing about the building. No identifiable person is shown. Source and licence of the original not recorded; confirm commercial usage rights before launch. |
+| `svc-boarding` | `svc-boarding.webp` | Clean boarding run, or a dog on its daily walk | Supplied by the client. A generic clinical photograph, not this practice's own rooms, equipment or staff — the alt text says what is in the frame and claims nothing about the building. No identifiable person is shown. Source and licence of the original not recorded; confirm commercial usage rights before launch. |
+| `svc-microchipping` | `svc-microchipping.webp` | Scanner being passed over a pet's shoulders | Supplied by the client. A generic clinical photograph, not this practice's own rooms, equipment or staff — the alt text says what is in the frame and claims nothing about the building. No identifiable person is shown. Source and licence of the original not recorded; confirm commercial usage rights before launch. |
+| `svc-reproductive-services` | `svc-reproductive-services.webp` | Puppies or a nursing mother, calm setting | Supplied by the client. A generic clinical photograph, not this practice's own rooms, equipment or staff — the alt text says what is in the frame and claims nothing about the building. No identifiable person is shown. Source and licence of the original not recorded; confirm commercial usage rights before launch. |
 | `reviews-dog` | `reviews-dog.webp` | Cut-out dog for the reviews panel (client supplied) | Supplied by the client. Background removed in-house (rembg, isnet-general-use, alpha matting). Source and licence of the original not recorded — confirm commercial usage rights before launch. |
 | `cta-dog` | `cta-dog.webp` | Cut-out dog for the closing call to action (client supplied) | Supplied by the client. Background removed in-house (rembg, isnet-general-use, alpha matting). Source and licence of the original not recorded — confirm commercial usage rights before launch. |
 | `welcome-dog` | `welcome-dog.webp` | Cut-out dog with paws over an edge (client supplied) | Supplied by the client. Background removed in-house (rembg, isnet-general-use, alpha matting). Source and licence of the original not recorded — confirm commercial usage rights before launch. |
@@ -36,15 +45,6 @@ These slots have no real photograph yet:
 
 - `closer-community` — Owner with their dog outside the hospital
 - `about-history` — Older photograph of the practice, or the building today
-- `svc-surgery` — Surgical suite, prepped and clean
-- `svc-dental-care` — Dental cleaning in progress, or a dog's teeth
-- `svc-digital-radiography` — Digital x-ray image on a monitor
-- `svc-heartworm-testing` — Blood draw or in-house test being run
-- `svc-dermatology` — Skin or ear examination close up
-- `svc-grooming` — Groomer working with a dog on the table
-- `svc-boarding` — Clean boarding run, or a dog on its daily walk
-- `svc-microchipping` — Scanner being passed over a pet's shoulders
-- `svc-reproductive-services` — Puppies or a nursing mother, calm setting
 - `contact-building` — The building and car park from the road
 - `gallery-welcome` — A dog greeted at the front desk
 - `gallery-reception` — Reception and waiting area

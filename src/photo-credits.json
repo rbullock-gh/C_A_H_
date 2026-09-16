@@ -83,5 +83,50 @@
     "file": "hero-sky.webp",
     "describes": "Blue sky with soft cloud, behind the hero photograph",
     "credit": "Supplied by the client. Decorative sky behind the hero cut-out; no identifiable person or place in it. Source and licence of the original not recorded \u2014 confirm commercial usage rights before launch."
+  },
+  "svc-boarding": {
+    "file": "svc-boarding.webp",
+    "describes": "Clean boarding run, or a dog on its daily walk",
+    "credit": "Supplied by the client. A generic clinical photograph, not this practice's own rooms, equipment or staff \u2014 the alt text says what is in the frame and claims nothing about the building. No identifiable person is shown. Source and licence of the original not recorded; confirm commercial usage rights before launch."
+  },
+  "svc-dental-care": {
+    "file": "svc-dental-care.webp",
+    "describes": "Dental cleaning in progress, or a dog's teeth",
+    "credit": "Supplied by the client. A generic clinical photograph, not this practice's own rooms, equipment or staff \u2014 the alt text says what is in the frame and claims nothing about the building. No identifiable person is shown. Source and licence of the original not recorded; confirm commercial usage rights before launch."
+  },
+  "svc-grooming": {
+    "file": "svc-grooming.webp",
+    "describes": "Groomer working with a dog on the table",
+    "credit": "Supplied by the client. A generic clinical photograph, not this practice's own rooms, equipment or staff \u2014 the alt text says what is in the frame and claims nothing about the building. No identifiable person is shown. Source and licence of the original not recorded; confirm commercial usage rights before launch."
+  },
+  "svc-microchipping": {
+    "file": "svc-microchipping.webp",
+    "describes": "Scanner being passed over a pet's shoulders",
+    "credit": "Supplied by the client. A generic clinical photograph, not this practice's own rooms, equipment or staff \u2014 the alt text says what is in the frame and claims nothing about the building. No identifiable person is shown. Source and licence of the original not recorded; confirm commercial usage rights before launch."
+  },
+  "svc-surgery": {
+    "file": "svc-surgery.webp",
+    "describes": "Surgical suite, prepped and clean",
+    "credit": "Supplied by the client. A generic clinical photograph, not this practice's own rooms, equipment or staff \u2014 the alt text says what is in the frame and claims nothing about the building. No identifiable person is shown. Source and licence of the original not recorded; confirm commercial usage rights before launch."
+  },
+  "svc-dermatology": {
+    "file": "svc-dermatology.webp",
+    "describes": "Skin or ear examination close up",
+    "credit": "Supplied by the client. A generic clinical photograph, not this practice's own rooms, equipment or staff \u2014 the alt text says what is in the frame and claims nothing about the building. No identifiable person is shown. Source and licence of the original not recorded; confirm commercial usage rights before launch."
+  },
+  "svc-digital-radiography": {
+    "file": "svc-digital-radiography.webp",
+    "describes": "Digital x-ray image on a monitor",
+    "credit": "Supplied by the client. A generic clinical photograph, not this practice's own rooms, equipment or staff \u2014 the alt text says what is in the frame and claims nothing about the building. No identifiable person is shown. Source and licence of the original not recorded; confirm commercial usage rights before launch."
+  },
+  "svc-heartworm-testing": {
+    "file": "svc-heartworm-testing.webp",
+    "describes": "Blood draw or in-house test being run",
+    "credit": "Supplied by the client. A generic clinical photograph, not this practice's own rooms, equipment or staff \u2014 the alt text says what is in the frame and claims nothing about the building. No identifiable person is shown. Source and licence of the original not recorded; confirm commercial usage rights before launch."
+  },
+  "svc-reproductive-services": {
+    "file": "svc-reproductive-services.webp",
+    "describes": "Puppies or a nursing mother, calm setting",
+    "credit": "Supplied by the client. A generic clinical photograph, not this practice's own rooms, equipment or staff \u2014 the alt text says what is in the frame and claims nothing about the building. No identifiable person is shown. Source and licence of the original not recorded; confirm commercial usage rights before launch."
   }
 }
