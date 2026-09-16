@@ -89,6 +89,7 @@ There are two documents, because they do different jobs:
 |---|---|---|
 | `Columbia-Animal-Hospital-One-Sheet.pdf` | 2 | What gets left on the desk. One sheet, printed both sides, about ninety seconds of reading. |
 | `Columbia-Animal-Hospital-Website-Proposal.pdf` | 13 | The proof, for the reply that says "send me something". With a stranger its length is part of the argument. |
+| `Walk-In-Notes.pdf` | 3 | **The sender's own script for the visit — never goes to the practice.** It says so across the top of page one, in case it ends up in the same stack as the others. |
 
 Both are generated from the HTML beside them — edit that and run `node tools/proposal-pdf.mjs`,
 so the two can never drift apart. Print the one-sheet **in colour**: the dark masthead and the

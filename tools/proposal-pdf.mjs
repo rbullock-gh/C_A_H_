@@ -26,6 +26,11 @@ import { fileURLToPath } from 'node:url';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const JOBS = [
+  // walk-in-notes is the sender's own script, not the practice's — it says so
+  // across the top of page one, because the worst outcome for it is being
+  // handed across a desk by mistake
+  ['docs/proposal/walk-in-notes.html',
+   'docs/proposal/Walk-In-Notes.pdf'],
   ['docs/proposal/columbia-animal-hospital-one-sheet.html',
    'docs/proposal/Columbia-Animal-Hospital-One-Sheet.pdf'],
   ['docs/proposal/columbia-animal-hospital-proposal.html',

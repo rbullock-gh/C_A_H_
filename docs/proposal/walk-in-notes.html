@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Columbia Animal Hospital — Website Proposal, one sheet</title>
-<meta name="description" content="A new website for Columbia Animal Hospital, Columbia, Mississippi. Built and ready to launch. One sheet; the full proposal runs to thirteen pages.">
+<title>Walk-in notes — Columbia Animal Hospital</title>
+<meta name="description" content="Ryan Bullock's own notes for the walk-in at Columbia Animal Hospital. Not for the practice.">
 <meta name="robots" content="noindex">
 <style>
 /* ==========================================================================
@@ -468,50 +468,42 @@ footer p { max-width: none; }
 }
 </style>
 <style>
-/* One sheet, printed both sides. Tighter than the full proposal everywhere:
-   this is the thing left on a desk, and it has about ninety seconds. */
-body { font-size: 15px; }
-.wrap { max-width: 860px; }
-.masthead { padding-block: 2rem 1.6rem; }
-.masthead h1 { font-size: clamp(1.9rem, 4.4vw, 2.6rem); }
-section { margin-top: 1.9rem; }
-h2 { font-size: 1.5rem; }
+/* These are Ryan's notes, not the practice's document. Everything below exists
+   to make that obvious at a glance — nobody wants to hand the wrong sheet
+   across a desk — and to be readable on a phone held in a car park. */
+body { font-size: 15.5px; }
+.wrap { max-width: 800px; }
+.masthead { padding-block: 1.7rem 1.4rem; }
+.masthead h1 { font-size: clamp(1.7rem, 4vw, 2.2rem); }
+.mine { display: inline-flex; align-items: center; gap: 0.5rem;
+  font-family: var(--font-body); font-size: 0.64rem; font-weight: 700;
+  letter-spacing: 0.2em; text-transform: uppercase; color: var(--charcoal);
+  background: var(--amber); border-radius: 999px; padding: 0.35rem 0.85rem; }
+section { margin-top: 1.6rem; }
+h2 { font-size: 1.45rem; }
 h2 .num { font-size: 0.6rem; }
-.section-lead { font-size: 1rem; margin-bottom: 0.9rem; }
-p { margin: 0.55rem 0; }
-.terse { display: grid; gap: 0.55rem; margin: 0; padding: 0; list-style: none; }
-/* The dash hangs in the margin. It has to be positioned rather than laid out:
-   a grid or a flex row makes the bold lead-in its own item and strands the
-   sentence after it in a column of its own. */
-.terse li { position: relative; padding-left: 1.45rem; font-size: 0.95rem; line-height: 1.55; }
+p { margin: 0.5rem 0; font-size: 0.97rem; }
+.say { margin: 0.8rem 0; padding: 0.85rem 1.1rem;
+  border-left: 4px solid var(--amber); background: var(--amber-soft);
+  border-radius: 0 10px 10px 0;
+  font-family: var(--font-display); font-size: 1.12rem; line-height: 1.45;
+  color: var(--ink); }
+.say + .why { margin-top: -0.2rem; font-size: 0.9rem; color: var(--body); }
+.terse { display: grid; gap: 0.5rem; margin: 0.6rem 0 0; padding: 0; list-style: none; }
+.terse li { position: relative; padding-left: 1.4rem; font-size: 0.95rem; line-height: 1.5; }
 .terse li::before { content: '\2014'; position: absolute; left: 0; top: 0;
   color: var(--amber-deep); font-weight: 700; }
 .terse strong { color: var(--ink); }
-.cost { gap: 0.7rem; margin-top: 1rem; }
-.cost > div { padding: 0.95rem 1.05rem; gap: 0.25rem; }
-.cost .figure { font-size: 1.5rem; }
-.cost .figure small { font-size: 0.82rem; margin-top: 0.2rem; }
-.cost-note { font-size: 0.83rem; }
-.foot { margin-top: 1.6rem; padding-top: 0.9rem; border-top: 2px solid var(--amber);
-  font-size: 0.9rem; color: var(--body); }
-.foot strong { color: var(--ink); }
+.nope li::before { content: '\00D7'; color: #9B2C2C; font-size: 1.1em; }
+.card { background: var(--white); border: 1px solid var(--line); border-radius: 12px;
+  padding: 0.95rem 1.1rem; margin-top: 0.8rem; }
+.card h3 { font-size: 1.05rem; margin-bottom: 0.25rem; }
 @media print {
-  /* The whole point of this sheet is that it fits on one, printed both sides.
-     Everything below is the squeeze that gets it there without making it look
-     squeezed: nine and a half point is still comfortable at arm's length. */
-  body { font-size: 9.5pt; }
-  section { margin-top: 0.95rem; }
-  .masthead { padding-block: 1.5rem 1.2rem; }
-  h2 { font-size: 1.3rem; break-inside: avoid; }
-  p { margin: 0.45rem 0; }
-  .terse { gap: 0.4rem; }
-  .terse li { line-height: 1.45; }
-  .panel { padding: 0.9rem 1.1rem; margin-top: 1rem; }
-  .panel h3 { font-size: 1rem; }
-  .panel p { font-size: 0.86rem; }
-  .cost { margin-top: 0.7rem; }
-  .cost > div { padding: 0.8rem 0.9rem; }
-  .foot { margin-top: 0.9rem; padding-top: 0.6rem; break-inside: avoid; }
+  body { font-size: 10.2pt; }
+  section { margin-top: 1.1rem; }
+  h2 { break-inside: avoid; }
+  .say { break-inside: avoid; }
+  .card { break-inside: avoid; }
 }
 </style>
 </head>
@@ -519,121 +511,138 @@ p { margin: 0.55rem 0; }
 
 <header class="masthead">
   <div class="wrap">
-    <p class="kicker">Website proposal</p>
-    <h1>A website that turns<br>searches into <em>appointments</em></h1>
+    <p><span class="mine">My notes — do not hand this over</span></p>
+    <h1>Columbia Animal Hospital<br>walk-in</h1>
     <p class="lede">
-      A new site for Columbia Animal Hospital, built around one job: when someone in Columbia or
-      Foxworth needs a veterinarian — usually on a phone, in a hurry — they find you, they trust
-      you, and they call.
+      1409 Hwy 98E &middot; (601) 736-3041 &middot; Mon&ndash;Fri 7:30&ndash;5:30, Sat 8:00&ndash;12:00.
+      Doctors: Pat Sanford (owner, there since 1985), Janelle Loper, Bridgett Williams.
     </p>
-    <p><span class="badge">Built and ready to launch</span></p>
   </div>
 </header>
 
 <div class="wrap">
 
   <section>
-    <h2><span class="num">Today</span>Where the current site loses people</h2>
+    <h2><span class="num">The point</span>I am not selling today</h2>
+    <p>
+      Whoever is at that desk cannot say yes. They can say no, by taking the sheet and binning
+      it. <strong>The job is to make them want to carry it back to Dr. Sanford.</strong> Everything
+      below serves that.
+    </p>
     <ul class="terse">
-      <li><strong>It was not laid out for a phone.</strong> Most people looking for a veterinarian
-        are on one, and pinching and dragging sideways to read your hours is friction at the worst
-        possible moment.</li>
-      <li><strong>Two directories have your address wrong.</strong> The Marion County Development
-        Partnership lists 1498 Hwy 98 East. US Companies lists Old Hwy 98 E. Local search ranking
-        rests on every listing reading the same way.</li>
-      <li><strong>Three places say you open at 7:30 on Saturday.</strong> You say 8:00. Someone who
-        drives over at 7:30 and finds a locked door does not come back a second time.</li>
-      <li><strong>The whole site exists twice.</strong> Every page is also reachable at
-        <em>columbiaanimalhospital.vetsourcecms.com</em>, so search engines split the credit
-        between two copies instead of giving it all to your own domain.</li>
+      <li><strong>Go between 2 and 4.</strong> Mornings are surgery and drop-offs, lunch is
+        pickups, after 4:30 everyone is trying to leave. Not Saturday — they shut at noon.</li>
+      <li><strong>Carry:</strong> laptop charged with the preview already open on the home page,
+        two printed one-sheets, the site loaded on my phone as a backup.</li>
     </ul>
   </section>
 
   <section>
-    <h2><span class="num">Already built</span>Nineteen pages, finished, waiting on you</h2>
-    <p class="section-lead">
-      Home, About, Services, Our Team, New Patients, Resources, Contact, an appointment request,
-      and a page of its own for each of your nine services.
+    <h2><span class="num">1</span>The opening</h2>
+    <p>Do not ask for the owner. That is the telemarketer move and the shutter comes down.</p>
+    <div class="say">
+      "Hey — I'm Ryan, I live here in town. I build websites for local businesses. I wasn't going
+      to bother y'all, but I noticed a couple of your listings online have the wrong address, and
+      while I was looking I ended up building out what a new site could look like for you. Can I
+      show you real quick? It's got your doctors on it."
+    </div>
+    <p class="why">
+      Three things doing work: I am local, I found a problem that is <em>theirs</em> rather than a
+      product that is mine, and "it's got your doctors on it" is curiosity nobody refuses.
     </p>
-    <ul class="terse">
-      <li><strong>Written from your own published words.</strong> Every fact — your hours, your
-        address, what each service involves, what the doctors studied and when — traces back to
-        something the practice already publishes. Where a source could not be confirmed, the claim
-        was left off rather than guessed at.</li>
-      <li><strong>Built to be found.</strong> Structured data on every page carrying your hours and
-        the area you serve, one source of truth for the address so it cannot drift, and a migration
-        plan that redirects every old page so nothing you have built up in search is lost. Plain
-        HTML, so there is no page builder and no monthly platform fee underneath it.</li>
+  </section>
+
+  <section>
+    <h2><span class="num">2</span>Open the laptop and shut up</h2>
+    <p>
+      Let them scroll. Do not narrate. They will recognise Dr. Sanford, Dr. Loper, Dr. Williams and
+      the sign out front, and that recognition <em>is</em> the pitch — it lands harder without me
+      talking over it. When they react, one line:
+    </p>
+    <div class="say">"Everything on it came off your own site. I didn't make anything up."</div>
+  </section>
+
+  <section>
+    <h2><span class="num">3</span>The one question worth asking</h2>
+    <p>Casually, while they are still looking:</p>
+    <div class="say">
+      "Who handles the website for y'all now — is that something the office pays for monthly, or
+      does it come with your software?"
+    </div>
+    <p class="why">
+      The answer decides the whole follow-up. Paying $250 a month for a template → I undercut them
+      on price and beat them on quality in one sentence. Bundled free with the practice software →
+      the monthly is a new expense, so lead with the $5,500 outright instead.
+    </p>
+  </section>
+
+  <section>
+    <h2><span class="num">4</span>The ask</h2>
+    <p>Small, and about them:</p>
+    <div class="say">
+      "I know this isn't your call, and I'm not trying to put you on the spot. Who's the best
+      person for me to leave this with — and when are they usually around? I'd rather come back at
+      a good time than bug anybody."
+    </div>
+    <p class="why">
+      <strong>"I know this isn't your call"</strong> is the most important sentence of the day. It
+      tells them they are not about to be trapped, and people help once they are not defending a
+      gate.
+    </p>
+    <p>Then hand over the one-sheet:</p>
+    <div class="say">"There's a price on the back so nobody has to guess."</div>
+  </section>
+
+  <section>
+    <h2><span class="num">5</span>Leave, and mean it</h2>
+    <p>
+      Get a name and a day, and write it down in front of them. Thank them and go. Do not linger,
+      do not add one more thing. Be the person who was easy, not the person who would not leave.
+      <strong>Follow up Monday.</strong> Cold deals close on the second or third visit, almost
+      never the first.
+    </p>
+  </section>
+
+  <section>
+    <h2><span class="num">Careful</span>What not to do</h2>
+    <ul class="terse nope">
+      <li><strong>Do not run down the current site in front of staff.</strong> Somebody in that
+        building may have picked it. "Built on a template, like most vet sites" — never "it's
+        bad."</li>
+      <li><strong>Do not leave the thirteen-page version.</strong> One sheet. The long one is for
+        when they ask for it.</li>
+      <li><strong>Do not discount to keep the conversation alive.</strong> The price is on the
+        sheet. Dropping it in the doorway teaches them what the work is worth.</li>
+      <li><strong>Do not ask for the doctor's cell number.</strong></li>
     </ul>
   </section>
 
-  <div class="panel">
-    <h3>Nothing on this site was invented.</h3>
+  <div class="card">
+    <h3>If Dr. Sanford walks out himself</h3>
     <p>
-      No testimonials, no star ratings, no awards, no claim you have not made yourself. The record
-      of where every fact came from — including the ones deliberately left off — is handed over
-      with the site.
+      Same opening, then hand him the laptop and let him scroll. When he asks the price, say it
+      plainly — <strong>$2,500 and $150 a month, or $5,500 to own it</strong> — and then stop
+      talking. First one to fill the silence loses.
+    </p>
+    <p>
+      If he asks something I do not know, <strong>"I don't know, let me find out"</strong> beats a
+      guess every time. He has run that practice since 1985 and will spot a bluff instantly. The
+      other answer he will respect.
     </p>
   </div>
 
-  <section>
-    <h2><span class="num">What it costs</span>Two ways to do this, the same site either way</h2>
-    <dl class="cost">
-      <div class="pick">
-        <span class="tag">Recommended</span>
-        <dt>Launch and look after it</dt>
-        <dd class="figure">$2,500 to start<small>then $150 a month</small></dd>
-        <p class="cost-note">
-          Twelve months, then month to month — cancel after that and the site comes with you.
-          Hosting, backups, security updates, and the changes a practice needs: hours, a new
-          doctor, a service added. The listing corrections are in here too.
-          <strong>Year one, $4,300.</strong>
-        </p>
-      </div>
-      <div>
-        <dt>Buy it outright</dt>
-        <dd class="figure">$5,500 once<small>the site is yours</small></dd>
-        <p class="cost-note">
-          Half on signature, half the day it goes live. Yours to keep, on any host, nothing owed
-          after. Looking after it afterwards is $95 a month if you want it, and nothing if you
-          do not.
-        </p>
-      </div>
-    </dl>
-    <p style="margin-top:0.9rem;font-size:0.9rem">
-      <strong>Included either way:</strong> every old address redirected, the domain pointed, the
-      sitemap submitted, the wrong listings corrected. <strong>Not included:</strong> photography —
-      sixteen slots still need real pictures of your building and your team, and I would rather say
-      so than bill you for stock photographs of someone else's practice.
-    </p>
-  </section>
-
-  <section>
-    <h2><span class="num">From you</span>Three answers, and it can launch</h2>
+  <div class="card">
+    <h3>Three things I can answer if they come up</h3>
     <ul class="terse">
-      <li><strong>Dr. Wallace Carson.</strong> Your site has a live bio page for a fourth
-        veterinarian. He is off the new one until you tell me whether he should be.</li>
-      <li><strong>How someone reaches the on-call vet.</strong> Your site says one is available
-        after hours and never says how. The most valuable missing sentence you have.</li>
-      <li><strong>Saturday's opening time.</strong> You say 8:00 AM, three directories say 7:30.
-        Confirm it and I will correct them.</li>
+      <li><strong>"Where did you get our doctors' photos?"</strong> — from what the practice
+        already publishes. Nothing goes live until they say so, and consent for every person shown
+        is on the pre-launch list in writing.</li>
+      <li><strong>"Will we lose our Google ranking?"</strong> — no. Every old address redirects to
+        its new page; that is included, not an extra.</li>
+      <li><strong>"What's wrong with our listings?"</strong> — Marion County Development
+        Partnership says 1498 Hwy 98 East, US Companies says Old Hwy 98 E, and three directories
+        have Saturday at 7:30 instead of 8:00.</li>
     </ul>
-    <p style="margin-top:0.9rem">
-      <strong>Two to three weeks from the day you say go</strong> — and most of that is waiting on
-      those three answers and a photograph of the building, not on me.
-    </p>
-  </section>
-
-  <div class="foot">
-    <p>
-      <strong>Ryan Bullock</strong> &nbsp;·&nbsp;
-      <a href="tel:+17693136636">(769) 313-6636</a> &nbsp;·&nbsp;
-      <a href="mailto:ryanbullock09@gmail.com">ryanbullock09@gmail.com</a>
-    </p>
-    <p style="margin-top:0.4rem;color:var(--muted);font-size:0.86rem">
-      Open the site on your phone — that is how most people choosing a vet will see it. A longer
-      version of this sets all of it out; ask and I will send it.
-    </p>
   </div>
 
 </div>
