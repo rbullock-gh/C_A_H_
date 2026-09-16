@@ -28,6 +28,7 @@ each photo in `incoming/` before importing it.
 | `pet-cat-tuxedo` | `pet-cat-tuxedo.webp` | Tuxedo cat on a pale sweep (client supplied) | Supplied by the client. Source and licence of the original not recorded — confirm commercial usage rights before launch. |
 | `pet-cat-siamese` | `pet-cat-siamese.webp` | Siamese cat on a pale sweep (client supplied) | Supplied by the client. Source and licence of the original not recorded — confirm commercial usage rights before launch. |
 | `pet-frenchie` | `pet-frenchie.webp` | French bulldog on a pale sweep (client supplied) | Supplied by the client. Source and licence of the original not recorded — confirm commercial usage rights before launch. |
+| `hero-sky` | `hero-sky.webp` | Blue sky with soft cloud, behind the hero photograph | Supplied by the client. Decorative sky behind the hero cut-out; no identifiable person or place in it. Source and licence of the original not recorded — confirm commercial usage rights before launch. |
 
 ## Still on placeholders
 

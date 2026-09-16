@@ -435,6 +435,36 @@ a:hover { color: var(--ink); }
     radial-gradient(52rem 34rem at 88% 8%, rgba(199, 123, 43, 0.09), transparent 68%),
     radial-gradient(40rem 30rem at 4% 84%, rgba(79, 125, 107, 0.07), transparent 70%);
 }
+/* Sky behind the dogs.
+   The photograph is a cut-out, so without a ground behind it the animals float
+   on the page. A sky gives them one and lifts the whole panel — but only on the
+   right, and only where the photograph is. It fades out well before the text
+   column, because dark type on a mid-blue is a contrast fight nobody wins, and
+   the headline's amber is the first thing that loses. Declared inside the
+   breakpoint so a phone, which never shows the photograph, never fetches it. */
+.hero__sky { display: none; }
+@media (min-width: 48rem) {
+  /* Between the two hero breakpoints the photograph sits under the words, so
+     the sky rises from the bottom and has faded out before it reaches them. */
+  .hero__sky {
+    display: block; position: absolute; inset: 0; pointer-events: none;
+    background: url('../img/hero-sky.webp') center bottom / cover no-repeat;
+    opacity: 0.85;
+    -webkit-mask-image: linear-gradient(to bottom, transparent 55%, #000 76%);
+    mask-image: linear-gradient(to bottom, transparent 55%, #000 76%);
+  }
+}
+@media (min-width: 64rem) {
+  /* Side by side, the sky belongs to the right-hand column and fades out across
+     the gap. One gradient rather than two composited: mask-composite is the
+     brittlest part of the property and this needs none of it. */
+  .hero__sky {
+    background-position: right center;
+    -webkit-mask-image: linear-gradient(to right, transparent 30%, #000 72%);
+    mask-image: linear-gradient(to right, transparent 30%, #000 72%);
+  }
+}
+
 .hero .shell { position: relative; }
 /* The photograph is a cut-out whose original frame crops the dogs at chest
    level. Bottom-aligned, that flat edge lands on the credibility strip below and

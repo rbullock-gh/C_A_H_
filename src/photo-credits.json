@@ -78,5 +78,10 @@
     "file": "why-exam.webp",
     "describes": "Technician holding a cat during an exam",
     "credit": "Supplied by the client. Generic clinical photograph, not this practice's own exam room \u2014 the alt text and caption say so. Source and licence of the original not recorded; confirm commercial usage rights before launch. No identifiable person is shown."
+  },
+  "hero-sky": {
+    "file": "hero-sky.webp",
+    "describes": "Blue sky with soft cloud, behind the hero photograph",
+    "credit": "Supplied by the client. Decorative sky behind the hero cut-out; no identifiable person or place in it. Source and licence of the original not recorded \u2014 confirm commercial usage rights before launch."
   }
 }

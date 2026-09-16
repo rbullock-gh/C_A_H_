@@ -57,6 +57,7 @@ SLOTS = {
     "pet-cat-tuxedo": (1254, 1254, "plain", "Tuxedo cat on a pale sweep (client supplied)"),
     "pet-cat-siamese": (1254, 1254, "plain", "Siamese cat on a pale sweep (client supplied)"),
     "pet-frenchie": (1254, 1254, "plain", "French bulldog on a pale sweep (client supplied)"),
+    "hero-sky": (1800, 732, "plain", "Blue sky with soft cloud, behind the hero photograph"),
 }
 
 CREAM = "#F0E9DC"
